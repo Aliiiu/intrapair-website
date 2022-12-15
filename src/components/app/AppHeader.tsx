@@ -10,7 +10,7 @@ interface Props {
 }
 export const AppHeader = ({ isOpen, toggleSidebar }: Props) => {
   const [colorChange, setColorchange] = useState(false)
-  if (typeof window !== "undefined") {
+  if (typeof window !== 'undefined') {
     const changeNavbarColor = () => {
       if (window.scrollY >= 80) {
         setColorchange(true)
@@ -18,11 +18,12 @@ export const AppHeader = ({ isOpen, toggleSidebar }: Props) => {
         setColorchange(false)
       }
     }
-    window.addEventListener('scroll', changeNavbarColor)  }
+    window.addEventListener('scroll', changeNavbarColor)
+  }
 
   return (
     <div
-      className={clsx(' bg-white z-10', { 'bg-dark-blue': isOpen })}
+      className={clsx('z-10', { 'bg-dark-blue': isOpen }, { ' bg-white ': !isOpen })}
       style={{ boxShadow: colorChange ? 'rgb(0 0 0 / 10%) 0px 1px 2px' : '' }}
     >
       <div className="container m-auto h-[70px] flex w-full px-[30px]">
