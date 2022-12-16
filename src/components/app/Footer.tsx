@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export const Footer = () => {
   return (
-    <div className=" bg-[#0E0037]">
+    <div className="bg-blue02">
       <div className="container m-auto py-[81px] px-[30px]">
         <Flex justify="space-between" wrap='wrap' gap='3rem'>
           <Flex direction="column" justify="space-between">
