@@ -409,7 +409,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section className="container m-auto  px-[30px] pt-[99px] sm:pt-[174px] pb-[99px] relative">
+          <section className="container m-auto  px-[30px] py-[99px] sm:pt-[174px] pb-[99px] relative">
             <div className="absolute sm:block hidden left-0 top-0">
               <Image src={'/home/spiral2.png'} width={180} height={180} alt="spiral" />
             </div>

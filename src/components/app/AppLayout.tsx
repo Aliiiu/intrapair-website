@@ -18,7 +18,7 @@ export const AppLayout = ({ children }: Props) => {
         <AppDropdownMenu isOpen={dropDownMenuIsOpen} />
       </div>
 
-      <main className="my-[80px]">{children}</main>
+      <main className="mt-[80px]">{children}</main>
       <Footer />
     </div>
   )
