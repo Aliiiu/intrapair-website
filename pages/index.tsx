@@ -28,7 +28,7 @@ export default function Home() {
                   We partner with organizations & startups to accelerate and simplify their work
                   processes by building innovative software solutions.
                 </p>
-                <button className="rounded-[41px]  text-xl w-[202px] bg-dark-blue text-white py-[15px] m-auto">
+                <button className="rounded-[41px]  text-base w-[202px] bg-dark-blue text-white py-[15px] m-auto">
                   Let&apos;s Talk
                 </button>
               </div>
@@ -88,7 +88,7 @@ export default function Home() {
                       </div>
                     </div>
 
-                    <button className="rounded-[41px]  text-xl w-[201px] border-2  border-solid text-white py-[15px]">
+                    <button className="rounded-[41px]  text-base w-[201px] border-2  border-solid text-white py-[15px]">
                       Learn More
                     </button>
                   </div>

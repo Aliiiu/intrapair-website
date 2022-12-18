@@ -18,7 +18,7 @@ export default function Home() {
         <div className=" w-full relative">
           <section className="container m-auto   px-[30px]">
             <div className=" flex items-center  justify-center sm:py-[120px] py-9 ">
-              <div className="h-[273px] xs:h-[387px] relative w-full bg-contain bg-center bg-no-repeat bg-[url('/common/flowery.png')]">
+              <div className="h-[273px] xs:h-[387px] relative w-full bg-contain bg-center bg-no-repeat bg-[url('/common/flowery.png')] w-full text-center">
                 <div
                   className="absolute top-[50%] left-[50%]"
                   style={{ transform: 'translate(-50%, -50%)' }}
@@ -100,7 +100,7 @@ export default function Home() {
                         }}
                         placeholder="Message"
                       ></textarea>
-                      <button className="rounded-[41px] mt-8  text-xl w-[202px] bg-dark-blue text-white py-[15px] ">
+                      <button className="rounded-[41px] mt-8  text-base w-[202px] bg-dark-blue text-white py-[15px] ">
                         Submit
                       </button>
                     </div>
@@ -180,7 +180,7 @@ export default function Home() {
                     className="border-2 border-solid  rounded-full bg-white placeholdertext-black01 flex-1 px-[35px] py-[15px]"
                     placeholder="Enter your email"
                   />
-                  <button className="rounded-[41px] text-xl w-[202px] bg-dark-blue text-white py-[15px] ">
+                  <button className="rounded-[41px] text-base w-[202px] bg-dark-blue text-white py-[15px] ">
                     Submit
                   </button>
                 </div>
