@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { AppLayout } from 'src/components/app'
 
-export default function Home() {
+export default function ContactUs() {
   return (
     <div>
       <Head>
