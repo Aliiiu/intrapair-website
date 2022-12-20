@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;600&display=swap');
+
+@font-face {
+	font-family: 'Millimeter';
+	src: url('/font/Millimetre-Regular.woff');
+	font-weight: 400;
+	font-style: normal;
+}
 @import url('https://fonts.cdnfonts.com/css/millimetre');
 @tailwind base;
 @tailwind components;
@@ -8,13 +15,19 @@
 	.font-outline-2 {
 		-webkit-text-stroke: 2px #185ea1;
 	}
+	@media only screen and (max-width: 900px) {
+		.font-outline-2 {
+			-webkit-text-stroke: 1px #185ea1;
+		}
+	}
 }
 html,
 body {
 	padding: 0;
 	margin: 0;
 	background-color: #ffffff;
-	font-family: 'Encode Sans', 'Millimetre', sans-serif;
+	color: #333333;
+	font-family: 'Encode Sans', sans-serif;
 }
 
 a {
@@ -26,6 +39,14 @@ a {
 	box-sizing: border-box;
 }
 
+.millimeter {
+	font-family: Millimeter;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
 .banner {
 	background-image: url('/images/banner.png');
 	/* background-color: aquamarine; */

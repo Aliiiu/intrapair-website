@@ -28,14 +28,14 @@ const feature = [
 const Feature = () => {
 	return (
 		<div>
-			<h2 className='text-5xl text-secondaryBlue_05 font-semibold underline decoration-1 underline-offset-[20px] font-encode'>
+			<h2 className='text-3xl xl:text-5xl text-secondaryBlue_05 font-semibold underline decoration-1 underline-offset-[20px] font-encode'>
 				Our Green Light
 			</h2>
-			<div className='grid grid-cols-3 gap-6 w-full mt-10'>
+			<div className='grid md:grid-cols-3 gap-6 w-full mt-10'>
 				{feature.map((item) => (
 					<div
 						key={item.id}
-						className='flex p-10 rounded-[20px] shadow_1 flex-col gap-4 items-center'
+						className='flex p-4 xl:p-10 rounded-[20px] shadow_1 flex-col gap-4 items-center'
 					>
 						<div className='w-20 flex justify-center rounded-[18px] shadow_2 items-center h-20'>
 							<Image src={item.icon} alt='' width={40} height={40} />

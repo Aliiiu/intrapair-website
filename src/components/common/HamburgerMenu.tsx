@@ -11,9 +11,9 @@ export const HamburgerMenu = ({ onClick, isOpen }: Props) => {
     <>
       <button onClick={onClick}>
         {isOpen === true ? (
-          <Image src="/header/close.svg" width={18} height={28} alt="close menu" />
+          <Image src="/header/close.svg" width={24} height={34} alt="close menu" />
         ) : (
-          <Image src="/header/ham-menu.svg" width={20} height={32} alt="open menu" />
+          <Image src="/header/ham-menu.svg" width={26} height={38} alt="open menu" />
         )}
       </button>
     </>

@@ -23,10 +23,13 @@ export const AppHeader = ({ isOpen, toggleSidebar }: Props) => {
 
 	return (
 		<div
-			className={clsx(' bg-white z-10', { 'bg-dark-blue': isOpen })}
+			className={clsx(
+				{ 'bg-dark-blue': isOpen },
+				{ ' bg-white w-full container mx-auto': !isOpen }
+			)}
 			style={{ boxShadow: colorChange ? 'rgb(0 0 0 / 10%) 0px 1px 2px' : '' }}
 		>
-			<div className='container m-auto h-[70px] flex w-full px-[112px]'>
+			<div className='h-[70px] flex w-full px-4 xl:px-[114px]'>
 				<header className={clsx('w-full flex', { isOpen })}>
 					<Flex gap='10px' justify='space-between' align='center' width='100%'>
 						<Link href='/'>
@@ -34,15 +37,15 @@ export const AppHeader = ({ isOpen, toggleSidebar }: Props) => {
 								<Image
 									alt='intrapair'
 									src='/header/logo-white.svg'
-									width={100}
-									height={43}
+									width={130}
+									height={73}
 								/>
 							) : (
 								<Image
 									alt='intrapair'
 									src='/header/logo-black.svg'
-									width={100}
-									height={43}
+									width={130}
+									height={73}
 								/>
 							)}
 						</Link>

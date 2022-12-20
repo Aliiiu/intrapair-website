@@ -1,10 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ['./src/**/*.{js,jsx,ts,tsx}', './pages/**/*.{js,ts,jsx,tsx}'],
+	content: ['./src/**/*.{js,jsx,ts,tsx}', './pages/**/*.{js,jsx,ts,tsx}'],
+
 	theme: {
 		extend: {
 			colors: {
 				'dark-blue': '#185EA1',
+				white: '#ffffff',
+				blue01: '#1FB0FF',
+				blue02: '#0E0037',
 				blue_01: '#F4EBFF',
 				blue_02: '#B2E4FF',
 				blue_03: '#80D2FF',
@@ -14,6 +18,7 @@ module.exports = {
 				red_02: '#FFA6B7',
 				red_03: '#FF8098',
 				red_04: '#FF335B',
+				black01: '#333333',
 				red_05: '#FF0032',
 				grey_01: '#E6E6E6',
 				grey_02: '#CCCCCC',
