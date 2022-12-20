@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { AppHeader, AppDropdownMenu, Footer } from 'src/components/app';
-import { sidebar, toggleSidebar, closeSidebar } from 'src/store/sidebar';
+import { sidebar, closeSidebar, toggleSidebar } from '../../store/sidebar';
+import AppDropdownMenu from './AppDropdownMenu';
+import AppHeader from './AppHeader';
+import Footer from './Footer';
 
 interface Props {
 	children: React.ReactNode;

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { HamburgerMenu, Flex } from 'src/components/common';
 import Image from 'next/image';
 import clsx from 'clsx';
 import Link from 'next/link';
+import { Flex, HamburgerMenu } from '../common';
 
 interface Props {
 	isOpen: boolean;
