@@ -13,13 +13,13 @@ const caseStudy = () => {
 			</Head>
 
 			<AppLayout>
-				<section className='container mx-auto'>
+				<section className='container pt-10 md:pt-0 mx-auto'>
 					<HeroSection header='With the Right Technology, Building is Easier!' />
 				</section>
-				<section className='py-[189px]'>
+				<section className='py-[70px] xl:py-[189px]'>
 					<CaseStudy showTitle={false} />
 				</section>
-				<SomethingGreat bgColor='white' />
+				<SomethingGreat bgColor='#CCEDFF' />
 			</AppLayout>
 		</div>
 	);

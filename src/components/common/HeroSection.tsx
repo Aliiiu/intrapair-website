@@ -7,7 +7,7 @@ const HeroSection: FC<{
 	header: string;
 }> = ({ showTitle, title, header }) => {
 	return (
-		<div className='py-10 md:py-16 xl:py-20 relative xl:mx-[54px]'>
+		<div className='py-14 md:py-16 xl:py-20 relative xl:mx-[54px]'>
 			<Image
 				src={'/images/heroBanner.png'}
 				alt=''
@@ -20,7 +20,7 @@ const HeroSection: FC<{
 					{title}
 				</h1>
 			)}
-			<h1 className='text-4xl xl:text-6xl max-w-[900px] mx-auto text-center mb-10 xl:leading-[80px] font-extrabold font-milli font-outline-2 text-white'>
+			<h1 className='text-4xl sm:text-5xl xl:text-6xl max-w-[900px] mx-auto text-center mb-10 xl:leading-[80px] font-extrabold font-milli font-outline-2 text-white'>
 				{header}
 			</h1>
 		</div>

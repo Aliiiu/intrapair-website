@@ -17,7 +17,7 @@ const services = () => {
 				<section className='container mx-auto'>
 					<HeroSection header='Excellent Engineering Is The Bedrock For Building Quality Solutions' />
 				</section>
-				<section className='container py-20 px-[114px] mx-auto'>
+				<section className='container px-4 py-16 xl:py-20 xl:px-[114px] mx-auto'>
 					<Features />
 				</section>
 				<section className='bg-[#CCEDFF4D]'>

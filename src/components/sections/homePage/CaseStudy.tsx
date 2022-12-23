@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 
 const CaseStudy: FC<{ showTitle: boolean }> = ({ showTitle }) => {
 	return (
-		<div className='container mx-auto px-[114px] '>
+		<div className='container mx-auto px-4 xl:px-[114px] '>
 			<div className='flex flex-col gap-y-9'>
 				{showTitle && (
 					<div className='flex flex-col gap-3 w-[fit-content] max-w-[100%]'>
@@ -17,9 +17,9 @@ const CaseStudy: FC<{ showTitle: boolean }> = ({ showTitle }) => {
 					</div>
 				)}
 				<div className='flex'>
-					<div className='mlg:flex justify-between gap-10 w-full'>
+					<div className='flex md:flex-row flex-col justify-between gap-5 xl:gap-10 w-full'>
 						<div className='flex flex-1 flex-col gap-5  mlg:mb-0 mb-[60px]'>
-							<div className='h-[273px] xs:h-[580px] relative'>
+							<div className='h-[303px] xs:h-[430px] lg:h-[580px] relative'>
 								<Image src={'/images/case1.png'} alt='' fill />
 							</div>
 							<div className='flex flex-col gap-1'>
@@ -27,8 +27,8 @@ const CaseStudy: FC<{ showTitle: boolean }> = ({ showTitle }) => {
 									<p className='text-black01 font-semibold text-sm	sm:text-xl	'>
 										Stitchvine
 									</p>
-									<p className='bg-black01 w-[29px] h-[2px]'></p>
-									<p className='text-black01 font-semibold text-sm	sm:text-xl'>
+									<p className='bg-black01 w-[19px] xl:w-[29px] h-[2px]'></p>
+									<p className='text-black01 font-semibold text-sm md:text-base	lg:text-xl'>
 										Fashion Made Easy
 									</p>
 								</div>
@@ -38,7 +38,7 @@ const CaseStudy: FC<{ showTitle: boolean }> = ({ showTitle }) => {
 							</div>
 						</div>
 						<div className='flex flex-1 flex-col gap-5'>
-							<div className='h-[273px] xs:h-[580px] relative'>
+							<div className='h-[303px] xs:h-[430px] lg:h-[580px] relative'>
 								<Image src={'/images/case2.png'} alt='' fill />
 							</div>
 							<div className='flex flex-col gap-1'>
@@ -46,8 +46,8 @@ const CaseStudy: FC<{ showTitle: boolean }> = ({ showTitle }) => {
 									<p className='text-black01 font-semibold text-sm	sm:text-xl	'>
 										Anyworks
 									</p>
-									<p className='bg-black01 w-[29px] h-[2px]'></p>
-									<p className='text-black01 font-semibold	 text-sm	sm:text-xl'>
+									<p className='bg-black01 w-[19px] xl:w-[29px] h-[2px]'></p>
+									<p className='text-black01 font-semibold	 text-sm md:text-base	lg:text-xl'>
 										Service At Your Doorstep
 									</p>
 								</div>

@@ -81,24 +81,24 @@ const serviceRendered = [
 
 const Features = () => {
 	return (
-		<div className='flex flex-col gap-40'>
+		<div className='flex flex-col gap-10 xl:gap-40'>
 			{serviceRendered.map((item) => (
 				<div
 					key={item.id}
-					className={`flex ${
-						item.id % 2 == 0 ? 'flex-row-reverse' : 'flex-row'
-					} gap-24`}
+					className={`flex flex-col-reverse ${
+						item.id % 2 == 0 ? 'md:flex-row-reverse' : 'md:flex-row'
+					} gap-12 xl:gap-24`}
 				>
-					<div className='flex-1 h-[500px] relative'>
+					<div className='md:flex-1 w-full h-[300px] xl:h-[500px] relative'>
 						<Image src={item.img} alt='' fill />
 					</div>
-					<div className='flex flex-1 flex-col justify-center'>
-						<div className='flex flex-col gap-8'>
-							<h3 className='font-semibold text-4xl text-secondaryBlue_05 '>
+					<div className='flex md:flex-1 flex-col justify-center'>
+						<div className='flex flex-col gap-2 xl:gap-8'>
+							<h3 className='font-semibold text-2xl lg:text-3xl xl:text-4xl text-secondaryBlue_05 '>
 								{item.feature}
 							</h3>
 							<p className='text-grey_05'>{item.content}</p>
-							<div className='flex justify-between'>
+							<div className='flex flex-col md:flex-row justify-between'>
 								<ListComponent items={item.subList} />
 								<ListComponent items={item.subList2} />
 							</div>

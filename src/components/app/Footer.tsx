@@ -47,7 +47,7 @@ export const Footer = () => {
 								About Us{' '}
 							</Link>
 
-							<Link href='/#blog' className='text-white  hover:underline'>
+							<Link href='/blog' className='text-white  hover:underline'>
 								Blog{' '}
 							</Link>
 
