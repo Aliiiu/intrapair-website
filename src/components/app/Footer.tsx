@@ -12,7 +12,7 @@ export const Footer = () => {
 					<Flex direction='column' justify='space-between'>
 						<Image
 							alt='intrapair'
-							src='/footer/logo-white.svg'
+							src='/images/logo.png'
 							width={150}
 							height={63}
 						/>

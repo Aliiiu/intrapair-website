@@ -36,14 +36,14 @@ export const AppHeader = ({ isOpen, toggleSidebar }: Props) => {
 							{isOpen ? (
 								<Image
 									alt='intrapair'
-									src='/header/logo-white.svg'
+									src='/images/logo-white.png'
 									width={130}
 									height={73}
 								/>
 							) : (
 								<Image
-									alt='intrapair'
-									src='/header/logo-black.svg'
+									alt='intrapair-new'
+									src='/images/logo-dark.png'
 									width={130}
 									height={73}
 								/>
