@@ -13,15 +13,15 @@ export const SomethingGreat = ({ bgColor }: Props) => {
 					<Image src={'/svgs/spiral.svg'} fill alt='spiral' />
 				</div>
 			</div>
-			<div className='container m-auto px-4 xl:px-[114px] py-[99px] sm:first-line:pt-[100px] xl:pt-[204px] pb-20 xl:pb-[200px]'>
-				<div className='flex flex-col items-center gap-y-6 m-auto '>
+			<div className='container px-4 xl:px-[114px] mx-auto py-[120px] xl:py-[209px]'>
+				<div className='flex flex-col items-center md:items-start xl:gap-y-6 '>
 					<p className='text-dark-blue text-base font-semibold'>
 						GOT A PROJECT IN MIND?
 					</p>
-					<div className='flex'>
-						<div className='md:flex block flex-nowrap  justify-between w-full items-center gap-[50px] m-auto'>
-							<div className='md:mb-0 mb-[30px] basis-[80%] '>
-								<h1 className='font-bold text-2xl md:text-3xl xl:text-6xl text-center text-blue02 max-w-[870px] xl:leading-[70px]'>
+					<div className='flex w-full'>
+						<div className='md:flex block justify-between w-full items-center'>
+							<div className='md:mb-0 mb-[30px]'>
+								<h1 className='font-bold text-2xl md:text-4xl xl:text-6xl text-center md:text-left text-blue02 max-w-[500px] xl:max-w-[870px] xl:leading-[70px]'>
 									Let’s make something great work together.
 								</h1>
 							</div>

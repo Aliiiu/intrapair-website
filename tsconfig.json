@@ -15,6 +15,11 @@
 		"jsx": "preserve",
 		"incremental": true
 	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+	"include": [
+		"next-env.d.ts",
+		"**/*.ts",
+		"**/*.tsx",
+		"src/components/UI/widget/Accordion/accordion.style.js"
+	],
 	"exclude": ["node_modules"]
 }

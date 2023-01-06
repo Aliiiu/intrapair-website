@@ -9,7 +9,7 @@ const Hero = () => {
 			</div>
 			<div className=' flex items-center  justify-center sm:py-[120px] py-9 w-[100%] sm:w-[80%] m-auto'>
 				<div className='flex flex-col gap-6 justify-center  text-center'>
-					<h1 className='text-dark-blue text-[30px] xs:text-[40px] sm:text-[60px] mlg:text-[100px] sm:leading-[70px] leading-[40px] mlg:leading-[94px] millimeter'>
+					<h1 className='text-dark-blue text-[30px] xs:text-[40px] sm:text-[60px] mlg:text-[100px] sm:leading-[70px] leading-[40px] mlg:leading-[94px] font-milli'>
 						ACCELERATING DIGITAL TRANSFORMATION
 					</h1>
 					<p className='text-dark-blue text-xl md:w-[70%] m-auto w-[100%]'>

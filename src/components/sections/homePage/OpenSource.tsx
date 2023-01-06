@@ -3,15 +3,16 @@ import React from 'react';
 
 const OpenSource = () => {
 	return (
-		<div className='container m-auto w-ful px-[114px]'>
+		<div className='container m-auto w-ful px-4 xl:px-[114px]'>
 			<div className='flex flex-col gap-y-9'>
 				<div className='flex'>
 					<div className='msm:flex block flex-wrap  gap-[146px] justify-between items-center w-full'>
 						<div className='flex flex-col flex-1 gap-8'>
 							<div className='flex flex-col gap-3'>
-								<div className='pb-5 pr-9 border-b-2  border-solid border-white'>
-									<h3 className='font-bold text-white text-5xl'>Open Source</h3>
-									<h3 className='font-bold text-white text-5xl'>is Art</h3>
+								<div className='pb-2 xl:pb-5 pr-9 border-b-[0.5px]  border-solid border-white'>
+									<h3 className='font-bold text-white max-w-[320px] text-3xl xl:text-5xl'>
+										Open Source is Art
+									</h3>
 								</div>
 								{/* <div className="bg-white w-full h-[1px]"></div> */}
 

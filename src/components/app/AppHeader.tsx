@@ -25,11 +25,11 @@ export const AppHeader = ({ isOpen, toggleSidebar }: Props) => {
 		<div
 			className={clsx(
 				{ 'bg-dark-blue': isOpen },
-				{ ' bg-white w-full container mx-auto': !isOpen }
+				{ ' bg-white w-full': !isOpen }
 			)}
 			style={{ boxShadow: colorChange ? 'rgb(0 0 0 / 10%) 0px 1px 2px' : '' }}
 		>
-			<div className='h-[70px] flex w-full px-4 xl:px-[114px]'>
+			<div className='h-[7vh] container mx-auto flex w-full px-4 xl:px-[114px]'>
 				<header className={clsx('w-full flex', { isOpen })}>
 					<Flex gap='10px' justify='space-between' align='center' width='100%'>
 						<Link href='/'>

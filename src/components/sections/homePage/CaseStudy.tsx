@@ -7,7 +7,7 @@ const CaseStudy: FC<{ showTitle: boolean }> = ({ showTitle }) => {
 			<div className='flex flex-col gap-y-9'>
 				{showTitle && (
 					<div className='flex flex-col gap-3 w-[fit-content] max-w-[100%]'>
-						<h3 className='font-bold text-dark-blue text-5xl border-b-2 w-[fit-content] pb-5 pr-9  border-solid border-dark-blue'>
+						<h3 className='font-bold text-dark-blue text-3xl xl:text-5xl border-b-[0.5px] w-[fit-content] pb-2 xl:pb-5 pr-4 xl:pr-9  border-solid border-dark-blue'>
 							Case Studies
 						</h3>
 						{/* <div className="bg-dark-blue w-[90%] h-[1px]"></div> */}
@@ -19,7 +19,7 @@ const CaseStudy: FC<{ showTitle: boolean }> = ({ showTitle }) => {
 				<div className='flex'>
 					<div className='flex md:flex-row flex-col justify-between gap-5 xl:gap-10 w-full'>
 						<div className='flex flex-1 flex-col gap-5  mlg:mb-0 mb-[60px]'>
-							<div className='h-[303px] xs:h-[430px] lg:h-[580px] relative'>
+							<div className='h-[303px] xs:h-[430px] md:h-[480px] 2xl:h-[580px] relative'>
 								<Image src={'/images/case1.png'} alt='' fill />
 							</div>
 							<div className='flex flex-col gap-1'>
@@ -38,7 +38,7 @@ const CaseStudy: FC<{ showTitle: boolean }> = ({ showTitle }) => {
 							</div>
 						</div>
 						<div className='flex flex-1 flex-col gap-5'>
-							<div className='h-[303px] xs:h-[430px] lg:h-[580px] relative'>
+							<div className='h-[303px] xs:h-[430px] md:h-[480px] 2xl:h-[580px] relative'>
 								<Image src={'/images/case2.png'} alt='' fill />
 							</div>
 							<div className='flex flex-col gap-1'>

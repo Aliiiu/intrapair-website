@@ -14,8 +14,11 @@ const services = () => {
 			</Head>
 
 			<AppLayout>
-				<section className='container mx-auto'>
-					<HeroSection header='Excellent Engineering Is The Bedrock For Building Quality Solutions' />
+				<section className='container mx-auto py-10 px-4 xl:px-[114px]'>
+					<HeroSection
+						imgSrc='/images/heroBanner2.png'
+						header='Excellent Engineering Is The Bedrock For Building Quality Solutions'
+					/>
 				</section>
 				<section className='container px-4 py-16 xl:py-20 xl:px-[114px] mx-auto'>
 					<Features />

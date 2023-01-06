@@ -28,9 +28,11 @@ const feature = [
 const Feature = () => {
 	return (
 		<div>
-			<h2 className='text-3xl xl:text-5xl text-secondaryBlue_05 font-semibold underline decoration-1 underline-offset-[20px] font-encode'>
-				Our Green Light
-			</h2>
+			<div className='border-solid border-b-[0.5px] pr-9 w-fit pb-3 xl:pb-5 border-dark-blue'>
+				<h2 className='text-3xl max-w-fit xl:text-5xl text-secondaryBlue_05 font-semibold font-encode'>
+					Our Green Light
+				</h2>
+			</div>
 			<div className='grid md:grid-cols-3 gap-6 w-full mt-10'>
 				{feature.map((item) => (
 					<div

@@ -40,7 +40,7 @@ export const AppDropdownMenu = ({ isOpen }: Props) => {
 		return (
 			<li key={nav.text}>
 				<Link
-					className='text-white font-semibold text-xl hover:underline'
+					className='text-white font-semibold text-2xl md:text-4xl xl:text-5xl hover:underline'
 					href={nav.url}
 				>
 					{nav.text}{' '}
@@ -55,62 +55,59 @@ export const AppDropdownMenu = ({ isOpen }: Props) => {
 			style={{ display: isOpen ? 'block' : 'none' }}
 		>
 			<div className='container m-auto '>
-				<nav className='dropdown-menu relative'>
-					<div className='absolute sm:bottom-[64px] bottom-[20px] left-[15px]'>
-						<Flex
-							justify='space-between'
-							align='center'
-							gap='1.5rem'
-							direction='column'
-						>
+				<nav className='dropdown-menu h-[93vh] relative'>
+					<div className='absolute sm:bottom-[64px] bottom-[66px] left-[45px]'>
+						<div className='flex md:flex-col justify-between gap-6 items-center'>
 							<Link href='#' className='text-white  hover:underline'>
 								<Image
 									alt='twitter'
 									src='/footer/twitter.svg'
-									width={13}
-									height={13}
+									width={24}
+									height={20}
 								/>
 							</Link>
 							<Link href='#' className='text-white  hover:underline'>
 								<Image
 									alt='instagram'
 									src='/footer/instagram.svg'
-									width={13}
-									height={13}
+									width={24}
+									height={20}
 								/>
 							</Link>
 							<Link href='#' className='text-white  hover:underline'>
 								<Image
 									alt='linkedin'
 									src='/footer/linkedin.svg'
-									width={13}
-									height={13}
+									width={24}
+									height={20}
 								/>
 							</Link>
-						</Flex>
+						</div>
 					</div>
-					<div className=' px-[40px] pt-[60px] pb-[70px] sm:pb-[140px] md:px-[70px]'>
-						<div className='flex justify-between items-center flex-wrap gap-5 relative'>
-							<ul className='flex flex-col gap-y-2'>
+					<div className='px-4 pt-[50px] md:pt-[190px] lg:pt-[100px] 2xl:pt-[270px] pb-[70px] sm:pb-[140px] md:px-[120px] xl:px-[216px]'>
+						<div className='flex flex-col md:flex-row justify-between md:items-center gap-[50px] '>
+							<ul className='flex flex-col gap-y-2 md:gap-y-[50px] xl:gap-y-[30px]'>
 								{DROPDOWN_MENU_DATA.map(mapSidebarNav)}
 							</ul>
 							<Flex direction='column' gap='5px'>
-								<p className='text-white text-xs font-semibold'>GET IN TOUCH</p>
+								<p className='text-white text-xl font-milli font-semibold'>
+									GET IN TOUCH
+								</p>
 								<Link
 									href='tel:+2349025539348'
-									className='text-white text-sm underline'
+									className='text-white text-base md:text-2xl underline'
 								>
 									+234 902 5539 348
 								</Link>
 								<Link
 									href='mailto:hello@intrapair.com'
-									className='text-white underline text-sm'
+									className='text-white underline text-base md:text-2xl'
 								>
 									hello@intrapair.com
 								</Link>
 								<Link
 									href='/contact-us'
-									className='text-white underline text-sm'
+									className='text-white underline text-base md:text-2xl'
 								>
 									Contact Us
 								</Link>

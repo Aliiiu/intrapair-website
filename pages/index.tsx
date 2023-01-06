@@ -24,27 +24,27 @@ export default function Home() {
 			<AppLayout>
 				<div className=' w-full relative'>
 					<Hero />
-					<section className='bg-blue01  py-[189px]'>
+					<section className='bg-blue01 py-20 xl:py-[189px]'>
 						<ProductEng />
 					</section>
 
-					<section className='py-[189px]'>
+					<section className='py-20 xl:py-[189px]'>
 						<CaseStudy showTitle />
 					</section>
 
-					<section className='pb-[189px]'>
+					<section className='py-20 xl:pb-[189px]'>
 						<Product />
 					</section>
 
-					<section className='bg-blue02 py-[189px]'>
+					<section className='bg-blue02 py-20 xl:py-[189px]'>
 						<OpenSource />
 					</section>
 
-					<section className=' py-[189px]'>
+					<section className=' py-20 xl:py-[189px]'>
 						<Blog />
 					</section>
 
-					<section className='bg-blue02 py-[189px]'>
+					<section className='bg-blue02 py-20 xl:py-[189px]'>
 						<QualityProd />
 					</section>
 

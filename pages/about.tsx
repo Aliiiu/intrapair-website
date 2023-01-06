@@ -23,7 +23,21 @@ const about = () => {
 						header='Product Engineers and Open Source  Enthusiasts'
 					/>
 				</section>
-				<section className='container py-10 xl:py-20 px-4 xl:px-[114px] mx-auto'>
+				<section className='container relative py-10 xl:py-20 px-4 xl:px-[114px] mx-auto'>
+					<Image
+						src={'/svgs/sphere_1.svg'}
+						alt=''
+						width={114}
+						height={114}
+						className='absolute hidden xl:block top-[100px] left-0'
+					/>
+					<Image
+						src={'/svgs/sphere_1.svg'}
+						alt=''
+						width={114}
+						height={114}
+						className='absolute hidden xl:block bottom-[0px] right-0'
+					/>
 					<Product />
 				</section>
 				<section className='container py-10 xl:py-20 px-4 xl:px-[114px] mx-auto'>
