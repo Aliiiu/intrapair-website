@@ -27,12 +27,12 @@ const flip = () => {
 				</section>
 				<section className='relative mt-[60px] md:mt-[80px] w-full'>
 					<div className='absolute w-full'>
-						<div className='relative w-full h-[250px] md:h-[400px] lg:h-[550px] xl:h-[750px]'>
+						<div className='relative w-full h-[250px] md:h-[400px] lg:h-[550px] xl:h-[750px] 2xl:h-[1050px]'>
 							<Image src={'/images/flipMockup.png'} alt='' fill />
 						</div>
 					</div>
 				</section>
-				<section className='bg-[#0E0037] mt-[250px] md:mt-[400px] lg:mt-[550px] xl:mt-[600px]'>
+				<section className='bg-[#0E0037] mt-[250px] md:mt-[400px] lg:mt-[550px] xl:mt-[600px] 2xl:mt-[800px]'>
 					<div className='container py-16 xl:pb-32 xl:pt-[300px] px-4 xl:px-[114px] mx-auto'>
 						<Overview />
 					</div>

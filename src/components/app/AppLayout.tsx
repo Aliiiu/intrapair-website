@@ -15,7 +15,7 @@ export const AppLayout = ({ children }: Props) => {
 
 	return (
 		<div className=''>
-			<div className='fixed z-10 w-full top-0 bg-white'>
+			<div className='fixed z-20 w-full top-0'>
 				<AppHeader isOpen={dropDownMenuIsOpen} toggleSidebar={toggleSidebar} />
 				<AppDropdownMenu isOpen={dropDownMenuIsOpen} />
 			</div>

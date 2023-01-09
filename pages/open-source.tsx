@@ -16,9 +16,9 @@ export default function OpenSource() {
 			<AppLayout>
 				<div className=' w-full relative'>
 					<section className='container mx-auto py-14 px-4 md:px-[100px] lg:px-[214px] xl:px-[114px]'>
-						<div className='h-[170px] md:h-[250px] flex flex-col justify-center relative xl:mx-[164px] 2xl:mx-[300px]'>
+						<div className='h-[170px] md:h-[250px] 2xl:h-[300px] flex flex-col justify-center relative xl:mx-[164px] 2xl:mx-[200px]'>
 							<Image
-								src={'/images/heroBanner.png'}
+								src={'/images/heroFOT.png'}
 								alt=''
 								fill
 								className='hidden md:block'

@@ -15,9 +15,9 @@ export default function ContactUs() {
 			<AppLayout>
 				<div className=' w-full relative'>
 					<section className='container mx-auto py-10 px-4 xl:px-[114px]'>
-						<div className='h-[300px] flex flex-col justify-center relative xl:mx-[134px] 2xl:mx-[260px]'>
+						<div className='h-[300px] flex flex-col justify-center relative xl:mx-[84px] 2xl:mx-[160px]'>
 							<Image
-								src={'/images/heroBanner.png'}
+								src={'/images/heroFOT.png'}
 								alt=''
 								fill
 								className='hidden md:block'

@@ -14,12 +14,12 @@ const caseStudy = () => {
 			</Head>
 
 			<AppLayout>
-				<section className='container pt-10 md:pt-0 mx-auto py-10 px-4 xl:px-[114px]'>
+				<section className='container pt-10 md:pt-0 mx-auto py-10 px-4 xl:px-[114px] 2xl:pl-[150px] 2xl:pr-[50px]'>
 					{/* <HeroSection
 						imgMb='/images/blogMb.png'
 						header='With the Right Technology, Building is Easier!'
 					/> */}
-					<div className='h-[200px] md:h-[250px] lg:h-[350px] flex flex-col justify-center relative mx-[20px] xl:mx-[64px] 2xl:mx-[190px]'>
+					<div className='h-[200px] md:h-[250px] lg:h-[350px] 2xl:h-[400px] flex flex-col justify-center relative mx-[20px] xl:mx-[64px] 2xl:mx-[90px]'>
 						<Image
 							src={'/images/heroBanner.png'}
 							alt=''
@@ -36,7 +36,7 @@ const caseStudy = () => {
 							<h1
 								className={`text-5xl xl:text-6xl max-w-[900px] mx-auto text-center mb-10 xl:leading-[70px] font-extrabold font-milli font-outline-2 text-white mt-[180px] md:mt-[80px]`}
 							>
-								With the Right Technology, Building is Easier
+								With the Right Technology, Building is Easier!
 							</h1>
 						</div>
 					</div>

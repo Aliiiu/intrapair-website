@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { FC } from 'react';
 
 const CaseStudy: FC<{ showTitle: boolean }> = ({ showTitle }) => {
@@ -18,7 +19,10 @@ const CaseStudy: FC<{ showTitle: boolean }> = ({ showTitle }) => {
 				)}
 				<div className='flex'>
 					<div className='flex md:flex-row flex-col justify-between gap-5 xl:gap-10 w-full'>
-						<div className='flex flex-1 flex-col gap-5  mlg:mb-0 mb-[60px]'>
+						<Link
+							href={'/stitchvine'}
+							className='flex flex-1 flex-col gap-5  mlg:mb-0 mb-[60px]'
+						>
 							<div className='h-[303px] xs:h-[430px] md:h-[480px] 2xl:h-[580px] relative'>
 								<Image src={'/images/case1.png'} alt='' fill />
 							</div>
@@ -36,8 +40,8 @@ const CaseStudy: FC<{ showTitle: boolean }> = ({ showTitle }) => {
 									Branding & Identity, Websites & Digital Platforms
 								</p>
 							</div>
-						</div>
-						<div className='flex flex-1 flex-col gap-5'>
+						</Link>
+						<Link href={'/anyworks'} className='flex flex-1 flex-col gap-5'>
 							<div className='h-[303px] xs:h-[430px] md:h-[480px] 2xl:h-[580px] relative'>
 								<Image src={'/images/case2.png'} alt='' fill />
 							</div>
@@ -55,7 +59,7 @@ const CaseStudy: FC<{ showTitle: boolean }> = ({ showTitle }) => {
 									Branding & Identity, Websites & Digital Platforms
 								</p>
 							</div>
-						</div>
+						</Link>
 					</div>
 				</div>
 			</div>

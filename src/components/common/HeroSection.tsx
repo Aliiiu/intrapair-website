@@ -8,7 +8,7 @@ const HeroSection: FC<{
 	header: string;
 }> = ({ showTitle, title, header, imgSrc }) => {
 	return (
-		<div className='h-[250px] lg:h-[350px] flex flex-col justify-center relative xl:mx-[64px] 2xl:mx-[190px]'>
+		<div className='h-[250px] lg:h-[350px] xl:h-[400px] 2xl:h-[420px] flex flex-col justify-center relative xl:mx-[114px] 2xl:mx-[0px]'>
 			<Image
 				src={imgSrc ? imgSrc : '/images/heroBanner.png'}
 				alt=''

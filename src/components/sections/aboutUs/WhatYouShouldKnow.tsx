@@ -4,6 +4,18 @@ import {
 } from 'react-icons/hi2';
 import React from 'react';
 import Image from 'next/image';
+import Carousel from 'react-elastic-carousel';
+
+const CarouselContent = () => (
+	<div className='flex-1 flex flex-col bg-orange-200 max-w-[700px] overflow-hidden md:flex-row gap-10'>
+		<div className='relative w-full sm:w-[400px] h-[400px] md:h-[500px] xl:h-[608px]'>
+			<Image src={'/images/aboutIntrapair.png'} alt='' fill />
+		</div>
+		<div className='hidden xl:block relative w-[200px] h-[608px]'>
+			<Image src={'/images/aboutIntrapair_2.png'} alt='' fill />
+		</div>
+	</div>
+);
 
 const WhatYouShouldKnow = () => {
 	return (
@@ -25,20 +37,13 @@ const WhatYouShouldKnow = () => {
 					</div>
 				</div>
 			</div>
-			<div className='flex-1 flex flex-col md:flex-row gap-10'>
+			<div className='flex-1 flex flex-col max-w-[700px] overflow-hidden md:flex-row gap-10'>
 				<div className='relative w-full sm:w-[400px] h-[400px] md:h-[500px] xl:h-[608px]'>
 					<Image src={'/images/aboutIntrapair.png'} alt='' fill />
 				</div>
-				<div className='hidden sm:relative w-[200px] h-[608px]'>
+				<div className='hidden xl:block relative w-[200px] h-[608px]'>
 					<Image src={'/images/aboutIntrapair_2.png'} alt='' fill />
 				</div>
-				{/* <Image
-					src={'/images/aboutIntrapair_2.png'}
-					alt=''
-					width={250}
-					height={608}
-					className='hidden xl:flex'
-				/> */}
 			</div>
 		</div>
 	);

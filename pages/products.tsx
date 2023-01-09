@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import { AppLayout } from '../src/components/app';
 import { SomethingGreat } from '../src/components/common';
@@ -15,7 +16,7 @@ const products = () => {
 			<AppLayout>
 				<div className=' w-full relative'>
 					<section className='container mx-auto py-10 px-4 md:px-[114px]'>
-						<div className='h-[150px] md:h-[150px] xl:h-[200px] flex flex-col justify-center md:justify-end relative mx-[20px] xl:mx-[164px] 2xl:mx-[260px]'>
+						<div className='h-[150px] md:h-[150px] xl:h-[200px] 2xl:h-[250px] flex flex-col justify-center md:justify-end relative mx-[20px] xl:mx-[164px] 2xl:mx-[200px]'>
 							<Image
 								src={'/images/heroBanner3.png'}
 								alt=''
@@ -40,7 +41,8 @@ const products = () => {
 					<section className='container py-10 xl:py-20 px-4 xl:px-[114px] mx-auto'>
 						<div className='flex'>
 							<div className='md:flex block flex-wrap  justify-between w-full items-center gap-[100px] m-auto'>
-								<div
+								<Link
+									href={'flip'}
 									className='flex flex-1 flex-col gap-5 mlg:mb-0 mb-[60px] w-[455px] max-w-[100%] h-[355px] xl:h-[455px] relative'
 									style={{
 										background:
@@ -57,7 +59,7 @@ const products = () => {
 											<Image src={'/home/flip.png'} fill alt='flip' />
 										</div>
 									</div>
-								</div>
+								</Link>
 								<div className='flex flex-1 flex-col gap-3 xl:gap-5'>
 									<p className='text-3xl xl:text-5xl font-bold text-black01'>
 										Flip
