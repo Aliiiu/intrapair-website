@@ -42,8 +42,11 @@ const flip = () => {
 				</section>
 				<section className='w-full h-[350px] md:h-[500px] xl:h-[750px]'>
 					<div className='flex h-full'>
-						<div className='flex-1 flex bg-[#0075FF] justify-center items-center'>
-							<div className='w-[150px] h-[40px] md:w-[200px] md:h-[48px] relative xl:w-[295px] xl:h-[80px]'>
+						<div className='flex-1 flex bg-[#0075FF] relative justify-center items-center'>
+							<h5 className='font-semibold absolute top-[2%] left-[10%] xl:left-[25%] 2xl:left-[30%] text-[8px] md:text-base text-white mt-[20px] md:mt-[50px] xl:mt-[100px]'>
+								Brandmark
+							</h5>
+							<div className='w-[150px] h-[30px] md:w-[200px] md:h-[48px] relative xl:w-[295px] xl:h-[80px]'>
 								<Image src={'/svgs/flipLogo.svg'} alt='' fill />
 							</div>
 						</div>

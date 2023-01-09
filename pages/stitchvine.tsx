@@ -34,14 +34,16 @@ const Stitchvine = () => {
 				</section>
 				<section className='w-full h-[200px] md:h-[500px] xl:h-[750px]'>
 					<div className='flex h-full'>
-						<div className='flex-1 flex bg-[#81249D] justify-center items-center'>
-							{/* <h5 className='absolute top-32 left-64 text-white'>Brandmark</h5> */}
-							<div className='w-[150px] h-[30px] md:w-[200px] md:h-[38px] relative xl:w-[295px] xl:h-[48px]'>
+						<div className='flex-1 flex bg-[#81249D] relative justify-center items-center'>
+							<h5 className='font-semibold absolute top-[2%] left-[10%] xl:left-[22%] 2xl:left-[30%] text-[8px] md:text-base text-white mt-[20px] md:mt-[50px] xl:mt-[100px]'>
+								Brandmark
+							</h5>
+							<div className='w-[100px] h-[30px] md:w-[200px] md:h-[38px] relative xl:w-[295px] xl:h-[68px]'>
 								<Image src={'/svgs/stitchvineLogo2.svg'} alt='' fill />
 							</div>
 						</div>
 						<div className='flex-1 flex bg-[#F8F2FF] justify-center items-center'>
-							<div className='w-[150px] h-[30px] md:w-[200px] md:h-[38px] relative xl:w-[295px] xl:h-[48px]'>
+							<div className='w-[100px] h-[30px] md:w-[200px] md:h-[38px] relative xl:w-[295px] xl:h-[68px]'>
 								<Image src={'/svgs/stitchvineLogo.svg'} alt='' fill />
 							</div>
 						</div>

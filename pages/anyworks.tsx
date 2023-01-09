@@ -42,13 +42,16 @@ const Anyworks = () => {
 				</section>
 				<section className='w-full h-[200px] md:h-[500px] xl:h-[750px]'>
 					<div className='flex h-full'>
-						<div className='flex-1 flex bg-[#7E00C4] justify-center items-center'>
-							<div className='w-[150px] h-[30px] md:w-[200px] md:h-[38px] relative xl:w-[295px] xl:h-[48px]'>
+						<div className='flex-1 flex bg-[#7E00C4] relative justify-center items-center'>
+							<h5 className='font-semibold absolute top-[2%] left-[10%] xl:left-[24%] 2xl:left-[30%] text-[8px] md:text-base text-white mt-[20px] md:mt-[50px] xl:mt-[100px]'>
+								Brandmark
+							</h5>
+							<div className='w-[150px] h-[30px] md:w-[200px] md:h-[38px] relative xl:w-[295px] xl:h-[68px] 2xl:h-[88px]'>
 								<Image src={'/svgs/anyworksLogo2.svg'} alt='' fill />
 							</div>
 						</div>
 						<div className='flex-1 flex bg-[#FAF1FF] justify-center items-center'>
-							<div className='w-[150px] h-[30px] md:w-[200px] md:h-[38px] relative xl:w-[295px] xl:h-[48px]'>
+							<div className='w-[150px] h-[30px] md:w-[200px] md:h-[38px] relative xl:w-[295px] xl:h-[68px] 2xl:h-[88px]'>
 								<Image src={'/svgs/anyworksLogo.svg'} alt='' fill />
 							</div>
 						</div>
