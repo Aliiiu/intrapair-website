@@ -70,14 +70,34 @@ const ProductEng = () => {
     <div className="container m-auto w-full px-4 xl:px-[114px]">
       <div className="flex flex-col gap-y-9 ">
         <div className="flex flex-col gap-3 ">
-          <div className="border-b-[0.5px] w-[fit-content]  xl:pb-5 pr-9  border-solid border-white hover:pr-1 ease-in-out hover:border-b-2 hover:origin-[100%_20%] duration-500 ">
+          <motion.div
+            className="border-b-[0.5px] w-[fit-content]  xl:pb-5 pr-9  border-solid border-white "
+            whileInView={{
+              borderBottom: '2px solid #fff',
+              paddingRight: 0,
+            }}
+            transition={{
+              duration: 0.5,
+              type: 'tween',
+              ease: 'easeInOut',
+            }}
+          >
             <h3 className="font-bold text-white text-[28px] xl:text-5xl">
               Home For Everything
             </h3>
             <h3 className="font-bold text-white text-[28px] xl:text-5xl">
               Product Engineering
             </h3>
-          </div>
+          </motion.div>
+
+          {/* TEST */}
+          {/* <motion.div
+            style={{ borderBottom: '1px solid black' }}
+            whileInView={{ borderWidth: 2 }}
+            transition={{ duration: 2, loop: Infinity }}
+          >
+            Animated Border
+          </motion.div> */}
 
           <div>
             <p className="text-white max-w-[450px] text-base">

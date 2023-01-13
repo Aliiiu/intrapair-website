@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Blog = () => {
   return (
@@ -10,11 +11,22 @@ const Blog = () => {
 						Our Blog
 					</h3>
 					<div className='bg-dark-blue w-[50%] h-[1px]'></div> */}
-          <div className="pb-3 xl:pb-5 xl:pr-9 border-b-[0.5px]  w-[fit-content] md:max-w-[270px] border-solid border-dark-blue hover:pr-0 hover:border-b-2 ease-in-out duration-300">
+          <motion.div
+            className="pb-3 xl:pb-5 xl:pr-9 border-b-[0.5px]  w-[fit-content] md:max-w-[270px] border-solid border-dark-blue "
+            whileInView={{
+              borderBottom: '2px solid #185EA1',
+              paddingRight: 0,
+            }}
+            transition={{
+              duration: 0.7,
+              type: 'tween',
+              ease: 'easeInOut',
+            }}
+          >
             <h3 className="font-bold text-dark-blue text-3xl xl:text-5xl ">
               Our Blog
             </h3>
-          </div>
+          </motion.div>
           <p className="text-black-01 max-w-[400px] text-base">
             Check out our unique stories from digital experience to enterprise
             solutions.
@@ -29,8 +41,14 @@ const Blog = () => {
                   '0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)',
               }}
             >
-              <div className="w-full">
-                <img src="/blog/blog1.png" alt="" />
+              {/* WORK ON SCALING THE IMAGE WHEN YOU HOVER ON THE PARENT */}
+              <div className="w-full overflow-hidden">
+                <motion.img
+                  src="/blog/blog1.png"
+                  alt=""
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.5, ease: 'easeInOut' }}
+                />
               </div>
               <div className="flex flex-col gap-6 p-5 flex-1 w-full justify-between">
                 <p className="black01 text-base w-full sm:w-[80%]">
@@ -54,8 +72,13 @@ const Blog = () => {
                   '0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)',
               }}
             >
-              <div className="w-full">
-                <img src="/blog/blog2.png" alt="" />
+              <div className="w-full overflow-hidden">
+                <motion.img
+                  src="/blog/blog2.png"
+                  alt=""
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.5, ease: 'easeInOut' }}
+                />
               </div>
               <div className="flex flex-col gap-6 p-5 flex-1 w-full justify-between">
                 <p className="black01 text-base w-full sm:w-[80%]">
@@ -79,8 +102,13 @@ const Blog = () => {
                   '0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)',
               }}
             >
-              <div className="w-full">
-                <img src="/blog/blog3.png" alt="" />
+              <div className="w-full overflow-hidden">
+                <motion.img
+                  src="/blog/blog3.png"
+                  alt=""
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.5, ease: 'easeInOut' }}
+                />
               </div>
               <div className="flex flex-col gap-6 p-5 flex-1 w-full justify-between">
                 <p className="black01 text-base w-full sm:w-[80%]">
@@ -124,8 +152,8 @@ const Blog = () => {
 						</div> */}
           </div>
         </div>
-        {/* NO ANIMATION ADDED IN THE PROTOTYPE */}
-        <button className="rounded-[41px]  text-sm w-[212px] bg-dark-blue text-white py-[15px] m-auto">
+        {/* NO ANIMATION ADDED IN THE PROTOTYPE BUT I ADDED AN HOVER ANIMATION */}
+        <button className="rounded-[41px]  text-sm w-[212px] bg-dark-blue text-white py-[15px] m-auto hover:bg-white hover:text-dark-blue border-dark-blue border duration-300 ease-in-out">
           Read A Story
         </button>
       </div>

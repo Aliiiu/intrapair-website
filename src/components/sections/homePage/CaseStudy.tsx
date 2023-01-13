@@ -9,9 +9,20 @@ const CaseStudy: FC<{ showTitle: boolean }> = ({ showTitle }) => {
       <div className="flex flex-col gap-y-9">
         {showTitle && (
           <div className="flex flex-col gap-3 w-[fit-content] max-w-[100%]">
-            <h3 className="font-bold text-dark-blue text-3xl xl:text-5xl border-b-[0.5px] w-[fit-content] pb-2 xl:pb-5 pr-4 xl:pr-9  border-solid border-dark-blue hover:pr-0 hover:border-b-2 ease-in-out duration-300">
+            <motion.h3
+              className="font-bold text-dark-blue text-3xl xl:text-5xl border-b-[0.5px] w-[fit-content] pb-2 xl:pb-5 pr-4 xl:pr-9  border-solid border-dark-blue "
+              whileInView={{
+                borderBottom: '2px solid',
+                paddingRight: 0,
+              }}
+              transition={{
+                duration: 0.5,
+                type: 'tween',
+                ease: 'easeInOut',
+              }}
+            >
               Case Studies
-            </h3>
+            </motion.h3>
             {/* <div className="bg-dark-blue w-[90%] h-[1px]"></div> */}
             <p className="text-black-01 text-base">
               Here are some of the projects we&apos;ve built for our clients.
