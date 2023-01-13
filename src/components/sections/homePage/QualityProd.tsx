@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const QualityProd = () => {
   return (
@@ -7,14 +8,25 @@ const QualityProd = () => {
       <div className="mb-[70px] m-auto">
         <div className="flex">
           <div className="flex flex-col gap-3 w-[700px] max-w-[100%]">
-            <div className="pb-5 pr-[11.8rem] border-b-2  border-solid border-white w-[fit-content] hover:pr-0 hover:border-b-2 ease-in-out duration-300">
+            <motion.div
+              className="pb-5 pr-[11.8rem] border-b-2  border-solid border-white w-[fit-content] "
+              whileInView={{
+                borderBottom: '2px solid #fff',
+                paddingRight: 0,
+              }}
+              transition={{
+                duration: 0.7,
+                type: 'tween',
+                ease: 'easeInOut',
+              }}
+            >
               <h3 className="font-bold text-white text-3xl xl:text-5xl">
                 Quality Product Keeps
               </h3>
               <h3 className="font-bold text-white text-3xl xl:text-5xl">
                 You In Business
               </h3>
-            </div>
+            </motion.div>
             {/* <div className="bg-white w-full h-[1px]"></div> */}
 
             <p className="text-white text-base leading-6">

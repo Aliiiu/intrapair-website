@@ -83,5 +83,6 @@ img {
 
 .testimony-container:hover .testimony-overlay {
   opacity: 1 !important;
-  background: #b2daff54 !important;
+  /* Getting the color for the testimony overlay */
+  background: rgba(31, 176, 255, 0.15) !important;
 }
