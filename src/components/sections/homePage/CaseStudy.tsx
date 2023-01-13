@@ -1,6 +1,8 @@
+import gsap from 'gsap';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { FC } from 'react';
+import React, { FC, useLayoutEffect, useRef } from 'react';
+import Cursor from '../../UI/widget/customCursor/Cursor';
 
 const CaseStudy: FC<{ showTitle: boolean }> = ({ showTitle }) => {
 	return (
@@ -17,15 +19,20 @@ const CaseStudy: FC<{ showTitle: boolean }> = ({ showTitle }) => {
 						</p>
 					</div>
 				)}
+				{/* <Cursor> */}
 				<div className='flex'>
 					<div className='flex md:flex-row flex-col justify-between gap-5 xl:gap-10 w-full'>
-						<Link
-							href={'/stitchvine'}
-							className='flex flex-1 flex-col gap-5  mlg:mb-0 mb-[60px]'
-						>
-							<div className='h-[303px] xs:h-[430px] md:h-[480px] 2xl:h-[580px] relative'>
-								<Image src={'/images/case1.png'} alt='' fill />
-							</div>
+						<div className='flex flex-1 flex-col gap-5 mlg:mb-0 mb-[60px]'>
+							<Link
+								href={'/stitchvine'}
+								className='h-[303px] overflow-hidden cursor-none xs:h-[430px] md:h-[480px] 2xl:h-[580px]'
+							>
+								<Cursor>
+									<div className='h-[303px] hover:scale-110 transition ease-in-out duration-500 xs:h-[430px] md:h-[480px] 2xl:h-[580px] relative'>
+										<Image src={'/images/case1.png'} alt='' fill />
+									</div>
+								</Cursor>
+							</Link>
 							<div className='flex flex-col gap-1'>
 								<div className='flex items-center gap-3'>
 									<p className='text-black01 font-semibold text-sm	sm:text-xl	'>
@@ -40,11 +47,18 @@ const CaseStudy: FC<{ showTitle: boolean }> = ({ showTitle }) => {
 									Branding & Identity, Websites & Digital Platforms
 								</p>
 							</div>
-						</Link>
-						<Link href={'/anyworks'} className='flex flex-1 flex-col gap-5'>
-							<div className='h-[303px] xs:h-[430px] md:h-[480px] 2xl:h-[580px] relative'>
-								<Image src={'/images/case2.png'} alt='' fill />
-							</div>
+						</div>
+						<div className='flex flex-1 flex-col gap-5'>
+							<Link
+								href={'/anyworks'}
+								className='h-[303px] overflow-hidden cursor-none xs:h-[430px] md:h-[480px] 2xl:h-[580px]'
+							>
+								<Cursor>
+									<div className='h-[303px] hover:scale-110 transition ease-in-out duration-500 xs:h-[430px] md:h-[480px] 2xl:h-[580px] relative'>
+										<Image src={'/images/case2.png'} alt='' fill />
+									</div>
+								</Cursor>
+							</Link>
 							<div className='flex flex-col gap-1'>
 								<div className='flex items-center gap-3'>
 									<p className='text-black01 font-semibold text-sm	sm:text-xl	'>
@@ -59,9 +73,10 @@ const CaseStudy: FC<{ showTitle: boolean }> = ({ showTitle }) => {
 									Branding & Identity, Websites & Digital Platforms
 								</p>
 							</div>
-						</Link>
+						</div>
 					</div>
 				</div>
+				{/* </Cursor> */}
 			</div>
 		</div>
 	);

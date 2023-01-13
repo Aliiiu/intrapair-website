@@ -2,7 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import clsx from 'clsx';
 import Image from 'next/image';
-import { Flex } from '../common';
+import { Flex, HamburgerMenu } from '../common';
+import { Transition } from '@headlessui/react';
 
 const DROPDOWN_MENU_DATA = [
 	{
@@ -33,12 +34,13 @@ const DROPDOWN_MENU_DATA = [
 
 interface Props {
 	isOpen: boolean;
+	setOpen: Function;
 }
 
-export const AppDropdownMenu = ({ isOpen }: Props) => {
+export const AppDropdownMenu = ({ isOpen, setOpen }: Props) => {
 	const mapSidebarNav = (nav: { url: string; text: string }) => {
 		return (
-			<li key={nav.text}>
+			<li onClick={() => setOpen(!isOpen)} key={nav.text}>
 				<Link
 					className='text-white font-semibold text-2xl md:text-4xl xl:text-5xl hover:underline'
 					href={nav.url}
@@ -51,11 +53,59 @@ export const AppDropdownMenu = ({ isOpen }: Props) => {
 
 	return (
 		<div
-			className='bg-dark-blue  '
-			style={{ display: isOpen ? 'block' : 'none' }}
+			className='bg-dark-blue'
+			// style={{ display: isOpen ? 'block' : 'none' }}
 		>
-			<div className='container m-auto '>
-				<nav className='dropdown-menu h-[93vh] relative'>
+			<div className='container mx-auto'>
+				<div
+					className={'bg-dark-blue'}
+					// style={{
+					// 	backdropFilter: colorChange ? 'rgb(0 0 0 / 10%) 0px 1px 2px' : '',
+					// }}
+				>
+					<div className='2xl:h-[114px] h-[80px] container mx-auto flex w-full px-4 xl:px-[114px]'>
+						<div className={clsx('w-full flex', { open })}>
+							<Flex
+								gap='10px'
+								justify='space-between'
+								align='center'
+								width='100%'
+							>
+								<Link href='/'>
+									{/* {isOpen ? (
+										<Image
+											alt='intrapair'
+											src='/images/logo-white.png'
+											width={130}
+											height={73}
+										/>
+									) : (
+										<Image
+											alt='intrapair-new'
+											src='/images/logo-dark.png'
+											width={130}
+											height={73}
+										/>
+									)} */}
+									<Image
+										alt='intrapair'
+										src='/images/logo-white.png'
+										width={130}
+										height={73}
+									/>
+								</Link>
+								<HamburgerMenu
+									isOpen={isOpen}
+									onClick={() => {
+										// console.log(!open);
+										setOpen(!isOpen);
+									}}
+								/>
+							</Flex>
+						</div>
+					</div>
+				</div>
+				<nav className='dropdown-menu h-[calc(100vh-80px)] 2xl:h-[calc(100vh-114px)] relative'>
 					<div className='absolute sm:bottom-[64px] bottom-[66px] left-[45px]'>
 						<div className='flex md:flex-col justify-between gap-6 items-center'>
 							<Link href='#' className='text-white  hover:underline'>
@@ -106,6 +156,7 @@ export const AppDropdownMenu = ({ isOpen }: Props) => {
 									hello@intrapair.com
 								</Link>
 								<Link
+									onClick={() => setOpen(isOpen)}
 									href='/contact-us'
 									className='text-white underline text-base md:text-2xl'
 								>

@@ -27,7 +27,7 @@ const QualityProd = () => {
 			</div>
 			<div className='flex'>
 				<div className='overflow-x-scroll scrollbar-hide py-8 flex  gap-[46px] justify-between w-full'>
-					<div className='relative flex flex-col border-2  border-solid border-dark-blue p-[20px] xl:p-[60px] gap-[74px] min-w-[326px] w-[526px]'>
+					<div className='relative flex flex-col border-2  border-solid border-dark-blue p-[20px] xl:p-[40px] 2xl:p-[60px] gap-[54px] 2xl:gap-[74px] min-w-[326px] w-[526px]'>
 						<div className='absolute top-[-13px] left-[32px]'>
 							<Image
 								src={'/home/testimony-tag.svg'}
@@ -36,7 +36,7 @@ const QualityProd = () => {
 								alt='tag'
 							/>
 						</div>
-						<p className='text-white text-xl'>
+						<p className='text-white 2xl:text-xl'>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere
 							a, mi vel sollicitudin velit varius dictum. Arcu suspendisse
 							blandit non porta adipiscing rutrum.
@@ -48,7 +48,7 @@ const QualityProd = () => {
 							<p className='text-white text-base '>CEO, Intrapair</p>
 						</div>
 					</div>
-					<div className='relative flex flex-col border-2  border-solid border-dark-blue p-[20px] xl:p-[60px] gap-[74px] min-w-[326px] w-[526px]'>
+					<div className='relative flex flex-col border-2  border-solid border-dark-blue p-[20px] xl:p-[40px] 2xl:p-[60px] gap-[54px] 2xl:gap-[74px] min-w-[326px] w-[526px]'>
 						<div className='absolute top-[-13px] left-[32px]'>
 							<Image
 								src={'/home/testimony-tag.svg'}
@@ -57,7 +57,7 @@ const QualityProd = () => {
 								alt='tag'
 							/>
 						</div>
-						<p className='text-white text-xl'>
+						<p className='text-white 2xl:text-xl'>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere
 							a, mi vel sollicitudin velit varius dictum. Arcu suspendisse
 							blandit non porta adipiscing rutrum.
@@ -69,7 +69,7 @@ const QualityProd = () => {
 							<p className='text-white text-base '>CEO, Intrapair</p>
 						</div>
 					</div>
-					<div className='relative flex flex-col border-2  border-solid border-dark-blue p-[20px] xl:p-[60px] gap-[74px] min-w-[326px] w-[526px]'>
+					<div className='relative flex flex-col border-2  border-solid border-dark-blue p-[20px] xl:p-[40px] 2xl:p-[60px] gap-[54px] 2xl:gap-[74px] min-w-[326px] w-[526px]'>
 						<div className='absolute top-[-13px] left-[32px]'>
 							<Image
 								src={'/home/testimony-tag.svg'}
@@ -78,7 +78,7 @@ const QualityProd = () => {
 								alt='tag'
 							/>
 						</div>
-						<p className='text-white text-xl'>
+						<p className='text-white 2xl:text-xl'>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere
 							a, mi vel sollicitudin velit varius dictum. Arcu suspendisse
 							blandit non porta adipiscing rutrum.

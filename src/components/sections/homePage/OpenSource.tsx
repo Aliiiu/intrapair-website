@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import Button from '../../UI/widget/button/Button';
 
 const OpenSource = () => {
 	return (
@@ -25,9 +26,13 @@ const OpenSource = () => {
 									performance of digital products
 								</p>
 							</div>
-							<button className='rounded-[41px]  text-sm w-[206px] bg-white text-blue02 py-[15px] '>
+							{/* <button className='rounded-[41px]  text-sm w-[206px] bg-white text-blue02 py-[15px] '>
 								Leave A Footprint
-							</button>
+							</button> */}
+							<Button
+								text='Leave A Footprint'
+								style='bg-white text-blue02 hover:bg-transparent hover:border hover:text-white'
+							/>
 						</div>
 						<div className='flex flex-1 '>
 							<Image

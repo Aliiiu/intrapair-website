@@ -7,7 +7,7 @@ import { Flex } from '../common';
 export const Footer = () => {
 	return (
 		<div className='bg-blue02'>
-			<div className='container m-auto py-[81px] lg:py-[140px] px-4 xl:px-[114px]'>
+			<div className='container m-auto py-[81px] lg:py-[100px] 2xl:py-[140px] px-4 xl:px-[114px]'>
 				<Flex justify='space-between' wrap='wrap' gap='3rem'>
 					<Flex direction='column' justify='space-between'>
 						<Image

@@ -22,13 +22,13 @@ export default function Home() {
 			</Head>
 
 			<AppLayout>
-				<div className=' w-full relative'>
+				<div className='w-full'>
 					<Hero />
-					<section className='bg-blue01 py-20 xl:py-[189px]'>
+					<section className='bg-blue01 py-20 xl:py-[139px]'>
 						<ProductEng />
 					</section>
 
-					<section className='py-20 xl:py-[189px]'>
+					<section className='py-20 xl:py-[129px]'>
 						<CaseStudy showTitle />
 					</section>
 
@@ -36,11 +36,11 @@ export default function Home() {
 						<Product />
 					</section>
 
-					<section className='bg-blue02 py-20 xl:py-[189px]'>
+					<section className='bg-blue02 py-20 xl:py-[149px]'>
 						<OpenSource />
 					</section>
 
-					<section className=' py-20 xl:py-[189px]'>
+					<section className=' py-20 xl:py-[139px]'>
 						<Blog />
 					</section>
 

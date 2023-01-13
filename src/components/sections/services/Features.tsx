@@ -1,3 +1,4 @@
+import { height } from '@mui/system';
 import Image from 'next/image';
 import React from 'react';
 
@@ -33,6 +34,7 @@ const serviceRendered = [
 							traffic-driven, and scalable across all platforms and devices
 							configuration.`,
 		img: `/images/prodDev.png`,
+		height: 'xl:h-450px',
 		subList: [
 			'Digital Branding & Strategy',
 			'Product Design  & Prototyping',
@@ -49,6 +51,7 @@ const serviceRendered = [
 		feature: 'DevOps and Platform Engineering',
 		content: `We are versatile with digital solutions that can automate the sequential processes of several organizations’ products, saving time, minimizing cost, and limiting human resources.`,
 		img: `/images/devOps.png`,
+		height: 'xl:h-502px',
 		subList: [
 			'CI/CD Pipeline',
 			'Site Reliability Engineering',
@@ -61,6 +64,7 @@ const serviceRendered = [
 		feature: 'Data Engineering and Analytics',
 		content: `Data resources are fundamental to every organization. We are conversant with the technology required to develop a robust infrastructure to accommodate heavy bytes of data that provide useful insights into the growth of businesses.`,
 		img: `/images/dataEng.png`,
+		height: 'xl:h-390px',
 		subList: ['Data Infrastructure', 'Data Warehouse'],
 		subList2: ['Data Pipeline', 'Data Consulting'],
 	},
@@ -70,6 +74,7 @@ const serviceRendered = [
 		content: `We transform legacy applications into elegant software products to enhance and accelerate business functions.
 `,
 		img: `/images/appDev.png`,
+		height: 'xl:h-475px',
 		subList: [
 			'UX Writing',
 			'Mobile App Development',
@@ -89,7 +94,7 @@ const Features = () => {
 						item.id % 2 == 0 ? 'md:flex-row-reverse' : 'md:flex-row'
 					} gap-12 xl:gap-24`}
 				>
-					<div className='md:flex-1 w-full h-[300px] xl:h-[500px] relative'>
+					<div className={`md:flex-1 w-full h-[300px] xl:h-[420px] relative`}>
 						<Image src={item.img} alt='' fill />
 					</div>
 					<div className='flex md:flex-1 flex-col justify-center'>

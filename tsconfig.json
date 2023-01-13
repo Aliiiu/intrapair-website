@@ -19,7 +19,8 @@
 		"next-env.d.ts",
 		"**/*.ts",
 		"**/*.tsx",
-		"src/components/UI/widget/Accordion/accordion.style.js"
+		"src/components/UI/widget/Accordion/accordion.style.js",
+		"src/components/sections/aboutUs/WhatYouShouldKnow.tsx"
 	],
 	"exclude": ["node_modules"]
 }

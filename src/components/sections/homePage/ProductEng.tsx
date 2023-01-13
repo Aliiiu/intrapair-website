@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import Accordion from '../../UI/widget/Accordion/Accordion';
+import Button from '../../UI/widget/button/Button';
 
 interface ArrayType {
 	title: string;
@@ -82,7 +83,7 @@ const ProductEng = () => {
 					))}
 				</div>
 				<div
-					className='md:flex hidden gap-[100px]'
+					className='md:flex xl:mt-[60px] hidden gap-[100px]'
 					style={{
 						gridTemplateColumns: 'max-content 1fr',
 					}}
@@ -102,38 +103,15 @@ const ProductEng = () => {
 									{item.title}
 								</p>
 							))}
-							{/* <p className='text-white font-bold text-4xl'>
-								Product Development
-							</p>
-							<div>
-								<p
-									className='font-bold text-4xl'
-									style={{ color: 'rgba(0, 0, 0, 0.25)' }}
-								>
-									DevOps and Platform Engineering
-								</p>
-							</div>
-							<div>
-								<p
-									className='font-bold text-4xl'
-									style={{ color: 'rgba(0, 0, 0, 0.25)' }}
-								>
-									Data Engineering and Analytics
-								</p>
-							</div>
-							<div>
-								<p
-									className='font-bold text-4xl'
-									style={{ color: 'rgba(0, 0, 0, 0.25)' }}
-								>
-									Application Modernization
-								</p>
-							</div> */}
 						</div>
 
-						<button className='rounded-[41px]  text-base w-[201px] border-2  border-solid text-white py-[15px]'>
+						{/* <button className='rounded-[41px]  text-base w-[201px] border-2  border-solid text-white py-[15px]'>
 							Learn More
-						</button>
+						</button> */}
+						<Button
+							text='Learn More'
+							style='border-2 border-white hover:bg-white hover:text-blue-400'
+						/>
 					</div>
 					<div className='flex flex-col flex-1 gap-3 items-center'>
 						<Image
