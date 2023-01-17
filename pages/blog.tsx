@@ -1,11 +1,23 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import { AppLayout } from '../src/components/app';
 
 export default function Blog() {
+	const [blogs, setBlogs] = useState<any>([]);
+
+	useEffect(() => {
+		const fetchBlog = async () => {
+			const response = await fetch(
+				'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/stitchvine'
+			);
+			const data = await response.json();
+			setBlogs(data);
+		};
+		fetchBlog();
+	}, []);
 	return (
 		<div>
 			<Head>
@@ -47,166 +59,110 @@ export default function Blog() {
 							</div>
 						</div>
 					</section>
-					<section className='mt-[160px] pb-[189px]'>
+					<section className='mt-[260px] md:mt-[160px] pb-[189px]'>
 						<div className='container px-4 xl:px-[114px] mx-auto'>
 							<div className='flex flex-col gap-[70px]'>
-								<div className='flex'>
-									<div className='xl:flex-nowrap flex-wrap flex  gap-[36px] justify-between w-full'>
-										<div
-											className='flex flex-col gap-1 md:max-w-[400px]  items-center'
-											style={{
-												boxShadow:
-													'0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)',
-											}}
-										>
-											<div className='w-full'>
-												<img src='/blog/blog1.png' alt='' />
+								<div className='md:flex mx-auto hidden'>
+									{
+										// Check if blog is sucessfully fetched from medium json
+										blogs.status === 'ok' ? (
+											<div className='flex-wrap flex  gap-[36px] justify-between w-full'>
+												{blogs.items
+													.slice(0, 6)
+													.map((item: any, id: number) => {
+														return (
+															<div
+																key={id}
+																className='flex flex-col gap-1 sm:max-w-[300px] xl:max-w-[400px] mx-auto items-center'
+																style={{
+																	boxShadow:
+																		'0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)',
+																}}
+															>
+																<a
+																	href={item.link}
+																	target='_blank'
+																	rel='nooponer noreferrer'
+																>
+																	<div className='w-full'>
+																		<img src={item.thumbnail} alt='' />
+																	</div>
+																</a>
+																<div className='flex flex-col gap-6 p-5 flex-1 w-full justify-between'>
+																	<p className='black01 text-base w-full sm:w-[80%]'>
+																		{item.title}
+																	</p>
+																	<div className='flex justify-between'>
+																		<p className='text-xs text-dark-blue'>
+																			{item.pubDate.split(' ')[0]}
+																		</p>
+																		<Image
+																			src={'/common/arrow-right.svg'}
+																			width={12}
+																			height={12}
+																			alt='>'
+																		/>
+																	</div>
+																</div>
+															</div>
+														);
+													})}
 											</div>
-											<div className='flex flex-col gap-6 p-5 flex-1 w-full justify-between'>
-												<p className='black01 text-base w-full sm:w-[80%]'>
-													Lorem ipsum , consectetur adipiscing elit.
-												</p>
-												<div className='flex justify-between'>
-													<p className='text-xs text-dark-blue'>31 Aug, 2022</p>
-													<Image
-														src={'/common/arrow-right.svg'}
-														width={12}
-														height={12}
-														alt='>'
-													/>
-												</div>
-											</div>
-										</div>
-										<div
-											className='flex flex-col gap-1  md:max-w-[400px]  items-center'
-											style={{
-												boxShadow:
-													'0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)',
-											}}
-										>
-											<div className='w-full'>
-												<img src='/blog/blog2.png' alt='' />
-											</div>
-											<div className='flex flex-col gap-6 p-5 flex-1 w-full justify-between'>
-												<p className='black01 text-base w-full sm:w-[80%]'>
-													Lorem ipsum , consectetur adipiscing elit.
-												</p>
-												<div className='flex justify-between'>
-													<p className='text-xs text-dark-blue'>31 Aug, 2022</p>
-													<Image
-														src={'/common/arrow-right.svg'}
-														width={12}
-														height={12}
-														alt='>'
-													/>
-												</div>
-											</div>
-										</div>
-										<div
-											className='flex flex-col gap-1   md:max-w-[400px] items-center'
-											style={{
-												boxShadow:
-													'0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)',
-											}}
-										>
-											<div className='w-full'>
-												<img src='/blog/blog3.png' alt='' />
-											</div>
-											<div className='flex flex-col gap-6 p-5 flex-1 w-full justify-between'>
-												<p className='black01 text-base w-full sm:w-[80%]'>
-													Lorem ipsum , consectetur adipiscing elit.
-												</p>
-												<div className='flex justify-between'>
-													<p className='text-xs text-dark-blue'>31 Aug, 2022</p>
-													<Image
-														src={'/common/arrow-right.svg'}
-														width={12}
-														height={12}
-														alt='>'
-													/>
-												</div>
-											</div>
-										</div>
-									</div>
+										) : (
+											<p>Something went wrong...</p>
+										)
+									}
 								</div>
-								<div className='md:flex hidden'>
-									<div className='xl:flex-nowrap flex-wrap flex  gap-[36px] justify-between w-full'>
-										<div
-											className='flex flex-col gap-1 md:max-w-[400px]  items-center'
-											style={{
-												boxShadow:
-													'0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)',
-											}}
-										>
-											<div className='w-full'>
-												<img src='/blog/blog1.png' alt='' />
+								<div className='flex md:hidden'>
+									{
+										// Check if blog is sucessfully fetched from medium json
+										blogs.status === 'ok' ? (
+											<div className='flex-wrap flex  gap-[36px] justify-between w-full'>
+												{blogs.items
+													.slice(0, 3)
+													.map((item: any, id: number) => {
+														return (
+															<div
+																key={id}
+																className='flex flex-col gap-1 sm:max-w-[300px] xl:max-w-[400px] mx-auto items-center'
+																style={{
+																	boxShadow:
+																		'0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)',
+																}}
+															>
+																<a
+																	href={item.link}
+																	target='_blank'
+																	rel='nooponer noreferrer'
+																>
+																	<div className='w-full'>
+																		<img src={item.thumbnail} alt='' />
+																	</div>
+																</a>
+																<div className='flex flex-col gap-6 p-5 flex-1 w-full justify-between'>
+																	<p className='black01 text-base w-full sm:w-[80%]'>
+																		{item.title}
+																	</p>
+																	<div className='flex justify-between'>
+																		<p className='text-xs text-dark-blue'>
+																			{item.pubDate.split(' ')[0]}
+																		</p>
+																		<Image
+																			src={'/common/arrow-right.svg'}
+																			width={12}
+																			height={12}
+																			alt='>'
+																		/>
+																	</div>
+																</div>
+															</div>
+														);
+													})}
 											</div>
-											<div className='flex flex-col gap-6 p-5 flex-1 w-full justify-between'>
-												<p className='black01 text-base w-full sm:w-[80%]'>
-													Lorem ipsum , consectetur adipiscing elit.
-												</p>
-												<div className='flex justify-between'>
-													<p className='text-xs text-dark-blue'>31 Aug, 2022</p>
-													<Image
-														src={'/common/arrow-right.svg'}
-														width={12}
-														height={12}
-														alt='>'
-													/>
-												</div>
-											</div>
-										</div>
-										<div
-											className='flex flex-col gap-1  md:max-w-[400px]  items-center'
-											style={{
-												boxShadow:
-													'0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)',
-											}}
-										>
-											<div className='w-full'>
-												<img src='/blog/blog2.png' alt='' />
-											</div>
-											<div className='flex flex-col gap-6 p-5 flex-1 w-full justify-between'>
-												<p className='black01 text-base w-full sm:w-[80%]'>
-													Lorem ipsum , consectetur adipiscing elit.
-												</p>
-												<div className='flex justify-between'>
-													<p className='text-xs text-dark-blue'>31 Aug, 2022</p>
-													<Image
-														src={'/common/arrow-right.svg'}
-														width={12}
-														height={12}
-														alt='>'
-													/>
-												</div>
-											</div>
-										</div>
-										<div
-											className='flex flex-col gap-1   md:max-w-[400px] items-center'
-											style={{
-												boxShadow:
-													'0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)',
-											}}
-										>
-											<div className='w-full'>
-												<img src='/blog/blog3.png' alt='' />
-											</div>
-											<div className='flex flex-col gap-6 p-5 flex-1 w-full justify-between'>
-												<p className='black01 text-base w-full sm:w-[80%]'>
-													Lorem ipsum , consectetur adipiscing elit.
-												</p>
-												<div className='flex justify-between'>
-													<p className='text-xs text-dark-blue'>31 Aug, 2022</p>
-													<Image
-														src={'/common/arrow-right.svg'}
-														width={12}
-														height={12}
-														alt='>'
-													/>
-												</div>
-											</div>
-										</div>
-									</div>
+										) : (
+											<p>Something went wrong...</p>
+										)
+									}
 								</div>
 							</div>
 						</div>

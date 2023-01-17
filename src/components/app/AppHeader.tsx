@@ -31,7 +31,7 @@ export const AppHeader = ({ isOpen, toggleSidebar }: Props) => {
 	return (
 		<header>
 			<Transition show={open}>
-				{/* <Transition.Child
+				<Transition.Child
 					enter='transition ease-in-out duration-500 transform'
 					enterFrom='-translate-x-full'
 					enterTo='translate-x-0'
@@ -40,9 +40,9 @@ export const AppHeader = ({ isOpen, toggleSidebar }: Props) => {
 					leaveTo='-translate-x-full'
 				>
 					<div className='top-0 left-0 right-0 bg-red-600 bottom-0 fixed Overlay h-[100vh] overflow-y-scroll'></div>
-				</Transition.Child> */}
+				</Transition.Child>
 				<Transition.Child
-					enter='transition ease-in-out duration-500 delay transform'
+					enter='transition ease-in-out duration-500 delay-200 transform'
 					enterFrom='-translate-x-full'
 					enterTo='translate-x-0'
 					leave='transition ease-in-out duration-500 transform'
