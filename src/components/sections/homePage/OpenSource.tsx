@@ -41,14 +41,18 @@ const OpenSource = () => {
                 Leave A Footprint
               </button>
             </div>
-            <div className="flex flex-1 ">
+            <motion.div
+              className="flex flex-1 opacity-20"
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.3, type: 'tween', ease: 'easeInOut' }}
+            >
               <Image
-                src={'/home/open-art.png'}
+                src={'/home/open-source.png'}
                 width={447}
                 height={447}
                 alt="sprial"
               />
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

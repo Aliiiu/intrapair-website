@@ -33,7 +33,7 @@ export const SomethingGreat = ({ bgColor }: Props) => {
                   className="relative w-[51px] xl:w-[41px] h-[31px] xl:h-[37px]"
                   whileInView={{ width: 80, height: 180 }}
                   transition={{
-                    duration: 1.0,
+                    duration: 0.5,
                     type: 'spring',
                     damping: 10,
                     ease: 'easeInOut',
