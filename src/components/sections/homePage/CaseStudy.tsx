@@ -23,6 +23,7 @@ const CaseStudy: FC<{ showTitle: boolean }> = ({ showTitle }) => {
             >
               Case Studies
             </motion.h3>
+
             {/* <div className="bg-dark-blue w-[90%] h-[1px]"></div> */}
             <p className="text-black-01 text-base">
               Here are some of the projects we&apos;ve built for our clients.

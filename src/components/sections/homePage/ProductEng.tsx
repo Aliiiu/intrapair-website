@@ -90,15 +90,6 @@ const ProductEng = () => {
             </h3>
           </motion.div>
 
-          {/* TEST */}
-          {/* <motion.div
-            style={{ borderBottom: '1px solid black' }}
-            whileInView={{ borderWidth: 2 }}
-            transition={{ duration: 2, loop: Infinity }}
-          >
-            Animated Border
-          </motion.div> */}
-
           <div>
             <p className="text-white max-w-[450px] text-base">
               We utilize our coding intelligence to deliver first-class products

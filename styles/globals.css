@@ -86,3 +86,7 @@ img {
   /* Getting the color for the testimony overlay */
   background: rgba(31, 176, 255, 0.15) !important;
 }
+
+.phone-img_wrapper {
+  background-image: url('../public/images/stitchVineBg.png');
+}
