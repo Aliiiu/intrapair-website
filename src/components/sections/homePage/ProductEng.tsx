@@ -72,7 +72,11 @@ const ProductEng = () => {
 			<div className='flex flex-col gap-y-9 '>
 				<div className='flex flex-col gap-3 '>
 					<motion.div
-						className='border-b-[0.5px] w-[fit-content]  xl:pb-5 pr-12  border-solid border-white '
+						className='border-b-[0.5px] w-[fit-content] pb-3 xl:pb-5 pr-12  border-solid border-white '
+						whileInView={{
+							borderBottom: '2px solid #fff',
+							paddingRight: 0,
+						}}
 						whileHover={{
 							borderBottom: '2px solid #fff',
 							paddingRight: 0,
@@ -115,7 +119,7 @@ const ProductEng = () => {
 								<p
 									key={item.key}
 									onClick={() => setIndex(item.key)}
-									className={`font-bold cursor-pointer text-4xl ${
+									className={`font-bold cursor-pointer text-3xl lg:text-4xl ${
 										item.key === index
 											? 'text-white'
 											: 'text-black text-opacity-25'

@@ -28,7 +28,7 @@ export default function Home() {
 						<ProductEng />
 					</section>
 
-					<section className='py-20 xl:py-[129px]'>
+					<section className='pt-20 xl:py-[129px]'>
 						<CaseStudy showTitle />
 					</section>
 

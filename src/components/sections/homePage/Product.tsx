@@ -16,7 +16,7 @@ const hoverVariant = {
 const Product = () => {
 	return (
 		<div className='container mx-auto px-4 xl:px-[114px]'>
-			<div className='flex flex-col gap-y-[60px] m-auto '>
+			<div className='flex flex-col gap-y-[60px] mx-auto '>
 				<div className='flex flex-col gap-3 w-[fit-content] max-w-[100%]'>
 					{/* <h3 className='font-bold text-dark-blue text-3xl xl:text-5xl border-b-[0.5px] w-[fit-content] pb-2 xl:pb-5 pr-4 xl:pr-9  border-solid border-dark-blue'>
 						Our Products
@@ -37,7 +37,7 @@ const Product = () => {
 							ease: 'easeInOut',
 						}}
 					>
-						<h3 className='font-bold text-dark-blue max-w-[320px] text-3xl xl:text-5xl'>
+						<h3 className='font-bold text-dark-blue md:max-w-[320px] text-3xl xl:text-5xl'>
 							Our Product
 						</h3>
 					</motion.div>
@@ -48,20 +48,20 @@ const Product = () => {
 					</p>
 				</div>
 				<div className='flex'>
-					<div className='md:flex block w-full items-center'>
-						<div className='overflow-hidden w-[60%]'>
+					<div className='flex flex-col gap-7 md:gap-0 md:flex-row w-full items-center'>
+						<div className='overflow-hidden w-full md:w-[60%]'>
 							<Link
 								href={'/stitchvine'}
-								className='h-[303px] cursor-none w-[720px] xs:h-[430px] md:h-[480px] 2xl:h-[580px]'
+								className='h-[373px] cursor-none w-[720px] sm:h-[383px] lg:h-[480px] 2xl:h-[580px]'
 							>
 								<Cursor style='bg-white text-blue-400'>
-									<div className='h-[303px] hover:scale-125 transition ease-in-out duration-500 xs:h-[430px] md:h-[480px] 2xl:h-[580px] relative'>
+									<div className='h-[373px] hover:scale-125 transition ease-in-out duration-500 sm:h-[383px] lg:h-[480px] 2xl:h-[580px] relative'>
 										<Image src={'/images/flipBig.png'} alt='' fill />
 									</div>
 								</Cursor>
 							</Link>
 						</div>
-						<div className='w-[40%] flex flex-col gap-3 pl-[80px] xl:gap-5'>
+						<div className='md:w-[40%] flex flex-col gap-3 md:pl-[20px] xl:pl-[80px] xl:gap-5'>
 							<p className='text-3xl xl:text-5xl font-bold text-black01'>
 								Flip
 							</p>

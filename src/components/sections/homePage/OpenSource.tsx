@@ -1,10 +1,13 @@
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from '../../UI/widget/button/Button';
 import { motion } from 'framer-motion';
 
 const OpenSource = () => {
 	const [animate, setAnimate] = useState(false);
+	useEffect(() => {
+		console.log(animate);
+	}, [animate]);
 	return (
 		<div className='container m-auto w-ful px-4 xl:px-[114px]'>
 			<div className='flex flex-col gap-y-9'>
@@ -13,7 +16,7 @@ const OpenSource = () => {
 						<div className='flex flex-col flex-1 gap-8'>
 							<div className='flex flex-col gap-3'>
 								<motion.div
-									className='pb-2 xl:pb-7 pr-[9rem] border-b-[0.5px] w-[fit-content]  border-solid border-white  mb-3'
+									className='pb-2 xl:pb-7 pr-[2rem] xl:pr-[9rem] border-b-[0.5px] w-[fit-content]  border-solid border-white mb-3'
 									whileHover={{
 										borderBottom: '2px solid #fff',
 										paddingRight: '9em',
@@ -30,7 +33,7 @@ const OpenSource = () => {
 										ease: 'easeInOut',
 									}}
 								>
-									<h3 className='font-bold text-white max-w-[320px] text-3xl xl:text-5xl'>
+									<h3 className='font-bold text-white xl:max-w-[320px] text-3xl xl:text-5xl'>
 										Open Source is Art
 									</h3>
 								</motion.div>
@@ -54,18 +57,12 @@ const OpenSource = () => {
 							/>
 						</div>
 						<div className='flex flex-1 '>
-							{/* <Image
-								src={'/home/open-art.png'}
-								width={447}
-								height={447}
-								alt='sprial'
-							/> */}
 							<motion.div
-								className={`flex flex-1 transform-gpu duration-500 ease-in-out ${
-									animate ? 'opacity-100' : 'opacity-70'
+								className={`flex flex-1 transform-gpu duration-500 hover:opacity-100 ease-in-out ${
+									animate ? 'opacity-100' : 'opacity-80'
 								}`}
-								whileHover={{ opacity: 1 }}
-								transition={{ duration: 0.5, type: 'tween', ease: 'easeInOut' }}
+								// whileHover={{ opacity: 1 }}
+								// transition={{ duration: 0.5, type: 'tween', ease: 'easeInOut' }}
 							>
 								<Image
 									src={'/home/open-source.png'}

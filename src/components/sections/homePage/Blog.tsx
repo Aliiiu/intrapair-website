@@ -31,7 +31,7 @@ const Blog = () => {
 						</h3>
 					</div> */}
 					<motion.div
-						className='pb-3 xl:pb-5 xl:pr-12 border-b-[0.5px]  w-[fit-content] md:max-w-[270px] border-solid border-dark-blue '
+						className='pb-3 xl:pb-5 pr-12 border-b-[0.5px]  w-[fit-content] md:max-w-[270px] border-solid border-dark-blue '
 						whileInView={{
 							borderBottom: '2px solid #185EA1',
 							paddingRight: 0,

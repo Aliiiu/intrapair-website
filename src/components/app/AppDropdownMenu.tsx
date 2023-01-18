@@ -55,7 +55,7 @@ export const AppDropdownMenu = ({ isOpen, setOpen }: Props) => {
 
 	return (
 		<div
-			className='bg-dark-blue'
+			className='bg-dark-blue z-50'
 			// style={{ display: isOpen ? 'block' : 'none' }}
 		>
 			<div className='container mx-auto'>
@@ -108,7 +108,7 @@ export const AppDropdownMenu = ({ isOpen, setOpen }: Props) => {
 					</div>
 				</div>
 				<nav className='dropdown-menu h-[calc(100vh-80px)] 2xl:h-[calc(100vh-114px)] relative'>
-					<div className='absolute sm:bottom-[64px] bottom-[66px] left-[45px]'>
+					<div className='absolute sm:bottom-[64px] bottom-[66px] left-[15px] md:left-[45px]'>
 						<div className='flex md:flex-col justify-between gap-6 items-center'>
 							<Link href='#' className='text-white  hover:text-blue01'>
 								<FaTwitter size={24} />
@@ -132,20 +132,20 @@ export const AppDropdownMenu = ({ isOpen, setOpen }: Props) => {
 								</p>
 								<Link
 									href='tel:+2349025539348'
-									className="text-white text-base md:text-2xl relative inline-block after:block after:scale-x-[1] after:content-[''] after:origin-[100%_0%] after:transform after:duration-500 after:ease-in-out after:hover:scale-x-0 after:hover:origin-[0%_100%] after:border-b-[1px] after:border-white after:pb-0"
+									className="text-white text-base md:text-2xl relative w-fit inline-block after:block after:scale-x-[1] after:content-[''] after:origin-[100%_0%] after:transform after:duration-500 after:ease-in-out after:hover:scale-x-0 after:hover:origin-[0%_100%] after:border-b-[1px] after:border-white after:pb-0"
 								>
 									+234 902 5539 348
 								</Link>
 								<Link
 									href='mailto:hello@intrapair.com'
-									className="text-white text-base md:text-2xl relative inline-block after:block after:scale-x-[1] after:content-[''] after:origin-[100%_0%] after:transform after:duration-500 after:ease-in-out after:hover:scale-x-0 after:hover:origin-[0%_100%] after:border-b-[1px] after:border-white after:pb-0"
+									className="text-white text-base md:text-2xl w-fit relative inline-block after:block after:scale-x-[1] after:content-[''] after:origin-[100%_0%] after:transform after:duration-500 after:ease-in-out after:hover:scale-x-0 after:hover:origin-[0%_100%] after:border-b-[1px] after:border-white after:pb-0"
 								>
 									hello@intrapair.com
 								</Link>
 								<Link
 									onClick={() => setOpen(isOpen)}
 									href='/contact-us'
-									className="text-white  text-base md:text-2xl relative inline-block after:block after:scale-x-[1] after:content-[''] after:origin-[100%_0%] after:transform after:duration-500 after:ease-in-out after:hover:scale-x-0 after:hover:origin-[0%_100%] after:border-b-[1px] after:border-white after:pb-0"
+									className="text-white  text-base md:text-2xl w-fit relative inline-block after:block after:scale-x-[1] after:content-[''] after:origin-[100%_0%] after:transform after:duration-500 after:ease-in-out after:hover:scale-x-0 after:hover:origin-[0%_100%] after:border-b-[1px] after:border-white after:pb-0"
 								>
 									Contact Us
 								</Link>

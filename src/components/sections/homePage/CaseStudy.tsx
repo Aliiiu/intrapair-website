@@ -42,14 +42,14 @@ const CaseStudy: FC<{ showTitle: boolean }> = ({ showTitle }) => {
 				)}
 				{/* <Cursor> */}
 				<div className='flex'>
-					<div className='flex md:flex-row flex-col justify-between gap-5 xl:gap-10 w-full'>
+					<div className='flex md:flex-row flex-col justify-between gap-2 md:gap-5 xl:gap-10 w-full'>
 						<div className='flex flex-1 flex-col gap-5 mlg:mb-0 mb-[60px]'>
 							<Link
 								href={'/stitchvine'}
-								className='h-[303px] overflow-hidden cursor-none xs:h-[430px] md:h-[480px] 2xl:h-[580px]'
+								className='h-[373px] overflow-hidden cursor-none xs:h-[380px] lg:h-[480px] 2xl:h-[580px]'
 							>
 								<Cursor>
-									<div className='h-[303px] hover:scale-125 transition ease-in-out duration-500 xs:h-[430px] md:h-[480px] 2xl:h-[580px] relative'>
+									<div className='h-[373px] hover:scale-125 transition ease-in-out duration-500 xs:h-[380px] lg:h-[480px] 2xl:h-[580px] relative'>
 										<Image src={'/images/case1.png'} alt='' fill />
 									</div>
 								</Cursor>
@@ -72,10 +72,10 @@ const CaseStudy: FC<{ showTitle: boolean }> = ({ showTitle }) => {
 						<div className='flex flex-1 flex-col gap-5'>
 							<Link
 								href={'/anyworks'}
-								className='h-[303px] overflow-hidden cursor-none xs:h-[430px] md:h-[480px] 2xl:h-[580px]'
+								className='h-[373px] overflow-hidden cursor-none xs:h-[380px] lg:h-[480px] 2xl:h-[580px]'
 							>
 								<Cursor>
-									<div className='h-[303px] hover:scale-125 transition ease-in-out duration-500 xs:h-[430px] md:h-[480px] 2xl:h-[580px] relative'>
+									<div className='h-[373px] hover:scale-125 transition ease-in-out duration-500 xs:h-[380px] lg:h-[480px] 2xl:h-[580px] relative'>
 										<Image src={'/images/case2.png'} alt='' fill />
 									</div>
 								</Cursor>
