@@ -4,6 +4,8 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import { Flex, HamburgerMenu } from '../common';
 import { Transition } from '@headlessui/react';
+import { FaTwitter, FaLinkedinIn } from 'react-icons/fa';
+import { RiInstagramFill } from 'react-icons/ri';
 
 const DROPDOWN_MENU_DATA = [
 	{
@@ -108,29 +110,14 @@ export const AppDropdownMenu = ({ isOpen, setOpen }: Props) => {
 				<nav className='dropdown-menu h-[calc(100vh-80px)] 2xl:h-[calc(100vh-114px)] relative'>
 					<div className='absolute sm:bottom-[64px] bottom-[66px] left-[45px]'>
 						<div className='flex md:flex-col justify-between gap-6 items-center'>
-							<Link href='#' className='text-white  hover:underline'>
-								<Image
-									alt='twitter'
-									src='/footer/twitter.svg'
-									width={24}
-									height={20}
-								/>
+							<Link href='#' className='text-white  hover:text-blue01'>
+								<FaTwitter size={24} />
 							</Link>
-							<Link href='#' className='text-white  hover:underline'>
-								<Image
-									alt='instagram'
-									src='/footer/instagram.svg'
-									width={24}
-									height={20}
-								/>
+							<Link href='#' className='text-white  hover:text-blue01'>
+								<RiInstagramFill size={24} />
 							</Link>
-							<Link href='#' className='text-white  hover:underline'>
-								<Image
-									alt='linkedin'
-									src='/footer/linkedin.svg'
-									width={24}
-									height={20}
-								/>
+							<Link href='#' className='text-white  hover:text-blue01'>
+								<FaLinkedinIn size={24} />
 							</Link>
 						</div>
 					</div>
@@ -145,20 +132,20 @@ export const AppDropdownMenu = ({ isOpen, setOpen }: Props) => {
 								</p>
 								<Link
 									href='tel:+2349025539348'
-									className='text-white text-base md:text-2xl underline'
+									className="text-white text-base md:text-2xl relative inline-block after:block after:scale-x-[1] after:content-[''] after:origin-[100%_0%] after:transform after:duration-500 after:ease-in-out after:hover:scale-x-0 after:hover:origin-[0%_100%] after:border-b-[1px] after:border-white after:pb-0"
 								>
 									+234 902 5539 348
 								</Link>
 								<Link
 									href='mailto:hello@intrapair.com'
-									className='text-white underline text-base md:text-2xl'
+									className="text-white text-base md:text-2xl relative inline-block after:block after:scale-x-[1] after:content-[''] after:origin-[100%_0%] after:transform after:duration-500 after:ease-in-out after:hover:scale-x-0 after:hover:origin-[0%_100%] after:border-b-[1px] after:border-white after:pb-0"
 								>
 									hello@intrapair.com
 								</Link>
 								<Link
 									onClick={() => setOpen(isOpen)}
 									href='/contact-us'
-									className='text-white underline text-base md:text-2xl'
+									className="text-white  text-base md:text-2xl relative inline-block after:block after:scale-x-[1] after:content-[''] after:origin-[100%_0%] after:transform after:duration-500 after:ease-in-out after:hover:scale-x-0 after:hover:origin-[0%_100%] after:border-b-[1px] after:border-white after:pb-0"
 								>
 									Contact Us
 								</Link>

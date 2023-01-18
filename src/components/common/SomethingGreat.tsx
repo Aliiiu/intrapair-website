@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 interface Props {
 	bgColor: string;
 }
 
 export const SomethingGreat = ({ bgColor }: Props) => {
+	const [animate, setAnimate] = useState(false);
 	return (
 		<section style={{ backgroundColor: bgColor }} className='relative'>
 			<div className='absolute sm:block hidden left-0 top-0'>
@@ -18,7 +20,11 @@ export const SomethingGreat = ({ bgColor }: Props) => {
 					<p className='text-dark-blue text-base font-semibold'>
 						GOT A PROJECT IN MIND?
 					</p>
-					<div className='flex w-full'>
+					<motion.div
+						onHoverStart={() => setAnimate(true)}
+						onHoverEnd={() => setAnimate(false)}
+						className='flex w-full'
+					>
 						<div className='md:flex block justify-between w-full items-center'>
 							<div className='md:mb-0 mb-[30px]'>
 								<h1 className='font-bold text-2xl md:text-4xl xl:text-6xl text-center md:text-left text-blue02 max-w-[500px] xl:max-w-[870px] xl:leading-[70px]'>
@@ -28,12 +34,24 @@ export const SomethingGreat = ({ bgColor }: Props) => {
 
 							<div className='flex-1 flex justify-center md:justify-end'>
 								{' '}
-								<div className='relative w-[51px] xl:w-[61px] h-[31px] xl:h-[37px]'>
-									<Image src={'/home/arrow-right.svg'} fill alt='>' />
-								</div>
+								<motion.div
+									className={`relative w-[51px] transform-gpu duration-500 ease-in-out h-[31px] xl:h-[47px] ${
+										animate ? 'xl:w-[90px]' : 'xl:w-[61px]'
+									}`}
+									// whileInView={{ width: 80 }}
+									// whileHover={{ width: 90 }}
+									// transition={{
+									// 	type: 'spring',
+									// 	duration: 0.3,
+									// 	// bounce: 0.25,
+									// 	// damping: 10,
+									// }}
+								>
+									<Image src={'/svgs/arrowRt.svg'} fill alt='right arrow' />
+								</motion.div>
 							</div>
 						</div>
-					</div>
+					</motion.div>
 				</div>
 			</div>
 		</section>

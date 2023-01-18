@@ -1,8 +1,10 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import Button from '../../UI/widget/button/Button';
+import { motion } from 'framer-motion';
 
 const OpenSource = () => {
+	const [animate, setAnimate] = useState(false);
 	return (
 		<div className='container m-auto w-ful px-4 xl:px-[114px]'>
 			<div className='flex flex-col gap-y-9'>
@@ -10,11 +12,28 @@ const OpenSource = () => {
 					<div className='msm:flex block flex-wrap  gap-[146px] justify-between items-center w-full'>
 						<div className='flex flex-col flex-1 gap-8'>
 							<div className='flex flex-col gap-3'>
-								<div className='pb-2 xl:pb-5 pr-9 border-b-[0.5px]  border-solid border-white'>
+								<motion.div
+									className='pb-2 xl:pb-7 pr-[9rem] border-b-[0.5px] w-[fit-content]  border-solid border-white  mb-3'
+									whileHover={{
+										borderBottom: '2px solid #fff',
+										paddingRight: '9em',
+									}}
+									onHoverStart={() => setAnimate(true)}
+									onHoverEnd={() => setAnimate(false)}
+									whileInView={{
+										borderBottom: '2px solid #fff',
+										paddingRight: 0,
+									}}
+									transition={{
+										duration: 1.0,
+										type: 'tween',
+										ease: 'easeInOut',
+									}}
+								>
 									<h3 className='font-bold text-white max-w-[320px] text-3xl xl:text-5xl'>
 										Open Source is Art
 									</h3>
-								</div>
+								</motion.div>
 								{/* <div className="bg-white w-full h-[1px]"></div> */}
 
 								<p className='text-white text-base'>
@@ -35,12 +54,26 @@ const OpenSource = () => {
 							/>
 						</div>
 						<div className='flex flex-1 '>
-							<Image
+							{/* <Image
 								src={'/home/open-art.png'}
 								width={447}
 								height={447}
 								alt='sprial'
-							/>
+							/> */}
+							<motion.div
+								className={`flex flex-1 transform-gpu duration-500 ease-in-out ${
+									animate ? 'opacity-100' : 'opacity-70'
+								}`}
+								whileHover={{ opacity: 1 }}
+								transition={{ duration: 0.5, type: 'tween', ease: 'easeInOut' }}
+							>
+								<Image
+									src={'/home/open-source.png'}
+									width={447}
+									height={447}
+									alt='sprial'
+								/>
+							</motion.div>
 						</div>
 					</div>
 				</div>

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import Button from '../../UI/widget/button/Button';
+import { motion } from 'framer-motion';
 
 const Blog = () => {
 	const [blogs, setBlogs] = useState<any>([]);
@@ -9,7 +10,7 @@ const Blog = () => {
 	useEffect(() => {
 		const fetchBlog = async () => {
 			const response = await fetch(
-				'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/stitchvine'
+				'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@intrapair'
 			);
 			const data = await response.json();
 			setBlogs(data);
@@ -24,11 +25,31 @@ const Blog = () => {
 						Our Blog
 					</h3>
 					<div className='bg-dark-blue w-[50%] h-[1px]'></div> */}
-					<div className='pb-3 xl:pb-5 xl:pr-9 border-b-[0.5px] max-w-[80%] md:max-w-[270px] border-solid border-dark-blue'>
+					{/* <div className='pb-3 xl:pb-5 xl:pr-9 border-b-[0.5px] max-w-[80%] md:max-w-[270px] border-solid border-dark-blue'>
 						<h3 className='font-bold text-dark-blue text-3xl xl:text-5xl'>
 							Our Blog
 						</h3>
-					</div>
+					</div> */}
+					<motion.div
+						className='pb-3 xl:pb-5 xl:pr-12 border-b-[0.5px]  w-[fit-content] md:max-w-[270px] border-solid border-dark-blue '
+						whileInView={{
+							borderBottom: '2px solid #185EA1',
+							paddingRight: 0,
+						}}
+						whileHover={{
+							borderBottom: '2px solid #185EA1',
+							paddingRight: '3rem',
+						}}
+						transition={{
+							duration: 1.0,
+							type: 'tween',
+							ease: 'easeInOut',
+						}}
+					>
+						<h3 className='font-bold text-dark-blue text-3xl xl:text-5xl '>
+							Our Blog
+						</h3>
+					</motion.div>
 					<p className='text-black-01 max-w-[400px] text-base'>
 						Check out our unique stories from digital experience to enterprise
 						solutions.

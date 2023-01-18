@@ -1,6 +1,7 @@
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Accordion from '../../UI/widget/Accordion/Accordion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Button from '../../UI/widget/button/Button';
 
 interface ArrayType {
@@ -57,18 +58,38 @@ const faqArray: ArrayType[] = [
 
 const ProductEng = () => {
 	const [index, setIndex] = useState(1);
+	// const [currentTile, setCurrentTile] = useState(0);
+
+	// useEffect(() => {
+	//   const interval = setInterval(() => {
+	//     setCurrentTile((currentTile + 1) % faqArray.length);
+	//   }, 5000);
+	//   return () => clearInterval(interval);
+	// }, [currentTile, faqArray]);
+
 	return (
 		<div className='container m-auto w-full px-4 xl:px-[114px]'>
 			<div className='flex flex-col gap-y-9 '>
 				<div className='flex flex-col gap-3 '>
-					<div className='border-b-[0.5px] w-[fit-content] pb-3 xl:pb-5 pr-9  border-solid border-white'>
+					<motion.div
+						className='border-b-[0.5px] w-[fit-content]  xl:pb-5 pr-12  border-solid border-white '
+						whileHover={{
+							borderBottom: '2px solid #fff',
+							paddingRight: 0,
+						}}
+						transition={{
+							duration: 0.5,
+							type: 'tween',
+							ease: 'easeInOut',
+						}}
+					>
 						<h3 className='font-bold text-white text-[28px] xl:text-5xl'>
 							Home For Everything
 						</h3>
 						<h3 className='font-bold text-white text-[28px] xl:text-5xl'>
 							Product Engineering
 						</h3>
-					</div>
+					</motion.div>
 
 					<div>
 						<p className='text-white max-w-[450px] text-base'>

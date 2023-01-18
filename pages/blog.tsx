@@ -11,7 +11,7 @@ export default function Blog() {
 	useEffect(() => {
 		const fetchBlog = async () => {
 			const response = await fetch(
-				'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/stitchvine'
+				'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@intrapair'
 			);
 			const data = await response.json();
 			setBlogs(data);

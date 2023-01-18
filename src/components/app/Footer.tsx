@@ -3,6 +3,8 @@ import Image from 'next/image';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { Flex } from '../common';
+import { FaTwitter, FaLinkedinIn } from 'react-icons/fa';
+import { RiInstagramFill } from 'react-icons/ri';
 
 export const Footer = () => {
 	return (
@@ -62,37 +64,52 @@ export const Footer = () => {
 					<Flex direction='column' justify='space-between'>
 						<p className='text-white font-semibold'>GET IN TOUCH</p>
 						<Flex justify='space-between' align='center'>
-							<Link href='#' className='text-white  hover:underline'>
-								<Image
-									alt='twitter'
-									src='/footer/twitter.svg'
-									width={20}
-									height={20}
-								/>
+							<Link
+								href='#'
+								className='text-white  hover:underline hover:text-blue_04'
+							>
+								{/* <Image
+                  alt="twitter"
+                  src="/footer/twitter.svg"
+                  width={20}
+                  height={20}
+                /> */}
+								<FaTwitter size={24} />
 							</Link>
-							<Link href='#' className='text-white  hover:underline'>
-								<Image
-									alt='instagram'
-									src='/footer/instagram.svg'
-									width={20}
-									height={20}
-								/>
+							<Link
+								href='#'
+								className='text-white  hover:underline hover:text-blue_04'
+							>
+								{/* <Image
+                  alt="instagram"
+                  src="/footer/instagram.svg"
+                  width={20}
+                  height={20}
+                /> */}
+								<RiInstagramFill size={24} />
 							</Link>
-							<Link href='#' className='text-white  hover:underline'>
-								<Image
-									alt='linkedin'
-									src='/footer/linkedin.svg'
-									width={20}
-									height={20}
-								/>
+							<Link
+								href='#'
+								className='text-white  hover:underline hover:text-blue_04'
+							>
+								{/* <Image
+                  alt="linkedin"
+                  src="/footer/linkedin.svg"
+                  width={20}
+                  height={20}
+                /> */}
+								<FaLinkedinIn size={24} />
 							</Link>
 						</Flex>
-						<Link href='tel:+2349025539348' className='text-white underline'>
+						<Link
+							href='tel:+2349025539348'
+							className="text-white relative inline-block after:block after:scale-x-[1] after:content-[''] after:origin-[100%_0%] after:transform after:duration-500 after:ease-in-out after:hover:scale-x-0 after:hover:origin-[0%_100%] after:border-b-[1px] after:border-white after:pb-0 "
+						>
 							+234 902 5539 348
 						</Link>
 						<Link
 							href='mailto:hello@intrapair.com'
-							className='text-white underline'
+							className="text-white relative inline-block after:block after:scale-x-[1] after:content-[''] after:origin-[100%_0%] after:transform after:duration-500 after:ease-in-out after:hover:scale-x-0 after:hover:origin-[0%_100%] after:border-b-[1px] after:border-white after:pb-0"
 						>
 							hello@intrapair.com
 						</Link>

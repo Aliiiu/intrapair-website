@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { FC, useLayoutEffect, useRef } from 'react';
 import Cursor from '../../UI/widget/customCursor/Cursor';
+import { motion, useAnimation } from 'framer-motion';
 
 const CaseStudy: FC<{ showTitle: boolean }> = ({ showTitle }) => {
 	return (
@@ -10,9 +11,29 @@ const CaseStudy: FC<{ showTitle: boolean }> = ({ showTitle }) => {
 			<div className='flex flex-col gap-y-9'>
 				{showTitle && (
 					<div className='flex flex-col gap-3 w-[fit-content] max-w-[100%]'>
-						<h3 className='font-bold text-dark-blue text-3xl xl:text-5xl border-b-[0.5px] w-[fit-content] pb-2 xl:pb-5 pr-4 xl:pr-9  border-solid border-dark-blue'>
+						{/* <h3 className='font-bold text-dark-blue text-3xl xl:text-5xl border-b-[0.5px] w-[fit-content] pb-2 xl:pb-5 pr-4 xl:pr-9  border-solid border-dark-blue'>
 							Case Studies
-						</h3>
+						</h3> */}
+						<motion.div
+							className='pb-2 xl:pb-4 pr-[5rem] border-b-[0.5px] w-[fit-content] border-solid border-dark-blue mb-2'
+							whileHover={{
+								borderBottom: '0.5px solid #185EA1',
+								paddingRight: '5em',
+							}}
+							whileInView={{
+								borderBottom: '2px solid #185EA1',
+								paddingRight: 0,
+							}}
+							transition={{
+								duration: 1.5,
+								type: 'tween',
+								ease: 'easeInOut',
+							}}
+						>
+							<h3 className='font-bold text-dark-blue max-w-[320px] text-3xl xl:text-5xl'>
+								Case Studies
+							</h3>
+						</motion.div>
 						{/* <div className="bg-dark-blue w-[90%] h-[1px]"></div> */}
 						<p className='text-black-01 text-base'>
 							Here are some of the projects we&apos;ve built for our clients.
@@ -28,7 +49,7 @@ const CaseStudy: FC<{ showTitle: boolean }> = ({ showTitle }) => {
 								className='h-[303px] overflow-hidden cursor-none xs:h-[430px] md:h-[480px] 2xl:h-[580px]'
 							>
 								<Cursor>
-									<div className='h-[303px] hover:scale-110 transition ease-in-out duration-500 xs:h-[430px] md:h-[480px] 2xl:h-[580px] relative'>
+									<div className='h-[303px] hover:scale-125 transition ease-in-out duration-500 xs:h-[430px] md:h-[480px] 2xl:h-[580px] relative'>
 										<Image src={'/images/case1.png'} alt='' fill />
 									</div>
 								</Cursor>
@@ -54,7 +75,7 @@ const CaseStudy: FC<{ showTitle: boolean }> = ({ showTitle }) => {
 								className='h-[303px] overflow-hidden cursor-none xs:h-[430px] md:h-[480px] 2xl:h-[580px]'
 							>
 								<Cursor>
-									<div className='h-[303px] hover:scale-110 transition ease-in-out duration-500 xs:h-[430px] md:h-[480px] 2xl:h-[580px] relative'>
+									<div className='h-[303px] hover:scale-125 transition ease-in-out duration-500 xs:h-[430px] md:h-[480px] 2xl:h-[580px] relative'>
 										<Image src={'/images/case2.png'} alt='' fill />
 									</div>
 								</Cursor>
