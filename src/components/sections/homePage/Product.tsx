@@ -51,11 +51,11 @@ const Product = () => {
 					<div className='flex flex-col gap-7 md:gap-0 md:flex-row w-full items-center'>
 						<div className='overflow-hidden w-full md:w-[60%]'>
 							<Link
-								href={'/stitchvine'}
+								href={'/flip'}
 								className='h-[373px] cursor-none w-[720px] sm:h-[383px] lg:h-[480px] 2xl:h-[580px]'
 							>
 								<Cursor style='bg-white text-blue-400'>
-									<div className='h-[373px] hover:scale-125 transition ease-in-out duration-500 sm:h-[383px] lg:h-[480px] 2xl:h-[580px] relative'>
+									<div className='h-[333px] hover:scale-125 transition ease-in-out duration-500 sm:h-[383px] lg:h-[480px] 2xl:h-[580px] relative'>
 										<Image src={'/images/flipBig.png'} alt='' fill />
 									</div>
 								</Cursor>

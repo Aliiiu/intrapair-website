@@ -35,7 +35,7 @@ export const SomethingGreat = ({ bgColor }: Props) => {
 							<div className='flex-1 flex justify-center md:justify-end'>
 								{' '}
 								<motion.div
-									className={`relative w-[51px] transform-gpu duration-500 ease-in-out h-[31px] xl:h-[47px] ${
+									className={`relative w-[51px] transform-gpu cursor-pointer duration-500 ease-in-out h-[31px] xl:h-[47px] ${
 										animate ? 'xl:w-[90px]' : 'xl:w-[61px]'
 									}`}
 									// whileInView={{ width: 80 }}
