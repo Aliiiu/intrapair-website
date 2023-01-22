@@ -69,7 +69,7 @@ const about = () => {
 					<Feature />
 				</section>
 				<section className='bg-[#F0FAFF]'>
-					<div className='container py-16 xl:py-32 px-4 xl:px-[114px] mx-auto'>
+					<div className='container relative py-16 xl:py-32 px-4 xl:px-[114px] mx-auto'>
 						<WhatYouShouldKnow />
 					</div>
 				</section>

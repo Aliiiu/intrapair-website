@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import Accordion from '../../UI/widget/Accordion/Accordion';
 import { motion, AnimatePresence } from 'framer-motion';
+import Button from '../../UI/widget/button/Button';
 
 interface ArrayType {
   title: string;
@@ -71,13 +72,17 @@ const ProductEng = () => {
       <div className="flex flex-col gap-y-9 ">
         <div className="flex flex-col gap-3 ">
           <motion.div
-            className="border-b-[0.5px] w-[fit-content]  xl:pb-5 pr-9  border-solid border-white "
+            className="border-b-[0.5px] w-[fit-content] pb-3 xl:pb-5 pr-20  border-solid border-white "
             whileInView={{
               borderBottom: '2px solid #fff',
               paddingRight: 0,
             }}
+            whileHover={{
+              borderBottom: '2px solid #fff',
+              paddingRight: 0,
+            }}
             transition={{
-              duration: 0.5,
+              duration: 0.8,
               type: 'tween',
               ease: 'easeInOut',
             }}
@@ -102,9 +107,8 @@ const ProductEng = () => {
             <Accordion {...item} key={item.key} />
           ))}
         </div>
-
         <div
-          className="md:flex hidden gap-[100px]"
+          className="md:flex xl:mt-[60px] hidden gap-[100px]"
           style={{
             gridTemplateColumns: 'max-content 1fr',
           }}
@@ -115,7 +119,7 @@ const ProductEng = () => {
                 <p
                   key={item.key}
                   onClick={() => setIndex(item.key)}
-                  className={`font-bold cursor-pointer text-4xl ${
+                  className={`font-bold cursor-pointer text-3xl lg:text-4xl ${
                     item.key === index
                       ? 'text-white'
                       : 'text-black text-opacity-25'
@@ -124,38 +128,15 @@ const ProductEng = () => {
                   {item.title}
                 </p>
               ))}
-              {/* <p className='text-white font-bold text-4xl'>
-								Product Development
-							</p>
-							<div>
-								<p
-									className='font-bold text-4xl'
-									style={{ color: 'rgba(0, 0, 0, 0.25)' }}
-								>
-									DevOps and Platform Engineering
-								</p>
-							</div>
-							<div>
-								<p
-									className='font-bold text-4xl'
-									style={{ color: 'rgba(0, 0, 0, 0.25)' }}
-								>
-									Data Engineering and Analytics
-								</p>
-							</div>
-							<div>
-								<p
-									className='font-bold text-4xl'
-									style={{ color: 'rgba(0, 0, 0, 0.25)' }}
-								>
-									Application Modernization
-								</p>
-							</div> */}
             </div>
 
-            <button className="rounded-[41px]  text-base w-[201px] border  border-solid text-white py-[15px] hover:bg-white hover:text-dark-blue duration-300 ease-in-out">
-              Learn More
-            </button>
+            {/* <button className='rounded-[41px]  text-base w-[201px] border-2  border-solid text-white py-[15px]'>
+							Learn More
+						</button> */}
+            <Button
+              text="Learn More"
+              style="border-2 border-white hover:bg-white hover:text-blue-400"
+            />
           </div>
           <div className="flex flex-col flex-1 gap-3 items-center">
             <Image
