@@ -53,7 +53,7 @@ const OpenSource = () => {
 							</button> */}
 							<Button
 								text='Leave A Footprint'
-								style='bg-white text-blue02 hover:bg-transparent hover:border hover:text-white'
+								style='bg-transparent hidden sm:block border-white border text-white hover:bg-white hover:text-blue02'
 							/>
 						</div>
 						<div className='flex flex-1 '>
@@ -71,6 +71,12 @@ const OpenSource = () => {
 									alt='sprial'
 								/>
 							</motion.div>
+						</div>
+						<div>
+							<Button
+								text='Leave A Footprint'
+								style='bg-white sm:hidden border-white w-[180px] text-blue02'
+							/>
 						</div>
 					</div>
 				</div>

@@ -20,7 +20,7 @@ const services = () => {
 						header='Excellent Engineering Is The Bedrock For Building Quality Solutions'
 					/>
 				</section>
-				<section className='container px-4 py-16 xl:py-20 xl:px-[114px] mx-auto'>
+				<section className='container px-4 py-16 md:py-20 lg:py-[120px] xl:py-[180px] xl:px-[114px] mx-auto'>
 					<Features />
 				</section>
 				<section className='bg-[#CCEDFF4D]'>

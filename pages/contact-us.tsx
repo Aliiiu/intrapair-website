@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import { AppLayout } from '../src/components/app';
+import Button from '../src/components/UI/widget/button/Button';
 
 export default function ContactUs() {
 	return (
@@ -123,9 +124,10 @@ export default function ContactUs() {
 												}}
 												placeholder='Message'
 											></textarea>
-											<button className='rounded-[41px] mt-8  text-base w-[202px] bg-dark-blue text-white py-[15px] '>
-												Submit
-											</button>
+											<Button
+												text='Submit'
+												style='bg-dark-blue border hover:bg-transparent hover:border-dark-blue hover:text-dark-blue '
+											/>
 										</div>
 									</div>
 								</div>
@@ -225,9 +227,10 @@ export default function ContactUs() {
 										className='border-2 border-solid outline-none rounded-full bg-white placeholdertext-black01 flex-1 px-[35px] py-[15px]'
 										placeholder='Enter your email'
 									/>
-									<button className='rounded-[41px] text-base w-[202px] bg-dark-blue text-white py-[15px] '>
-										Submit
-									</button>
+									<Button
+										text='Submit'
+										style='bg-dark-blue border hover:bg-transparent hover:border-dark-blue hover:text-dark-blue '
+									/>
 								</div>
 							</div>
 						</div>

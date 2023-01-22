@@ -46,10 +46,10 @@ const CaseStudy: FC<{ showTitle: boolean }> = ({ showTitle }) => {
 						<div className='flex flex-1 flex-col gap-5 mlg:mb-0 mb-[60px]'>
 							<Link
 								href={'/stitchvine'}
-								className='h-[333px] overflow-hidden cursor-none sm:h-[380px] lg:h-[480px] 2xl:h-[580px]'
+								className='h-[300px] overflow-hidden cursor-none sm:h-[380px] lg:h-[480px] 2xl:h-[580px]'
 							>
 								<Cursor>
-									<div className='h-[333px] hover:scale-125 transition ease-in-out duration-500 sm:h-[380px] lg:h-[480px] 2xl:h-[580px] relative'>
+									<div className='h-[300px] hover:scale-125 transition ease-in-out duration-500 sm:h-[380px] lg:h-[480px] 2xl:h-[580px] relative'>
 										<Image src={'/images/case1.png'} alt='' fill />
 									</div>
 								</Cursor>
@@ -72,10 +72,10 @@ const CaseStudy: FC<{ showTitle: boolean }> = ({ showTitle }) => {
 						<div className='flex flex-1 flex-col gap-5'>
 							<Link
 								href={'/anyworks'}
-								className='h-[333px] overflow-hidden cursor-none sm:h-[380px] lg:h-[480px] 2xl:h-[580px]'
+								className='h-[300px] overflow-hidden cursor-none sm:h-[380px] lg:h-[480px] 2xl:h-[580px]'
 							>
 								<Cursor>
-									<div className='h-[333px] hover:scale-125 transition ease-in-out duration-500 sm:h-[380px] lg:h-[480px] 2xl:h-[580px] relative'>
+									<div className='h-[300px] hover:scale-125 transition ease-in-out duration-500 sm:h-[380px] lg:h-[480px] 2xl:h-[580px] relative'>
 										<Image src={'/images/anyworks2.png'} alt='' fill />
 									</div>
 								</Cursor>
@@ -83,7 +83,7 @@ const CaseStudy: FC<{ showTitle: boolean }> = ({ showTitle }) => {
 							<div className='flex flex-col gap-1'>
 								<div className='flex items-center gap-3'>
 									<p className='text-black01 font-semibold text-sm	sm:text-xl	'>
-										Anyworks
+										Anyworkx
 									</p>
 									<p className='bg-black01 w-[19px] xl:w-[29px] h-[2px]'></p>
 									<p className='text-black01 font-semibold	 text-sm md:text-base	lg:text-xl'>

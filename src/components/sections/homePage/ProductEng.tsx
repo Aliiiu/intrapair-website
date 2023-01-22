@@ -8,7 +8,6 @@ interface ArrayType {
 	title: string;
 	key: number;
 	content: string;
-	content2: string;
 	imgSrc: string;
 	width: number;
 	height: number;
@@ -17,8 +16,7 @@ const faqArray: ArrayType[] = [
 	{
 		key: 1,
 		title: 'Product Development',
-		content: 'Growth and Development Asset Management Limited',
-		content2:
+		content:
 			'We explore our client’s business ideas to build scalable and future-ready products that are generally acceptable and accessible in the global market.',
 		imgSrc: '/images/prodDev.png',
 		width: 607,
@@ -27,8 +25,7 @@ const faqArray: ArrayType[] = [
 	{
 		key: 2,
 		title: 'DevOps and Platform Engineering',
-		content: 'Growth and Development Asset Management Limited',
-		content2:
+		content:
 			'We build tools to automate the software development lifecycle that improves the continuous delivery of applications and services at a high-velocity scale and customer experience. ',
 		imgSrc: '/images/devOps.png',
 		width: 531,
@@ -37,8 +34,7 @@ const faqArray: ArrayType[] = [
 	{
 		key: 3,
 		title: 'Data Engineering and Analytics',
-		content: 'Growth and Development Asset Management Limited',
-		content2:
+		content:
 			'We improve the data visualization of companies by developing data-driven solutions that produce insightful real-time data about the core metrics of their business. ',
 		imgSrc: '/images/dataEng.png',
 		width: 609,
@@ -47,8 +43,7 @@ const faqArray: ArrayType[] = [
 	{
 		key: 4,
 		title: 'Application Modernization',
-		content: 'Growth and Development Asset Management Limited',
-		content2:
+		content:
 			'We transform legacy applications into elegant software products to enhance and accelerate business functions.',
 		imgSrc: '/images/appDev.png',
 		width: 523,
@@ -147,7 +142,7 @@ const ProductEng = () => {
 						/>
 						<div>
 							<p className='text-xl text-white'>
-								{faqArray[index - 1]?.content2}
+								{faqArray[index - 1]?.content}
 							</p>
 						</div>
 					</div>

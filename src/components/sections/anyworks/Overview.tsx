@@ -24,7 +24,7 @@ const ListComponent = (props: any) => (
 );
 const Overview = () => {
 	return (
-		<div className='flex gap-2 xl:gap-0'>
+		<div className='flex flex-col md:flex-row gap-8 md:gap-0'>
 			<div className='flex flex-1 flex-col gap-4'>
 				<div className='flex flex-col gap-2'>
 					<h3 className=' text-secondaryBlue_05 text-xs xl:text-base font-semibold'>
@@ -59,7 +59,7 @@ const Overview = () => {
 					</p>
 				</div>
 			</div>
-			<div className='flex flex-col flex-1 items-center'>
+			<div className='flex flex-col flex-1 md:items-center'>
 				<div className='flex flex-col gap-2'>
 					<h3 className=' text-secondaryBlue_05 text-xs xl:text-base font-semibold'>
 						Deliverables
@@ -73,13 +73,14 @@ const Overview = () => {
 							'Mobile Apps ( Customer and Vendor App)',
 						]}
 					/>
-					<a
-						href=''
-						className='font-semibold text-sm xl:text-base text-secondaryBlue_03'
-					>
-						Visit Live
-						<HiOutlineArrowLongRight className='text-secondaryBlue_05 text-lg xl:text-4xl' />
-					</a>
+					<div className='flex gap-4 items-center'>
+						<span className='font-semibold text-sm md:text-base text-secondaryBlue_03'>
+							Visit Live
+						</span>
+						<a href=''>
+							<HiOutlineArrowLongRight className='text-secondaryBlue_05 text-3xl md:text-4xl' />
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>

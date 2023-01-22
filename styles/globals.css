@@ -12,15 +12,15 @@
 @tailwind utilities;
 
 @layer base {
-  .font-outline-2 {
-    /* font-family: Mill; */
-    -webkit-text-stroke: 2px #185ea1;
-  }
-  @media only screen and (max-width: 900px) {
-    .font-outline-2 {
-      -webkit-text-stroke: 1px #185ea1;
-    }
-  }
+	.font-outline-2 {
+		/* font-family: Mill; */
+		-webkit-text-stroke: 2px #185ea1;
+	}
+	@media only screen and (max-width: 900px) {
+		.font-outline-2 {
+			-webkit-text-stroke: 1px #185ea1;
+		}
+	}
 }
 
 *,
@@ -31,69 +31,103 @@
 }
 html,
 body {
-  padding: 0;
-  margin: 0;
-  background-color: #ffffff;
-  color: #333333;
-  font-family: 'Encode Sans', 'Millimeter', sans-serif;
+	padding: 0;
+	margin: 0;
+	background-color: #ffffff;
+	color: #333333;
+	font-family: 'Encode Sans', 'Millimeter', sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .millimeter {
-  font-family: Millimeter;
+	font-family: Millimeter;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+	max-width: 100%;
+	height: auto;
 }
 .banner {
-  background-image: url('/images/banner.png');
-  /* background-color: aquamarine; */
-  background-size: 949.72px 412.69px;
-  background-repeat: no-repeat;
+	background-image: url('/images/banner.png');
+	/* background-color: aquamarine; */
+	background-size: 949.72px 412.69px;
+	background-repeat: no-repeat;
 }
 
 .shadow_1 {
-  background: #ffffff;
-  box-shadow: 0px 4px 20px -4px rgba(16, 24, 40, 0.07);
+	background: #ffffff;
+	box-shadow: 0px 4px 20px -4px rgba(16, 24, 40, 0.07);
 }
 
 .shadow_2 {
-  background: #ffffff;
-  /* Shadow lg */
+	background: #ffffff;
+	/* Shadow lg */
 
-  box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08),
-    0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+	box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08),
+		0px 4px 6px -2px rgba(16, 24, 40, 0.03);
 }
 
 /* For Webkit-based browsers (Chrome, Safari and Opera) */
 .scrollbar-hide::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
 
 /* For IE, Edge and Firefox */
 .scrollbar-hide {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
 }
 
 /* Testimonial Overlay */
 
 .testimony-container:hover .testimony-overlay {
-  opacity: 1 !important;
-  /* Getting the color for the testimony overlay */
-  background: rgba(31, 176, 255, 0.15) !important;
+	opacity: 1 !important;
+	/* Getting the color for the testimony overlay */
+	background: rgba(31, 176, 255, 0.15) !important;
 }
 
 .phone-img_wrapper {
-  background-image: url('../public/images/stitchVineBg.png');
+	background-image: url('../public/images/stitchVineBg.png');
+}
+
+.arrow {
+	position: relative;
+	display: inline-block;
+	padding: 8px 0;
+	cursor: pointer;
+}
+
+.arrow:before {
+	content: '';
+	display: block;
+	width: 50px;
+	height: 3px;
+	background-color: #0e0037;
+	top: 50%;
+	transition: width 0.5s ease-out;
+}
+
+.arrow:after {
+	content: '';
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-top: 3px solid #0e0037;
+	border-right: 3px solid #0e0037;
+	transform: rotate(45deg);
+	top: calc(50% - 10px);
+	position: absolute;
+	right: 1px;
+}
+
+.arrow:hover {
+	cursor: pointer;
 }

@@ -22,7 +22,7 @@ const Hero = () => {
 					</button> */}
 					<Button
 						text="Let's Talk"
-						style='bg-dark-blue mx-auto hover:bg-transparent hover:text-dark-blue hover:border hover:border-dark-blue'
+						style='bg-dark-blue border mx-auto hover:bg-transparent hover:border-dark-blue hover:text-dark-blue '
 					/>
 				</div>
 			</div>

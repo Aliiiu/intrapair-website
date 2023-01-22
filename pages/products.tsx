@@ -38,7 +38,7 @@ const products = () => {
 							</div>
 						</div>
 					</section>
-					<section className='container py-10 xl:py-20 px-4 xl:px-[114px] mx-auto'>
+					<section className='container pt-10 pb-[100px] md:pt-20 md:pb-[150px] lg:pb-[180px] xl:pb-[251px] px-4 xl:px-[114px] mx-auto'>
 						<div className='flex'>
 							<div className='md:flex block flex-wrap  justify-between w-full items-center gap-[100px] m-auto'>
 								<Link

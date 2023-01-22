@@ -52,10 +52,10 @@ const Product = () => {
 						<div className='overflow-hidden w-full md:w-[60%]'>
 							<Link
 								href={'/flip'}
-								className='h-[373px] cursor-none w-[720px] sm:h-[383px] lg:h-[480px] 2xl:h-[580px]'
+								className='h-[283px] cursor-none w-[720px] sm:h-[383px] lg:h-[480px] 2xl:h-[580px]'
 							>
 								<Cursor style='bg-white text-blue-400'>
-									<div className='h-[333px] hover:scale-125 transition ease-in-out duration-500 sm:h-[383px] lg:h-[480px] 2xl:h-[580px] relative'>
+									<div className='h-[283px] hover:scale-125 transition ease-in-out duration-500 sm:h-[383px] lg:h-[480px] 2xl:h-[580px] relative'>
 										<Image src={'/images/flipBig.png'} alt='' fill />
 									</div>
 								</Cursor>
