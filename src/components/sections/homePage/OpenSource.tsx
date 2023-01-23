@@ -75,7 +75,7 @@ const OpenSource = () => {
 						<div>
 							<Button
 								text='Leave A Footprint'
-								style='bg-white sm:hidden border-white w-[200px] text-sm sm:text-base text-blue02'
+								style='bg-white sm:hidden border-white w-[186px] lg:w-[201px] text-sm sm:text-base text-blue02'
 							/>
 						</div>
 					</div>

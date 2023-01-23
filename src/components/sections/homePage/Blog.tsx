@@ -21,32 +21,6 @@ const Blog = () => {
 		<div className='container px-4 xl:px-[114px] m-auto'>
 			<div className=' flex flex-col gap-y-[70px] m-auto '>
 				<div className='flex flex-col gap-3 w-[fit-content]'>
-					{/* <h3 className='font-bold text-dark-blue text-3xl xl:text-5xl'>
-	const [blogs, setBlogs] = useState<any>([]);
-
-	useEffect(() => {
-		const fetchBlog = async () => {
-			const response = await fetch(
-				'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@intrapair'
-			);
-			const data = await response.json();
-			setBlogs(data);
-		};
-		fetchBlog();
-	}, []);
-	return (
-		<div className='container px-4 xl:px-[114px] m-auto'>
-			<div className=' flex flex-col gap-y-[70px] m-auto '>
-				<div className='flex flex-col gap-3 w-[fit-content]'>
-					{/* <h3 className='font-bold text-dark-blue text-3xl xl:text-5xl'>
-						Our Blog
-					</h3>
-					<div className='bg-dark-blue w-[50%] h-[1px]'></div> */}
-					{/* <div className='pb-3 xl:pb-5 xl:pr-9 border-b-[0.5px] max-w-[80%] md:max-w-[270px] border-solid border-dark-blue'>
-						<h3 className='font-bold text-dark-blue text-3xl xl:text-5xl'>
-							Our Blog
-						</h3>
-					</div> */}
 					<motion.div
 						className='pb-3 xl:pb-5 pr-12 border-b-[0.5px]  w-[fit-content] md:max-w-[270px] border-solid border-dark-blue '
 						whileInView={{
@@ -123,13 +97,10 @@ const Blog = () => {
 						}
 					</div>
 				</div>
-				{/* <button className='rounded-[41px]  text-sm w-[212px] bg-dark-blue text-white py-[15px] m-auto'>
-					Read A Story
-				</button> */}
 				<Link href={'blog'} className='mx-auto'>
 					<Button
 						text='Read A Story'
-						style='hover:border hover:border-dark-blue mx-auto bg-dark-blue xl:w-[212px] hover:bg-white hover:text-dark-blue'
+						style='hover:border hover:border-dark-blue mx-auto bg-dark-blue w-[146px] lg:w-[201px] xl:w-[212px] hover:bg-white hover:text-dark-blue'
 					/>
 				</Link>
 			</div>

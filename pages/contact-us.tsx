@@ -126,7 +126,7 @@ export default function ContactUs() {
 											></textarea>
 											<Button
 												text='Submit'
-												style='bg-dark-blue border hover:bg-transparent hover:border-dark-blue hover:text-dark-blue '
+												style='bg-dark-blue border hover:bg-transparent hover:border-dark-blue hover:text-dark-blue w-[106px] lg:w-[201px] '
 											/>
 										</div>
 									</div>
@@ -229,7 +229,7 @@ export default function ContactUs() {
 									/>
 									<Button
 										text='Submit'
-										style='bg-dark-blue border hover:bg-transparent hover:border-dark-blue hover:text-dark-blue '
+										style='bg-dark-blue border hover:bg-transparent hover:border-dark-blue hover:text-dark-blue w-[106px] lg:w-[201px] '
 									/>
 								</div>
 							</div>

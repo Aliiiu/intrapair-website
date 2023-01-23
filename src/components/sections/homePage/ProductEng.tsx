@@ -124,13 +124,9 @@ const ProductEng = () => {
 								</p>
 							))}
 						</div>
-
-						{/* <button className='rounded-[41px]  text-base w-[201px] border-2  border-solid text-white py-[15px]'>
-							Learn More
-						</button> */}
 						<Button
 							text='Learn More'
-							style='border-2 border-white hover:bg-white hover:text-blue-400'
+							style='border-2 border-white hover:bg-white w-[146px] lg:w-[201px] hover:text-blue-400'
 						/>
 					</div>
 					<div className='flex flex-col flex-1 gap-3 items-center'>

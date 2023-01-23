@@ -54,12 +54,9 @@ export default function Blog() {
 									Intrapair. You don’t want to miss out on any of our exciting
 									stories.
 								</p>
-								{/* <button className='rounded-[41px] text-base w-[202px] bg-dark-blue text-white py-[15px] '>
-									Prompt Me
-								</button> */}
 								<Button
 									text='Prompt Me'
-									style='bg-dark-blue border mx-auto hover:bg-transparent hover:border-dark-blue hover:text-dark-blue '
+									style='bg-dark-blue border mx-auto w-[146px] lg:w-[201px] hover:bg-transparent hover:border-dark-blue hover:text-dark-blue '
 								/>
 							</div>
 						</div>
