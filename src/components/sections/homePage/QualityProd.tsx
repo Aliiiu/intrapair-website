@@ -19,7 +19,7 @@ const QualityProd = () => {
 				<div className='flex'>
 					<div className='flex flex-col gap-3 xl:w-[700px] max-w-[100%]'>
 						<motion.div
-							className='pb-5 pr-[1rem] md:pr-[4rem] xl:pr-[11.8rem] border-b-2  border-solid border-white w-[fit-content] '
+							className='pb-2 lg:pb-5 pr-[2rem] md:pr-[4rem] xl:pr-[11.8rem] border-b-[0.5px]  border-solid border-white  w-[fit-content] '
 							whileInView={{
 								borderBottom: '2px solid #fff',
 								paddingRight: 0,
@@ -29,7 +29,7 @@ const QualityProd = () => {
 								paddingRight: '11.8rem',
 							}}
 							transition={{
-								duration: 1.5,
+								duration: 1.0,
 								type: 'tween',
 								ease: 'easeInOut',
 							}}

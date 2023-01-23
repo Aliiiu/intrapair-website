@@ -85,7 +85,7 @@ const ProductEng = () => {
 						<h3 className='font-bold text-white text-[28px] xl:text-5xl'>
 							Home For Everything
 						</h3>
-						<h3 className='font-bold text-white mt-2 text-[28px] xl:text-5xl'>
+						<h3 className='font-bold text-white mt-0 sm:mt-2 text-[28px] xl:text-5xl'>
 							Product Engineering
 						</h3>
 					</motion.div>
