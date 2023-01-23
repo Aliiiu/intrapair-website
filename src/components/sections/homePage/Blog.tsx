@@ -22,6 +22,23 @@ const Blog = () => {
 			<div className=' flex flex-col gap-y-[70px] m-auto '>
 				<div className='flex flex-col gap-3 w-[fit-content]'>
 					{/* <h3 className='font-bold text-dark-blue text-3xl xl:text-5xl'>
+	const [blogs, setBlogs] = useState<any>([]);
+
+	useEffect(() => {
+		const fetchBlog = async () => {
+			const response = await fetch(
+				'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@intrapair'
+			);
+			const data = await response.json();
+			setBlogs(data);
+		};
+		fetchBlog();
+	}, []);
+	return (
+		<div className='container px-4 xl:px-[114px] m-auto'>
+			<div className=' flex flex-col gap-y-[70px] m-auto '>
+				<div className='flex flex-col gap-3 w-[fit-content]'>
+					{/* <h3 className='font-bold text-dark-blue text-3xl xl:text-5xl'>
 						Our Blog
 					</h3>
 					<div className='bg-dark-blue w-[50%] h-[1px]'></div> */}

@@ -65,19 +65,19 @@ const ProductEng = () => {
 	return (
 		<div className='container m-auto w-full px-4 xl:px-[114px]'>
 			<div className='flex flex-col gap-y-9 '>
-				<div className='flex flex-col gap-3 '>
+				<div className='flex flex-col gap-3'>
 					<motion.div
-						className='border-b-[0.5px] w-[fit-content] pb-3 xl:pb-5 pr-12  border-solid border-white '
+						className='border-b-[0.5px] w-[fit-content] pb-3 xl:pb-5 pr-12 lg:pr-20  border-solid border-white '
 						whileInView={{
 							borderBottom: '2px solid #fff',
 							paddingRight: 0,
 						}}
 						whileHover={{
 							borderBottom: '2px solid #fff',
-							paddingRight: 0,
+							paddingRight: '5rem',
 						}}
 						transition={{
-							duration: 0.5,
+							duration: 1.0,
 							type: 'tween',
 							ease: 'easeInOut',
 						}}
@@ -85,7 +85,7 @@ const ProductEng = () => {
 						<h3 className='font-bold text-white text-[28px] xl:text-5xl'>
 							Home For Everything
 						</h3>
-						<h3 className='font-bold text-white text-[28px] xl:text-5xl'>
+						<h3 className='font-bold text-white mt-2 text-[28px] xl:text-5xl'>
 							Product Engineering
 						</h3>
 					</motion.div>
