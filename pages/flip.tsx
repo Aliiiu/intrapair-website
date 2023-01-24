@@ -19,7 +19,7 @@ const flip = () => {
 							<h2 className='font-semibold text-3xl xl:text-5xl'>
 								Flip - Enhanced Assessment Platform
 							</h2>
-							<p className='text-grey_04'>
+							<p className='text-grey_04 mt-2'>
 								Branding & Identity, Websites & Digital Platforms
 							</p>
 						</div>

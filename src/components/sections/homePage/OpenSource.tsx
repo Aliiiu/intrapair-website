@@ -53,7 +53,7 @@ const OpenSource = () => {
 							</button> */}
 							<Button
 								text='Leave A Footprint'
-								style='bg-transparent hidden sm:block border-white border text-white hover:bg-white hover:text-blue02'
+								style='bg-transparent hidden sm:block border-white border text-white hover:bg-white hover:text-blue02 w-[146px] lg:w-[201px]'
 							/>
 						</div>
 						<div className='flex flex-1 '>

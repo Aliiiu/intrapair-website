@@ -31,7 +31,7 @@ const Overview = () => {
 						Overview
 					</h3>
 					<p className='text-white text-sm xl:text-xl'>
-						Anyworks is an online mobile-based platform that provides a solution
+						Anyworkx is an online mobile-based platform that provides a solution
 						for everyone who needs a trusted, professional and experienced
 						artisan as fast as possible based on their geo-location.
 					</p>
