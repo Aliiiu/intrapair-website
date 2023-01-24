@@ -4,8 +4,8 @@ import Button from '../../UI/widget/button/Button';
 
 const Hero = () => {
 	return (
-		<section className='container mx-auto px-2 relative'>
-			<div className='absolute sm:block hidden right-0 2xl:right-10 top-[-25px]'>
+		<section className='container mx-auto px-2 h-[calc(100vh-80px)] flex flex-col items-center justify-center relative'>
+			<div className='absolute sm:block hidden right-0 2xl:right-10 top-[0px]'>
 				<Image src={'/home/spiral.png'} width={200} height={200} alt='sprial' />
 			</div>
 			<div className='flex items-center mx-auto justify-center sm:py-[120px] py-9 w-[100%] sm:w-[80%] '>
@@ -22,7 +22,7 @@ const Hero = () => {
 					</button> */}
 					<Button
 						text="Let's Talk"
-						style='bg-dark-blue mx-auto hover:bg-transparent hover:text-dark-blue hover:border hover:border-dark-blue'
+						style='bg-dark-blue border mx-auto hover:bg-transparent w-[146px] lg:w-[201px] hover:border-dark-blue hover:text-dark-blue '
 					/>
 				</div>
 			</div>

@@ -21,15 +21,6 @@ const Blog = () => {
 		<div className='container px-4 xl:px-[114px] m-auto'>
 			<div className=' flex flex-col gap-y-[70px] m-auto '>
 				<div className='flex flex-col gap-3 w-[fit-content]'>
-					{/* <h3 className='font-bold text-dark-blue text-3xl xl:text-5xl'>
-						Our Blog
-					</h3>
-					<div className='bg-dark-blue w-[50%] h-[1px]'></div> */}
-					{/* <div className='pb-3 xl:pb-5 xl:pr-9 border-b-[0.5px] max-w-[80%] md:max-w-[270px] border-solid border-dark-blue'>
-						<h3 className='font-bold text-dark-blue text-3xl xl:text-5xl'>
-							Our Blog
-						</h3>
-					</div> */}
 					<motion.div
 						className='pb-3 xl:pb-5 pr-12 border-b-[0.5px]  w-[fit-content] md:max-w-[270px] border-solid border-dark-blue '
 						whileInView={{
@@ -65,7 +56,7 @@ const Blog = () => {
 										return (
 											<div
 												key={id}
-												className='flex flex-col gap-1 sm:max-w-[300px] xl:max-w-[400px] mx-auto items-center'
+												className='flex flex-col gap-1 max-w-[350px] sm:max-w-[300px] xl:max-w-[400px] mx-auto items-center'
 												style={{
 													boxShadow:
 														'0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)',
@@ -106,13 +97,10 @@ const Blog = () => {
 						}
 					</div>
 				</div>
-				{/* <button className='rounded-[41px]  text-sm w-[212px] bg-dark-blue text-white py-[15px] m-auto'>
-					Read A Story
-				</button> */}
 				<Link href={'blog'} className='mx-auto'>
 					<Button
 						text='Read A Story'
-						style='hover:border hover:border-dark-blue mx-auto bg-dark-blue xl:w-[212px] hover:bg-white hover:text-dark-blue'
+						style='hover:border hover:border-dark-blue mx-auto bg-dark-blue w-[146px] lg:w-[201px] xl:w-[212px] hover:bg-white hover:text-dark-blue'
 					/>
 				</Link>
 			</div>

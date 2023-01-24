@@ -72,7 +72,7 @@ const Cursor = ({
 			<div
 				ref={cursorRef}
 				className={`w-20 h-20 flex justify-center ${
-					style ? style : 'bg-purple-600 text-white'
+					style ? style : 'bg-white text-purple-600'
 				} font-encode items-center z-10 absolute top-0 left-0 rounded-full ${
 					showCursor ? 'block' : 'hidden'
 				}`}

@@ -24,10 +24,6 @@ export const AppHeader = ({ isOpen, toggleSidebar }: Props) => {
 		window.addEventListener('scroll', changeNavbarColor);
 	}
 
-	useEffect(() => {
-		console.log(colorChange);
-	}, [colorChange]);
-
 	return (
 		<header>
 			<Transition show={open}>
@@ -55,7 +51,7 @@ export const AppHeader = ({ isOpen, toggleSidebar }: Props) => {
 			<div
 				className={`${colorChange ? 'bg-[#ffffff33] backdrop-blur-lg' : ''}`}
 			>
-				<div className='2xl:h-[114px] h-[80px] xl:h-[100px] container mx-auto flex w-full px-4 xl:px-[114px]'>
+				<div className='2xl:h-[114px] h-[80px] xl:h-[100px] xl:px-[114px] container mx-auto flex w-full px-4'>
 					<div className={clsx('w-full flex', { open })}>
 						<Flex
 							gap='10px'

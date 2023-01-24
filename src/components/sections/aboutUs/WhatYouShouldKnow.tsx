@@ -2,19 +2,9 @@ import {
 	HiOutlineArrowLongLeft,
 	HiOutlineArrowLongRight,
 } from 'react-icons/hi2';
-import React, {
-	forwardRef,
-	ReactNode,
-	useRef,
-	CSSProperties,
-	useState,
-} from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { Carousel } from 'react-responsive-carousel';
-// import Carousel, {
-// 	ReactElasticCarouselProps,
-// 	consts,
-// } from 'react-elastic-carousel';
 
 const WhatYouShouldKnowArray = [
 	{
@@ -40,35 +30,8 @@ const WhatYouShouldKnowArray = [
 	},
 ];
 
-const CarouselContent = () => (
-	<>
-		<div className='relative w-full sm:w-[400px] h-[400px] md:h-[500px] xl:h-[608px]'>
-			<Image src={'/images/aboutIntrapair.png'} alt='' fill />
-		</div>
-		<div className='hidden xl:block relative w-[200px] h-[608px]'>
-			<Image src={'/images/aboutIntrapair_2.png'} alt='' fill />
-		</div>
-	</>
-);
-
-// const CustomCarousel = forwardRef<
-// 	any,
-// 	ReactElasticCarouselProps & { children: ReactNode }
-// >((props, ref) => <Carousel ref={ref} {...props} />);
-
-// CustomCarousel.displayName === 'MyCustomCarousel';
-
 const WhatYouShouldKnow = () => {
-	// const carouselRef = useRef(null);
 	const [currentSlide, setCurrentSlide] = useState(0);
-	const arrowStyles: CSSProperties = {
-		position: 'absolute',
-		zIndex: 2,
-		bottom: '17%',
-		// width: 30,
-		// height: 30,
-		cursor: 'pointer',
-	};
 
 	const next = () => {
 		setCurrentSlide((prevState) => prevState + 1);
@@ -86,45 +49,13 @@ const WhatYouShouldKnow = () => {
 
 	return (
 		<Carousel
-			// selectedItem={currentSlide}
-			// onChange={updateCurrentSlide}
+			selectedItem={currentSlide}
+			onChange={updateCurrentSlide}
 			showThumbs={false}
-			showArrows={true}
+			showArrows={false}
 			showStatus={false}
 			showIndicators={false}
-			renderArrowPrev={(onClickHandler, hasPrev, label) =>
-				hasPrev && (
-					<button
-						type='button'
-						onClick={onClickHandler}
-						title={label}
-						// className='absolute w-5 h-5 bg-black z-10'
-						style={{ ...arrowStyles, left: 0 }}
-					>
-						<HiOutlineArrowLongLeft
-							onClick={onClickHandler}
-							// onClick={prev}
-							className='text-secondaryBlue_05 cursor-pointer z-10 text-4xl'
-						/>
-					</button>
-				)
-			}
-			renderArrowNext={(onClickHandler, hasNext, label) =>
-				hasNext && (
-					<button
-						type='button'
-						onClick={onClickHandler}
-						title={label}
-						// className='absolute w-5 h-5 bg-black z-10'
-						style={{ ...arrowStyles, left: 55 }}
-					>
-						<HiOutlineArrowLongRight
-							onClick={onClickHandler}
-							className='text-secondaryBlue_05 cursor-pointer text-4xl'
-						/>
-					</button>
-				)
-			}
+			infiniteLoop={true}
 		>
 			{WhatYouShouldKnowArray.map((item, index) => (
 				<div
@@ -139,17 +70,18 @@ const WhatYouShouldKnow = () => {
 							<p className='text-secondaryBlue_05 text-left max-w-[415px] '>
 								{item.content}
 							</p>
-							{/* <p>{currentSlide}</p> */}
-							{/* <div className='flex gap-5 mb-4 md:mb-0 justify-between md:justify-start mt-12'>
+							<div className='flex gap-5 mb-4 md:mb-0 justify-between align-bottom md:justify-start mt-12'>
 								<HiOutlineArrowLongLeft
-									// onClick={prev}
+									onClick={prev}
 									className='text-secondaryBlue_05 cursor-pointer text-4xl'
 								/>
 								<HiOutlineArrowLongRight
-									// onClick={next}
-									className='text-secondaryBlue_05 cursor-pointer text-4xl'
+									onClick={next}
+									className={`text-secondaryBlue_05 cursor-pointer text-4xl ${
+										index === 0 ? 'md:ml-7' : 'ml-0'
+									}`}
 								/>
-							</div> */}
+							</div>
 						</div>
 					</div>
 					<div className='flex flex-1 flex-col md:flex-row gap-10'>
@@ -160,6 +92,14 @@ const WhatYouShouldKnow = () => {
 							<Image src={item.imgSrc2} alt='' fill />
 						</div>
 					</div>
+					{/* <div className='flex flex-1 flex-col md:flex-row gap-10'>
+						<div className='relative w-full sm:w-[400px] h-[400px] md:h-[500px] xl:h-[608px]'>
+							<Image src={item.imgSrc1} alt='' fill />
+						</div>
+						<div className='hidden xl:block relative w-[200px] h-[608px]'>
+							<Image src={item.imgSrc2} alt='' fill />
+						</div>
+					</div> */}
 				</div>
 			))}
 		</Carousel>

@@ -86,8 +86,8 @@ const serviceRendered = [
 
 const Features = () => {
 	return (
-		<div className='flex flex-col gap-10 xl:gap-40'>
-			{serviceRendered.map((item) => (
+		<div className='flex flex-col gap-10 lg:gap-40'>
+			{serviceRendered.slice(0, 3).map((item) => (
 				<div
 					key={item.id}
 					className={`flex flex-col-reverse ${
@@ -103,7 +103,39 @@ const Features = () => {
 								{item.feature}
 							</h3>
 							<p className='text-grey_05'>{item.content}</p>
-							<div className='flex flex-col md:flex-row justify-between'>
+							<div
+								className={`flex flex-col md:flex-row justify-between ${
+									item.id === 2 || item.id === 3 ? 'xl:w-[70%]' : 'w-full'
+								}`}
+							>
+								<ListComponent items={item.subList} />
+								<ListComponent items={item.subList2} />
+							</div>
+						</div>
+					</div>
+				</div>
+			))}
+			{serviceRendered.slice(3).map((item) => (
+				<div
+					key={item.id}
+					className={`flex flex-col-reverse ${
+						item.id % 2 == 0 ? 'md:flex-row-reverse' : 'md:flex-row'
+					} gap-12 xl:gap-24`}
+				>
+					<div
+						className={`md:flex-1 w-full h-[300px] lg:h-[400px] xl:h-[475px] 2xl:h-[550px] relative`}
+					>
+						<Image src={item.img} alt='' fill />
+					</div>
+					<div className='flex md:flex-1 flex-col justify-center'>
+						<div className='flex flex-col gap-2 xl:gap-8'>
+							<h3 className='font-semibold text-2xl lg:text-3xl xl:text-4xl text-secondaryBlue_05 '>
+								{item.feature}
+							</h3>
+							<p className='text-grey_05'>{item.content}</p>
+							<div
+								className={`flex flex-col md:flex-row justify-between xl:w-[90%]`}
+							>
 								<ListComponent items={item.subList} />
 								<ListComponent items={item.subList2} />
 							</div>

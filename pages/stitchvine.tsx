@@ -19,20 +19,20 @@ const Stitchvine = () => {
 				</section>
 				<section className='relative mt-[60px] md:mt-[80px] w-full'>
 					<div className='absolute w-full'>
-						<div className='relative w-full h-[250px] md:h-[400px] lg:h-[550px] xl:h-[750px] 2xl:h-[1050px]'>
+						<div className='relative w-full h-[250px] md:h-[400px] lg:h-[550px] xl:h-[700px] 2xl:h-[930px]'>
 							<Image src={'/images/stitchvineMockup.png'} alt='' fill />
 						</div>
 					</div>
 				</section>
-				<section className='bg-[#0E0037] mt-[250px] md:mt-[400px] lg:mt-[550px] xl:mt-[600px] 2xl:mt-[800px]'>
-					<div className='container py-16 xl:pb-32 xl:pt-[300px] px-4 xl:px-[114px] mx-auto'>
+				<section className='bg-[#0E0037] mt-[250px] md:mt-[400px] lg:mt-[500px] xl:mt-[550px] 2xl:mt-[750px]'>
+					<div className='container pt-[80px] py-16 xl:pb-32 md:pt-[100px] lg:pt-[150px] xl:pt-[300px] px-4 xl:px-[114px] mx-auto'>
 						<Overview />
 					</div>
 				</section>
 				<section className='container py-16 xl:py-32 px-4 xl:px-[114px] mx-auto'>
 					<Challenges />
 				</section>
-				<section className='w-full h-[200px] md:h-[500px] xl:h-[750px]'>
+				<section className='w-full h-[300px] md:h-[500px] xl:h-[750px]'>
 					<div className='flex h-full'>
 						<div className='flex-1 flex bg-[#81249D] relative justify-center items-center'>
 							<h5 className='font-semibold absolute top-[2%] left-[10%] xl:left-[22%] 2xl:left-[30%] text-[8px] md:text-base text-white mt-[20px] md:mt-[50px] xl:mt-[100px]'>

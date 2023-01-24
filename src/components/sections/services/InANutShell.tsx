@@ -19,13 +19,8 @@ const InANutShell = () => {
 			<div className='relative hidden md:block h-[400px] lg:h-[480px] xl:h-[629px] w-[500px] xl:w-[694px]'>
 				<Image src={'/images/inAnutshell2.png'} alt='' fill />
 			</div>
-			<div className='flex-1 md:hidden block'>
-				<Image
-					src={'/images/inAnutshell.png'}
-					alt=''
-					width={342}
-					height={356}
-				/>
+			<div className='md:hidden h-[400px] w-full relative block'>
+				<Image src={'/images/inAnutshell.png'} alt='' fill />
 			</div>
 		</div>
 	);

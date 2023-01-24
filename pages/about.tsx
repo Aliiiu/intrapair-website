@@ -16,7 +16,7 @@ const about = () => {
 			</Head>
 
 			<AppLayout>
-				<section className='container mx-auto py-10 px-4 xl:pl-[188px] 2xl:pr-[100px] 2xl:pl-[288px]'>
+				<section className='container mx-auto py-10 lg:py-20 px-4 xl:pl-[188px] 2xl:pr-[100px] 2xl:pl-[288px]'>
 					{/* <HeroSection
 						showTitle
 						title='WE ARE'
@@ -48,7 +48,7 @@ const about = () => {
 						</div>
 					</div>
 				</section>
-				<section className='container relative py-10 xl:py-20 px-4 xl:px-[114px] mx-auto'>
+				<section className='container relative py-10 lg:py-20 xl:py-[160px] px-4 xl:px-[114px] mx-auto'>
 					<Image
 						src={'/svgs/sphere_1.svg'}
 						alt=''
@@ -59,13 +59,13 @@ const about = () => {
 					<Image
 						src={'/svgs/sphere_1.svg'}
 						alt=''
-						width={114}
-						height={114}
+						width={214}
+						height={214}
 						className='absolute hidden xl:block bottom-[0px] right-0'
 					/>
 					<Product />
 				</section>
-				<section className='container py-10 xl:py-20 px-4 xl:px-[114px] mx-auto'>
+				<section className='container py-10 lg:py-20 xl:py-[180px] px-4 xl:px-[114px] mx-auto'>
 					<Feature />
 				</section>
 				<section className='bg-[#F0FAFF]'>

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { AppLayout } from '../src/components/app';
 import { SomethingGreat } from '../src/components/common';
+import Button from '../src/components/UI/widget/button/Button';
 
 export default function OpenSource() {
 	return (
@@ -39,11 +40,11 @@ export default function OpenSource() {
 						</div>
 					</section>
 
-					<section className='mt-[40px] lg:mt-[82px] pb-[100px] lg:pb-[189px]'>
+					<section className='mt-[40px] lg:mt-[82px] pb-[100px] lg:pb-[189px] xl:pb-[200px]'>
 						<div className='container px-4 xl:px-[114px] relative mx-auto'>
 							<div className='flex'>
 								<div className='flex md:flex-row flex-col justify-between w-full items-center xl:gap-[40px]'>
-									<div className='flex flex-col max-w-[402px] gap-5 flex-1'>
+									<div className='flex flex-col max-w-[402px] items-start gap-5 flex-1'>
 										<p className='text-base max-w-[392px] text-black01'>
 											We are enthusiastic about contributing to the tech
 											ecosystem by creating free open-source solutions that
@@ -51,9 +52,10 @@ export default function OpenSource() {
 											curators, and product managers. We hope to always share
 											our knowledge with the world.
 										</p>
-										<button className='rounded-[41px] hover:bg-transparent hover:text-dark-blue text-sm w-[212px] bg-dark-blue text-white py-[15px]'>
-											Collaborate With Us
-										</button>
+										<Button
+											text='Collaborate With Us'
+											style='bg-dark-blue border hover:bg-transparent w-[186px] lg:w-[201px] hover:border-dark-blue text-sm sm:text-base hover:text-dark-blue '
+										/>
 									</div>
 									<div className='xl:my-0 my-9'>
 										<Image
@@ -65,9 +67,9 @@ export default function OpenSource() {
 										/>
 									</div>
 
-									<div className='md:flex-1 relative w-full md:w-[400px] h-[399px] lg:w-[531px] lg:h-[499px]'>
+									<div className='md:flex-1 relative w-full md:w-[400px] h-[399px] lg:w-[531px] lg:h-[499px] xl:h-[599px]'>
 										<Image
-											src={'/open-source/open-source-illustration.png'}
+											src={'/images/open-source.png'}
 											fill
 											alt='open-source-illustration'
 										/>
