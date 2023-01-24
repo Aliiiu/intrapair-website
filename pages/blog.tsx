@@ -63,7 +63,7 @@ export default function Blog() {
 					</section>
 					<section className='mt-[260px] md:mt-[160px] pb-[189px]'>
 						<div className='container px-4 xl:px-[114px] mx-auto'>
-							<div className='flex flex-col gap-[70px]'>
+							<div className='flex flex-col mx-auto gap-[70px]'>
 								<div className='md:flex mx-auto hidden'>
 									{
 										// Check if blog is sucessfully fetched from medium json
@@ -75,7 +75,7 @@ export default function Blog() {
 														return (
 															<div
 																key={id}
-																className='flex flex-col gap-1 sm:max-w-[300px] xl:max-w-[400px] items-center'
+																className='flex flex-col gap-1 sm:max-w-[300px] xl:max-w-[320px] 2xl:max-w-[400px] items-center'
 																style={{
 																	boxShadow:
 																		'0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)',

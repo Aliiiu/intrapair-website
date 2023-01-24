@@ -39,7 +39,7 @@ export default function ContactUs() {
 						</div>
 					</section>
 					<section className='mt-[110px] pb-[189px]'>
-						<div className='container px-4 xl:px-[170px] mx-auto relative'>
+						<div className='container px-4 xl:px-[114px] mx-auto relative'>
 							<div className='absolute bottom-[-82px] hidden xl:block right-0'>
 								<Image
 									src={'/contact/blurry.png'}
