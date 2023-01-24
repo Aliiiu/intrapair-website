@@ -67,7 +67,7 @@ export default function OpenSource() {
 										/>
 									</div>
 
-									<div className='md:flex-1 relative w-full md:w-[400px] h-[399px] lg:w-[531px] lg:h-[499px] xl:h-[599px]'>
+									<div className='md:flex-1 relative w-full md:w-[400px] h-[399px] lg:w-[531px] lg:h-[499px] 2xl:h-[599px]'>
 										<Image
 											src={'/images/open-source.png'}
 											fill

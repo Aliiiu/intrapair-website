@@ -15,7 +15,7 @@ const products = () => {
 
 			<AppLayout>
 				<div className=' w-full relative'>
-					<section className='container mx-auto py-10 px-4 md:px-[114px]'>
+					<section className='container mx-auto py-10 px-4 pt-10 md:pt-[20px] lg:pt-[50px] xl:pt-[70px] md:px-[114px]'>
 						<div className='h-[150px] md:h-[150px] xl:h-[200px] 2xl:h-[250px] flex flex-col justify-center md:justify-end relative mx-[20px] xl:mx-[164px] 2xl:mx-[200px]'>
 							<Image
 								src={'/images/heroBanner3.png'}

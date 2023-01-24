@@ -70,7 +70,7 @@ export const AppHeader = ({ isOpen, toggleSidebar }: Props) => {
 								) : (
 									<Image
 										alt='intrapair-new'
-										src='/images/logo-dark.png'
+										src='/svgs/logo-dark.svg'
 										width={130}
 										height={73}
 									/>
