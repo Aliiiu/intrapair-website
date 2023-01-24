@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 interface Props {
@@ -25,7 +26,10 @@ export const SomethingGreat = ({ bgColor }: Props) => {
             onHoverEnd={() => setAnimate(false)}
             className="flex w-full"
           >
-            <div className="md:flex block justify-between w-full items-center">
+            <Link
+              href={'/contact-us'}
+              className="md:flex block justify-between w-full items-center"
+            >
               <div className="md:mb-0 mb-[30px]">
                 <h1 className="font-bold text-2xl md:text-4xl xl:text-6xl text-center md:text-left text-blue02 max-w-[500px] xl:max-w-[870px] xl:leading-[70px]">
                   Let’s make something great work together.
@@ -50,7 +54,7 @@ export const SomethingGreat = ({ bgColor }: Props) => {
                   <Image src={'/svgs/arrowRt.svg'} fill alt="right arrow" />
                 </motion.div>
               </div>
-            </div>
+            </Link>
           </motion.div>
         </div>
       </div>
