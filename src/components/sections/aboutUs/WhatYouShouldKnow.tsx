@@ -86,8 +86,8 @@ const WhatYouShouldKnow = () => {
 					</div>
 					<div className='flex flex-1 flex-col md:flex-row gap-10'>
 						<div
-							className={`relative w-full xl:w-[400px] h-[400px] md:h-[500px] xl:h-[608px] ${
-								item.id === 3 && '2xl:w-full'
+							className={`relative w-full h-[400px] md:h-[500px] xl:h-[608px] ${
+								item.id === 3 ? 'xl:w-full' : 'xl:w-[400px]'
 							}`}
 						>
 							<Image src={item.imgSrc1} alt='' fill />

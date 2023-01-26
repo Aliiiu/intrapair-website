@@ -60,7 +60,7 @@ const OpenSource = () => {
 				</div>
 				<div className='flex flex-1 w-full'>
 					<motion.div
-						className={`flex justify-end relative w-full h-[400px] lg:w-[500px] lg:h-[500px] transform-gpu duration-500 hover:opacity-100 ease-in-out ${
+						className={`flex justify-end relative w-full h-[400px] lg:h-[500px] 2xl:h-[550px] transform-gpu duration-500 hover:opacity-100 ease-in-out ${
 							animate ? 'opacity-100' : 'opacity-80'
 						}`}
 						// whileHover={{ opacity: 1 }}
