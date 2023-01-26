@@ -3,10 +3,12 @@ import React, { CSSProperties } from 'react';
 import { motion } from 'framer-motion';
 import { Carousel } from 'react-responsive-carousel';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import { useMedia } from 'react-use';
 
 // Media Query with Framer Motion
 
 const QualityProd = () => {
+  const isMobile = useMedia('(max-width: 768px)');
   const arrowStyles: CSSProperties = {
     position: 'absolute',
     zIndex: 2,
@@ -27,12 +29,12 @@ const QualityProd = () => {
                 paddingRight: 0,
               }}
               initial={{
-                paddingRight: '12rem',
+                paddingRight: isMobile ? '0.8rem' : '12rem',
                 borderBottom: '0.5px solid #fff',
               }}
               whileHover={{
-                borderBottom: '2px solid #fff',
-                paddingRight: '12rem',
+                borderBottom: isMobile ? '1px solid #fff' : '2px solid #fff',
+                paddingRight: isMobile ? '0.8rem' : '12rem',
               }}
               transition={{
                 duration: 0.5,
