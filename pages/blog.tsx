@@ -9,6 +9,7 @@ import { motion } from 'framer-motion';
 
 export default function Blog() {
   const [blogs, setBlogs] = useState<any>([]);
+  const [onFocus, setonFocus] = useState<boolean>(false);
 
   useEffect(() => {
     const fetchBlog = async () => {
@@ -107,11 +108,17 @@ export default function Blog() {
                                     src="/common/arrow-right.svg"
                                     alt="blog-arrow"
                                     className="w-3 h-3"
-                                    whileFocus={{
-                                      width: '14px',
-                                      height: '14px',
-                                    }}
+                                    animate={
+                                      onFocus
+                                        ? { width: '18px', height: '18px' }
+                                        : { width: '12px', height: '12px' }
+                                    }
                                     initial={{ width: '12px', height: '12px' }}
+                                    transition={{
+                                      duration: 0.7,
+                                      type: 'tween',
+                                      ease: 'easeInOut',
+                                    }}
                                   />
                                 </div>
                               </div>
