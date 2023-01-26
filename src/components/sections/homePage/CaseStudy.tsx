@@ -30,6 +30,10 @@ const CaseStudy: FC<{ showTitle: boolean }> = ({ showTitle }) => {
                   type: 'tween',
                   ease: 'easeInOut',
                 }}
+                initial={{
+                  borderBottom: '0.5px solid #185EA1',
+                  paddingRight: '2rem',
+                }}
               >
                 Case Studies
               </motion.h3>
