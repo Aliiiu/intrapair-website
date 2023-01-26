@@ -62,39 +62,21 @@ export const Footer = () => {
             <p className="text-white font-semibold">GET IN TOUCH</p>
             <Flex justify="space-between" align="center">
               <Link
-                href="#"
+                href="https://twitter.com/intrapairhq/"
                 className="text-white  hover:underline hover:text-blue_04"
               >
-                {/* <Image
-                  alt="twitter"
-                  src="/footer/twitter.svg"
-                  width={20}
-                  height={20}
-                /> */}
                 <FaTwitter size={24} />
               </Link>
               <Link
-                href="#"
+                href="https://instagram.com/intrapairhq/"
                 className="text-white  hover:underline hover:text-blue_04"
               >
-                {/* <Image
-                  alt="instagram"
-                  src="/footer/instagram.svg"
-                  width={20}
-                  height={20}
-                /> */}
                 <RiInstagramFill size={24} />
               </Link>
               <Link
-                href="#"
+                href="https://www.linkedin.com/company/intrapair/"
                 className="text-white  hover:underline hover:text-blue_04"
               >
-                {/* <Image
-                  alt="linkedin"
-                  src="/footer/linkedin.svg"
-                  width={20}
-                  height={20}
-                /> */}
                 <FaLinkedinIn size={24} />
               </Link>
             </Flex>

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Accordion from '../../UI/widget/Accordion/Accordion';
 import { motion, AnimatePresence } from 'framer-motion';
 import Button from '../../UI/widget/button/Button';
+import Link from 'next/link';
 
 interface ArrayType {
   title: string;
@@ -120,10 +121,12 @@ const ProductEng = () => {
                 </p>
               ))}
             </div>
-            <Button
-              text="Learn More"
-              style="border-2 border-white hover:bg-white w-[146px] lg:w-[201px] hover:text-blue-400"
-            />
+            <Link href={'/services'}>
+              <Button
+                text="Learn More"
+                style="border-2 border-white hover:bg-white w-[146px] lg:w-[201px] hover:text-blue-400"
+              />
+            </Link>
           </div>
           <div className="flex flex-col flex-1 gap-3 items-center">
             <Image
