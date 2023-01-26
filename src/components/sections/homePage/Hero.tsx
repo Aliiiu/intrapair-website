@@ -1,10 +1,11 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import Button from '../../UI/widget/button/Button';
 
 const Hero = () => {
 	return (
-		<section className='container mx-auto px-2 h-[calc(100vh-80px)] flex flex-col items-center justify-center relative'>
+		<section className='container mx-auto px-2 h-[calc(60vh-80px)]  md:h-[calc(100vh-80px)] flex flex-col items-center justify-center relative'>
 			<div className='absolute sm:block hidden right-0 2xl:right-10 top-[0px]'>
 				<Image src={'/home/spiral.png'} width={200} height={200} alt='sprial' />
 			</div>
@@ -20,10 +21,12 @@ const Hero = () => {
 					{/* <button className='rounded-[41px] text-base w-[202px] bg-dark-blue text-white py-[15px] m-auto'>
 						Let&apos;s Talk
 					</button> */}
-					<Button
-						text="Let's Talk"
-						style='bg-dark-blue border mx-auto hover:bg-transparent w-[146px] lg:w-[201px] hover:border-dark-blue hover:text-dark-blue '
-					/>
+					<Link href={'/contact-us'} className='mx-auto'>
+						<Button
+							text="Let's Talk"
+							style='bg-dark-blue border mx-auto hover:bg-transparent w-[146px] lg:w-[201px] hover:border-dark-blue hover:text-dark-blue '
+						/>
+					</Link>
 				</div>
 			</div>
 		</section>

@@ -52,10 +52,12 @@ export default function OpenSource() {
 											curators, and product managers. We hope to always share
 											our knowledge with the world.
 										</p>
-										<Button
-											text='Collaborate With Us'
-											style='bg-dark-blue border hover:bg-transparent w-[186px] lg:w-[201px] hover:border-dark-blue text-sm sm:text-base hover:text-dark-blue '
-										/>
+										<Link href={'contact-us'}>
+											<Button
+												text='Collaborate With Us'
+												style='bg-dark-blue border hover:bg-transparent w-[186px] lg:w-[201px] hover:border-dark-blue text-sm sm:text-base hover:text-dark-blue '
+											/>
+										</Link>
 									</div>
 									<div className='xl:my-0 my-9'>
 										<Image

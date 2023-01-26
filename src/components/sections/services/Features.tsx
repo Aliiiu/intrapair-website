@@ -95,7 +95,7 @@ const Features = () => {
 					} gap-12 xl:gap-24`}
 				>
 					<div
-						className={`md:flex-1 w-full h-[300px] ${
+						className={`md:flex-1 w-full h-[250px] md:h-[300px] ${
 							item.id === 3 ? 'xl:h-[300px]' : 'xl:h-[350px]'
 						} 2xl:h-[400px] relative`}
 					>

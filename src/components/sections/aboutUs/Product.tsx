@@ -4,7 +4,7 @@ import React from 'react';
 const Product = () => {
 	return (
 		<div className='flex flex-col-reverse gap-10 md:gap-0 md:flex-row'>
-			<div className='relative md:flex-1 w-full md:w-[500px] h-[350px] md:h-[400px] 2xl:h-[500px]'>
+			<div className='relative md:flex-1 w-full md:w-[500px] h-[300px] md:h-[400px] 2xl:h-[500px]'>
 				<Image src={'/images/qualityProd.png'} alt='' fill />
 			</div>
 			<div className='flex md:flex-1 flex-col justify-center'>

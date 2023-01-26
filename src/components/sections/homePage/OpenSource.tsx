@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import Button from '../../UI/widget/button/Button';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const OpenSource = () => {
 	const [animate, setAnimate] = useState(false);
@@ -50,10 +51,12 @@ const OpenSource = () => {
 					{/* <button className='rounded-[41px]  text-sm w-[206px] bg-white text-blue02 py-[15px] '>
 								Leave A Footprint
 							</button> */}
-					<Button
-						text='Leave A Footprint'
-						style='bg-transparent hidden sm:block border-white border text-white hover:bg-white hover:text-blue02 w-[146px] lg:w-[201px]'
-					/>
+					<Link href={'/open-source'}>
+						<Button
+							text='Leave A Footprint'
+							style='bg-transparent hidden sm:block border-white border text-white hover:bg-white hover:text-blue02 w-[146px] lg:w-[201px]'
+						/>
+					</Link>
 				</div>
 				<div className='flex flex-1 w-full'>
 					<motion.div
@@ -75,10 +78,12 @@ const OpenSource = () => {
 						/>
 					</motion.div>
 				</div>
-				<Button
-					text='Leave A Footprint'
-					style='bg-white sm:hidden border-white w-[186px] sm:w-[0px] text-sm sm:text-base text-blue02'
-				/>
+				<Link href={'/open-source'} className=' sm:hidden'>
+					<Button
+						text='Leave A Footprint'
+						style='bg-white border-white w-[186px] sm:w-[0px] text-sm sm:text-base text-blue02'
+					/>
+				</Link>
 			</div>
 		</div>
 	);
