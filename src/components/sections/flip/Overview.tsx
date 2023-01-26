@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { HiOutlineArrowLongRight } from 'react-icons/hi2';
 
@@ -70,13 +71,16 @@ const Overview = () => {
 							'Result Checker WebApp',
 						]}
 					/>
-					<a
-						href=''
-						className='font-semibold text-sm xl:text-base text-secondaryBlue_03'
-					>
-						Visit Live
-						<HiOutlineArrowLongRight className='text-secondaryBlue_05 text-lg xl:text-4xl' />
-					</a>
+					<div className='flex gap-4 items-center'>
+						<Link href='https://www.flipcbt.com/' passHref legacyBehavior>
+							<a target={'_blank'} rel='noopener noreferrer'>
+								<span className='font-semibold text-sm md:text-base text-secondaryBlue_03'>
+									Visit Live
+								</span>
+								<HiOutlineArrowLongRight className='text-secondaryBlue_05 text-3xl md:text-4xl' />
+							</a>
+						</Link>
+					</div>
 				</div>
 			</div>
 		</div>
