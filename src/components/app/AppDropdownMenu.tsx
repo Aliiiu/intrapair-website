@@ -110,14 +110,46 @@ export const AppDropdownMenu = ({ isOpen, setOpen }: Props) => {
 				<nav className='dropdown-menu h-[calc(100vh-80px)] 2xl:h-[calc(100vh-114px)] relative'>
 					<div className='absolute sm:bottom-[64px] bottom-[66px] left-[15px] md:left-[45px]'>
 						<div className='flex md:flex-col justify-between gap-6 items-center'>
-							<Link href='#' className='text-white  hover:text-blue01'>
-								<FaTwitter size={24} />
+							<Link
+								href='https://twitter.com/IntrapairHQ'
+								legacyBehavior
+								passHref
+								className='text-white  hover:text-blue01'
+							>
+								<a
+									className='text-white  hover:text-blue01'
+									target={'_blank'}
+									rel='noopener noreferrer'
+								>
+									<FaTwitter size={24} />
+								</a>
 							</Link>
-							<Link href='#' className='text-white  hover:text-blue01'>
-								<RiInstagramFill size={24} />
+							<Link
+								href='https://www.instagram.com/intrapairhq/'
+								legacyBehavior
+								passHref
+								className='text-white  hover:text-blue01'
+							>
+								<a
+									className='text-white  hover:text-blue01'
+									target={'_blank'}
+									rel='noopener noreferrer'
+								>
+									<RiInstagramFill size={24} />
+								</a>
 							</Link>
-							<Link href='#' className='text-white  hover:text-blue01'>
-								<FaLinkedinIn size={24} />
+							<Link
+								href='https://www.linkedin.com/company/intrapair/mycompany/'
+								legacyBehavior
+								passHref
+							>
+								<a
+									className='text-white  hover:text-blue01'
+									target={'_blank'}
+									rel='noopener noreferrer'
+								>
+									<FaLinkedinIn size={24} />
+								</a>
 							</Link>
 						</div>
 					</div>

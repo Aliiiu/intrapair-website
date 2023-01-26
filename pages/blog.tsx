@@ -49,7 +49,7 @@ export default function Blog() {
 								>
 									There’s Always Something To Read About
 								</h1>
-								<p className='text-black01 max-w-[520px] mb-5 mt-2 text-base'>
+								{/* <p className='text-black01 max-w-[520px] mb-5 mt-2 text-base'>
 									Receive frequent tech updates curated by proficient writers at
 									Intrapair. You don’t want to miss out on any of our exciting
 									stories.
@@ -57,7 +57,7 @@ export default function Blog() {
 								<Button
 									text='Prompt Me'
 									style='bg-dark-blue border mx-auto w-[146px] lg:w-[201px] hover:bg-transparent hover:border-dark-blue hover:text-dark-blue '
-								/>
+								/> */}
 							</div>
 						</div>
 					</section>
@@ -69,46 +69,44 @@ export default function Blog() {
 										// Check if blog is sucessfully fetched from medium json
 										blogs.status === 'ok' ? (
 											<div className='flex-wrap flex mx-auto gap-[36px]'>
-												{blogs.items
-													.slice(0, 6)
-													.map((item: any, id: number) => {
-														return (
-															<div
-																key={id}
-																className='flex flex-col gap-1 sm:max-w-[300px] xl:max-w-[320px] 2xl:max-w-[400px] items-center'
-																style={{
-																	boxShadow:
-																		'0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)',
-																}}
+												{blogs.items.map((item: any, id: number) => {
+													return (
+														<div
+															key={id}
+															className='flex flex-col gap-1 sm:max-w-[300px] xl:max-w-[320px] 2xl:max-w-[400px] items-center'
+															style={{
+																boxShadow:
+																	'0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)',
+															}}
+														>
+															<a
+																href={item.link}
+																target='_blank'
+																rel='nooponer noreferrer'
 															>
-																<a
-																	href={item.link}
-																	target='_blank'
-																	rel='nooponer noreferrer'
-																>
-																	<div className='w-full'>
-																		<img src={item.thumbnail} alt='' />
-																	</div>
-																</a>
-																<div className='flex flex-col gap-6 p-5 flex-1 w-full justify-between'>
-																	<p className='black01 text-base w-full sm:w-[80%]'>
-																		{item.title}
+																<div className='w-full'>
+																	<img src={item.thumbnail} alt='' />
+																</div>
+															</a>
+															<div className='flex flex-col gap-6 p-5 flex-1 w-full justify-between'>
+																<p className='black01 text-base w-full sm:w-[80%]'>
+																	{item.title}
+																</p>
+																<div className='flex justify-between'>
+																	<p className='text-xs text-dark-blue'>
+																		{item.pubDate.split(' ')[0]}
 																	</p>
-																	<div className='flex justify-between'>
-																		<p className='text-xs text-dark-blue'>
-																			{item.pubDate.split(' ')[0]}
-																		</p>
-																		<Image
-																			src={'/common/arrow-right.svg'}
-																			width={12}
-																			height={12}
-																			alt='>'
-																		/>
-																	</div>
+																	<Image
+																		src={'/common/arrow-right.svg'}
+																		width={12}
+																		height={12}
+																		alt='>'
+																	/>
 																</div>
 															</div>
-														);
-													})}
+														</div>
+													);
+												})}
 											</div>
 										) : (
 											<p>Something went wrong...</p>

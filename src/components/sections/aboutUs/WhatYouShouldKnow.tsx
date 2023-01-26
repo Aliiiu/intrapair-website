@@ -85,12 +85,18 @@ const WhatYouShouldKnow = () => {
 						</div>
 					</div>
 					<div className='flex flex-1 flex-col md:flex-row gap-10'>
-						<div className='relative w-full sm:w-[400px] h-[400px] md:h-[500px] xl:h-[608px]'>
+						<div
+							className={`relative w-full xl:w-[400px] h-[400px] md:h-[500px] xl:h-[608px] ${
+								item.id === 3 && 'xl:w-full'
+							}`}
+						>
 							<Image src={item.imgSrc1} alt='' fill />
 						</div>
-						<div className='hidden xl:block relative w-[200px] h-[608px]'>
-							<Image src={item.imgSrc2} alt='' fill />
-						</div>
+						{item.id !== 3 && (
+							<div className='hidden xl:block relative w-[200px] h-[608px]'>
+								<Image src={item.imgSrc2} alt='' fill />
+							</div>
+						)}
 					</div>
 					{/* <div className='flex flex-1 flex-col md:flex-row gap-10'>
 						<div className='relative w-full sm:w-[400px] h-[400px] md:h-[500px] xl:h-[608px]'>
