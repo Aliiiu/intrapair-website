@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 
 const Blog = () => {
   const [blogs, setBlogs] = useState<any>([]);
+  const [onFocus, setonFocus] = useState<boolean>(false);
 
   useEffect(() => {
     const fetchBlog = async () => {
@@ -56,10 +57,12 @@ const Blog = () => {
                     return (
                       <div
                         key={id}
+                        onClick={(id) => console.log('I was clicked!', id)}
                         className="flex flex-col gap-1 max-w-[350px] sm:max-w-[300px] xl:max-w-[400px] mx-auto items-center"
                         style={{
                           boxShadow:
                             '0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)',
+                          // border: '1px solid red',
                         }}
                       >
                         <a
@@ -79,11 +82,27 @@ const Blog = () => {
                             <p className="text-xs text-dark-blue">
                               {item.pubDate.split(' ')[0]}
                             </p>
-                            <Image
+                            {/* <Image
                               src={'/common/arrow-right.svg'}
                               width={12}
                               height={12}
                               alt=">"
+                            /> */}
+                            <motion.img
+                              src="/common/arrow-right.svg"
+                              alt="blog-arrow"
+                              className="w-3 h-3"
+                              animate={
+                                onFocus
+                                  ? { width: '18px', height: '18px' }
+                                  : { width: '12px', height: '12px' }
+                              }
+                              initial={{ width: '12px', height: '12px' }}
+                              transition={{
+                                duration: 0.7,
+                                type: 'tween',
+                                ease: 'easeInOut',
+                              }}
                             />
                           </div>
                         </div>
