@@ -1,9 +1,10 @@
 import Image from 'next/image';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Accordion from '../../UI/widget/Accordion/Accordion';
 import { motion, AnimatePresence } from 'framer-motion';
 import Button from '../../UI/widget/button/Button';
 import Link from 'next/link';
+import { useMedia, useIntersection } from 'react-use';
 
 interface ArrayType {
 	title: string;
@@ -54,10 +55,90 @@ const faqArray: ArrayType[] = [
 
 const ProductEng = () => {
 	const [index, setIndex] = useState(1);
+	const intersectionRef = useRef(null);
+	const intersection = useIntersection(intersectionRef, {
+		root: null,
+		rootMargin: '0px',
+		threshold: 1,
+	});
+	const isMobile = useMedia('(max-width: 768px)');
+
+	useEffect(() => {
+		// console.log('effect fired')
+		const _body = document.querySelector('body');
+		let _productEng: any = null;
+		if( intersectionRef ) {
+			_productEng = intersectionRef.current;
+		}
+
+		if(!_body || !_productEng) return;
+
+		// you can change this to useRef instead of id and pass it as props here
+		const _hero = document.querySelector('#hero');
+		const _caseStudy = document.querySelector('#caseStudy');
+
+		let _timeOutHandler: any = null;
+
+		const _switch = (e: any) => {
+			console.log(index);
+			if(e.wheelDelta /120 > 0) {
+				// user scrolled up
+				// console.log('up', index);
+				if( index > 1) {
+					setIndex(index - 1);
+				} else {
+					console.log('release scroll');
+					if(_hero) _hero.scrollIntoView({ behavior: 'smooth' });
+				}
+			} else {
+				// user scrolled down
+				// console.log('down', index);
+				if( index < faqArray.length ) {
+					setIndex(index + 1)
+				} else {
+					console.log('release scroll');
+					if(_caseStudy) _caseStudy.scrollIntoView({ behavior: 'smooth' });
+				}
+			}
+		}
+
+		const _clearTimeout = () => {
+			if(_timeOutHandler) { clearTimeout(_timeOutHandler); }
+		}
+
+		const onWheel = (e: any) => {
+			e.preventDefault();
+			// console.log('wheel event active');
+			_clearTimeout()
+            _timeOutHandler = setTimeout(() => { _switch(e) }, 100);
+		}
+
+		const cleanup = () => {
+			// console.log('cleanup');
+			_clearTimeout()
+			if(intersectionRef && _productEng) {
+				_productEng.removeEventListener('wheel', onWheel);
+			}
+		}
+
+		if(intersection && intersection.intersectionRatio < 1 || isMobile) {
+			cleanup();
+		} else {
+			_productEng.addEventListener('wheel', onWheel);
+		}
+
+		return () => {
+			if(!isMobile) {
+				cleanup();
+			}
+		}
+		
+
+	}, [index, isMobile, intersection]);
 
 	return (
 		<div className='container m-auto w-full px-4 xl:px-[114px]'>
-			<div className='flex flex-col gap-y-9 '>
+			<div className='flex flex-col gap-y-9'>
 				<div className='flex flex-col gap-3'>
 					<motion.div
 						className='border-b-[0.5px] w-max pb-3 xl:pb-5 pr-5 border-white '
@@ -104,6 +185,7 @@ const ProductEng = () => {
 					style={{
 						gridTemplateColumns: 'max-content 1fr',
 					}}
+					ref={intersectionRef}
 				>
 					<div className='flex flex-1 flex-col mlg:mb-0 mb-[60px] gap-y-[60px]'>
 						<div className='flex flex-col max-w-[370px] gap-6 mt-6'>

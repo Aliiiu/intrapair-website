@@ -5,7 +5,7 @@ import Button from '../../UI/widget/button/Button';
 
 const Hero = () => {
 	return (
-		<section className='container mx-auto px-2 h-[calc(60vh-80px)]  md:h-[calc(100vh-80px)] flex flex-col items-center justify-center relative'>
+		<section className='container mx-auto px-2 h-[calc(60vh-80px)]  md:h-[calc(100vh-80px)] flex flex-col items-center justify-center relative' id='hero'>
 			<div className='absolute sm:block hidden right-0 2xl:right-10 top-[0px]'>
 				<Image src={'/home/spiral.png'} width={200} height={200} alt='sprial' />
 			</div>
