@@ -12,6 +12,25 @@ const Blog = () => {
   //   console.log(id);
   // };
 
+  const arrowMotion = {
+    rest: {
+      transition: {
+        duration: 2,
+        type: "tween",
+        ease: "easeIn"
+      }
+    },
+    hover: {
+      width: "18px",
+      height: "18px",
+      transition: {
+        duration: 0.4,
+        type: "tween",
+        ease: "easeInOut"
+      }
+    }
+  };
+
   useEffect(() => {
     const fetchBlog = async () => {
       const response = await fetch(
@@ -59,17 +78,17 @@ const Blog = () => {
                 <div className="xl:flex-nowrap flex-wrap flex  gap-[36px] justify-between w-full">
                   {blogs.items.slice(0, 3).map((item: any, id: any) => {
                     return (
-                      <div
+                      <motion.div
                         key={id}
-                        onClick={() => {
-                          setonFocus(true);
-                        }}
                         className="flex flex-col gap-1 max-w-[350px] sm:max-w-[300px] xl:max-w-[400px] mx-auto items-center"
                         style={{
                           boxShadow:
                             '0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)',
                           // border: '1px solid red',
                         }}
+                        whileHover="hover"
+                        animate="rest"
+                        initial="rest"
                       >
                         <a
                           href={item.link}
@@ -98,21 +117,11 @@ const Blog = () => {
                               src="/common/arrow-right.svg"
                               alt="blog-arrow"
                               className="w-3 h-3"
-                              animate={
-                                onFocus
-                                  ? { width: '18px', height: '18px' }
-                                  : { width: '12px', height: '12px' }
-                              }
-                              initial={{ width: '12px', height: '12px' }}
-                              transition={{
-                                duration: 0.7,
-                                type: 'tween',
-                                ease: 'easeInOut',
-                              }}
+                              variants={arrowMotion}
                             />
                           </div>
                         </div>
-                      </div>
+                      </motion.div>
                     );
                   })}
                 </div>
