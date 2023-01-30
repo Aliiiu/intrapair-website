@@ -70,9 +70,11 @@ export default function Blog() {
 										blogs.status === 'ok' ? (
 											<div className='flex-wrap flex mx-auto gap-[36px]'>
 												{blogs.items.map((item: any, id: number) => {
+													console.log(id);
 													return (
 														<div
 															key={id}
+															onClick={() => console.log(id)}
 															className='flex flex-col gap-1 sm:max-w-[300px] xl:max-w-[320px] 2xl:max-w-[400px] items-center'
 															style={{
 																boxShadow:
