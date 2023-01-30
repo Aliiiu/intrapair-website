@@ -16,19 +16,19 @@ const Blog = () => {
     rest: {
       transition: {
         duration: 2,
-        type: "tween",
-        ease: "easeIn"
-      }
+        type: 'tween',
+        ease: 'easeIn',
+      },
     },
     hover: {
-      width: "18px",
-      height: "18px",
+      width: '18px',
+      height: '21px',
       transition: {
         duration: 0.4,
-        type: "tween",
-        ease: "easeInOut"
-      }
-    }
+        type: 'tween',
+        ease: 'easeInOut',
+      },
+    },
   };
 
   useEffect(() => {
