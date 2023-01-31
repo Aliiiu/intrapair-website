@@ -140,9 +140,9 @@ const QualityProd = () => {
                   <p className="text-white text-base font-semibold">
                     {item.name}
                   </p>
-                  <p className="text-white text-left text-sm md:text-base ">
+                  {/* <p className="text-white text-left text-sm md:text-base ">
                     {item.position}
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </div>
@@ -159,22 +159,22 @@ const prodArray = [
   {
     id: 1,
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere a, mi vel sollicitudin velit varius dictum. Arcu suspendisse blandit non porta adipiscing rutrum. mi vel sollicitudin velit varius dictum. Arcu suspendisse blandit non porta adipiscing rutrum. ',
-    name: 'Stephen Stephen',
-    position: 'CEO, Intrapair',
+      'Partnering with Intrapair has to be one of the greatest decisions we took as a company. Their coordination, team spirit and innovative ideas is second to none.',
+    name: 'Dele Akeem ',
+    // position: 'CEO, Intrapair',
   },
   {
     id: 2,
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere a, mi vel sollicitudin velit varius dictum. Arcu suspendisse blandit non porta adipiscing rutrum. mi vel sollicitudin velit varius dictum. Arcu suspendisse blandit non porta adipiscing rutrum. ',
-    name: 'Stephen Stephen',
-    position: 'CEO, Intrapair',
+      'If you are looking to build a product with the best tech company there is, You need to check out Intrapair. They are the solutions to tech related problems and would give you nothing but the best. I highly recommend Intrapair and their team of experts. ',
+    name: 'Eloise Awosika',
+    // position: 'CEO, Intrapair',
   },
   {
     id: 3,
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere a, mi vel sollicitudin velit varius dictum. Arcu suspendisse blandit non porta adipiscing rutrum. mi vel sollicitudin velit varius dictum. Arcu suspendisse blandit non porta adipiscing rutrum. ',
-    name: 'Stephen Stephen',
-    position: 'CEO, Intrapair',
+      'Intrapair provides their partners with the best user friendly products. They provide top notch professional services which include user friendly products and a well simplified UI interface that users love. ',
+    name: 'Abdulsalaam Hassan',
+    // position: 'CEO, Intrapair',
   },
 ];
