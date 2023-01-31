@@ -6,6 +6,30 @@ import { motion } from 'framer-motion';
 
 const Blog = () => {
   const [blogs, setBlogs] = useState<any>([]);
+  const [onFocus, setonFocus] = useState<boolean>(false);
+
+  // const handleArrow = (id: any) => {
+  //   console.log(id);
+  // };
+
+  const arrowMotion = {
+    rest: {
+      transition: {
+        duration: 2,
+        type: 'tween',
+        ease: 'easeIn',
+      },
+    },
+    hover: {
+      width: '18px',
+      height: '21px',
+      transition: {
+        duration: 0.4,
+        type: 'tween',
+        ease: 'easeInOut',
+      },
+    },
+  };
 
   useEffect(() => {
     const fetchBlog = async () => {
@@ -52,15 +76,19 @@ const Blog = () => {
               // Check if blog is sucessfully fetched from medium json
               blogs.status === 'ok' ? (
                 <div className="xl:flex-nowrap flex-wrap flex  gap-[36px] justify-between w-full">
-                  {blogs.items.slice(0, 3).map((item: any, id: number) => {
+                  {blogs.items.slice(0, 3).map((item: any, id: any) => {
                     return (
-                      <div
+                      <motion.div
                         key={id}
                         className="flex flex-col gap-1 max-w-[350px] sm:max-w-[300px] xl:max-w-[400px] mx-auto items-center"
                         style={{
                           boxShadow:
                             '0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)',
+                          // border: '1px solid red',
                         }}
+                        whileHover="hover"
+                        animate="rest"
+                        initial="rest"
                       >
                         <a
                           href={item.link}
@@ -79,15 +107,21 @@ const Blog = () => {
                             <p className="text-xs text-dark-blue">
                               {item.pubDate.split(' ')[0]}
                             </p>
-                            <Image
+                            {/* <Image
                               src={'/common/arrow-right.svg'}
                               width={12}
                               height={12}
                               alt=">"
+                            /> */}
+                            <motion.img
+                              src="/common/arrow-right.svg"
+                              alt="blog-arrow"
+                              className="w-3 h-3"
+                              variants={arrowMotion}
                             />
                           </div>
                         </div>
-                      </div>
+                      </motion.div>
                     );
                   })}
                 </div>

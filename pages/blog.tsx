@@ -5,9 +5,30 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { AppLayout } from '../src/components/app';
 import Button from '../src/components/UI/widget/button/Button';
+import { motion } from 'framer-motion';
 
 export default function Blog() {
 	const [blogs, setBlogs] = useState<any>([]);
+	const [onFocus, setonFocus] = useState<boolean>(false);
+
+	const arrowMotion = {
+		rest: {
+			transition: {
+				duration: 2,
+				type: 'tween',
+				ease: 'easeIn',
+			},
+		},
+		hover: {
+			width: '18px',
+			height: '21px',
+			transition: {
+				duration: 0.4,
+				type: 'tween',
+				ease: 'easeInOut',
+			},
+		},
+	};
 
 	useEffect(() => {
 		const fetchBlog = async () => {
@@ -70,16 +91,17 @@ export default function Blog() {
 										blogs.status === 'ok' ? (
 											<div className='flex-wrap flex mx-auto gap-[36px]'>
 												{blogs.items.map((item: any, id: number) => {
-													console.log(id);
 													return (
-														<div
+														<motion.div
 															key={id}
-															onClick={() => console.log(id)}
 															className='flex flex-col gap-1 sm:max-w-[300px] xl:max-w-[320px] 2xl:max-w-[400px] items-center'
 															style={{
 																boxShadow:
 																	'0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)',
 															}}
+															whileHover='hover'
+															animate='rest'
+															initial='rest'
 														>
 															<a
 																href={item.link}
@@ -98,15 +120,21 @@ export default function Blog() {
 																	<p className='text-xs text-dark-blue'>
 																		{item.pubDate.split(' ')[0]}
 																	</p>
-																	<Image
+																	{/* <Image
 																		src={'/common/arrow-right.svg'}
 																		width={12}
 																		height={12}
 																		alt='>'
+																	/> */}
+																	<motion.img
+																		src='/common/arrow-right.svg'
+																		alt='blog-arrow'
+																		className='w-3 h-3'
+																		variants={arrowMotion}
 																	/>
 																</div>
 															</div>
-														</div>
+														</motion.div>
 													);
 												})}
 											</div>
