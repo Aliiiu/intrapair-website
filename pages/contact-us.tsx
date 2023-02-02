@@ -10,7 +10,7 @@ export default function ContactUs() {
   return (
     <div>
       <Head>
-        <title>Contact us</title>
+        <title>Contact us - Intrapair</title>
       </Head>
 
       <AppLayout>
@@ -168,7 +168,7 @@ export default function ContactUs() {
                       </p>
                       <div>
                         <p className="text-black01 text-base">
-                          Call us on any of these phone numbers between
+                          Call us on any of this phone number between
                         </p>
                         <p className="text-black01 text-base">
                           9 am and 4 pm, Mondays to Fridays.

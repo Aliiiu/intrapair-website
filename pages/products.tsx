@@ -11,7 +11,7 @@ const products = () => {
 	return (
 		<div>
 			<Head>
-				<title>Products</title>
+				<title>Products - Intrapair</title>
 			</Head>
 
 			<AppLayout>

@@ -6,29 +6,24 @@ import { motion } from 'framer-motion';
 
 const Blog = () => {
   const [blogs, setBlogs] = useState<any>([]);
-  const [onFocus, setonFocus] = useState<boolean>(false);
-
-  // const handleArrow = (id: any) => {
-  //   console.log(id);
-  // };
 
   const arrowMotion = {
     rest: {
       transition: {
         duration: 2,
-        type: "tween",
-        ease: "easeIn"
-      }
+        type: 'tween',
+        ease: 'easeIn',
+      },
     },
     hover: {
-      width: "18px",
-      height: "18px",
+      width: '18px',
+      height: '18px',
       transition: {
         duration: 0.4,
-        type: "tween",
-        ease: "easeInOut"
-      }
-    }
+        type: 'tween',
+        ease: 'easeInOut',
+      },
+    },
   };
 
   useEffect(() => {
@@ -90,7 +85,7 @@ const Blog = () => {
                         animate="rest"
                         initial="rest"
                       >
-                        <a
+                        <Link
                           href={item.link}
                           target="_blank"
                           rel="nooponer noreferrer"
@@ -98,29 +93,30 @@ const Blog = () => {
                           <div className="w-full">
                             <img src={item.thumbnail} alt="" />
                           </div>
-                        </a>
-                        <div className="flex flex-col gap-6 p-5 flex-1 w-full justify-between">
-                          <p className="black01 text-base w-full sm:w-[80%]">
-                            {item.title}
-                          </p>
-                          <div className="flex justify-between">
-                            <p className="text-xs text-dark-blue">
-                              {item.pubDate.split(' ')[0]}
+
+                          <div className="flex flex-col gap-6 p-5 flex-1 w-full justify-between">
+                            <p className="black01 text-base w-full sm:w-[80%]">
+                              {item.title}
                             </p>
-                            {/* <Image
+                            <div className="flex justify-between">
+                              <p className="text-xs text-dark-blue">
+                                {item.pubDate.split(' ')[0]}
+                              </p>
+                              {/* <Image
                               src={'/common/arrow-right.svg'}
                               width={12}
                               height={12}
                               alt=">"
                             /> */}
-                            <motion.img
-                              src="/common/arrow-right.svg"
-                              alt="blog-arrow"
-                              className="w-3 h-3"
-                              variants={arrowMotion}
-                            />
+                              <motion.img
+                                src="/common/arrow-right.svg"
+                                alt="blog-arrow"
+                                className="w-3 h-3"
+                                variants={arrowMotion}
+                              />
+                            </div>
                           </div>
-                        </div>
+                        </Link>
                       </motion.div>
                     );
                   })}
