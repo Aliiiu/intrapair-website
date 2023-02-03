@@ -10,7 +10,7 @@ const Anyworks = () => {
 	return (
 		<div>
 			<Head>
-				<title>Anyworkx</title>
+				<title>Anyworkx - Intrapair</title>
 			</Head>
 			<AppLayout>
 				<section className='container py-0 xl:pb-0 xl:pt-20 px-4 xl:pr-[114px] mx-auto'>
