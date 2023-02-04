@@ -14,7 +14,7 @@ const caseStudy = () => {
       </Head>
 
       <AppLayout>
-        <section className="container pt-10 md:pt-[30psx-auto py-10 lg:pt-[50px] xl:pt-[100px] px-4 xl:px-[114px] 2xl:pl-[150px] 2xl:pr-[50px]">
+        <section className="container pt-10 md:pt-[30px] mx-auto py-10 lg:pt-[50px] xl:pt-[100px] px-4 xl:px-[114px] 2xl:pl-[150px] 2xl:pr-[50px]">
           {/* <HeroSection
 						imgMb='/images/blogMb.png'
 						header='With the Right Technology, Building is Easier!'
