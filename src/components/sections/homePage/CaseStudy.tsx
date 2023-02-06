@@ -94,11 +94,11 @@ const CaseStudy: FC<{ showTitle: boolean }> = ({ showTitle }) => {
                   </p>
                   <p className="bg-black01 w-[19px] xl:w-[29px] h-[2px]"></p>
                   <p className="text-black01 font-semibold	 text-sm md:text-base	lg:text-xl">
-                    Service At Your Doorstep
+                    Endless services, endless possibilities
                   </p>
                 </div>
                 <p className="text-base sm:text-sm text-[#666666]">
-                  Endless services, endless possibilities
+                  Branding & Identity, Websites & Digital Platforms
                 </p>
               </div>
             </div>
