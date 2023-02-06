@@ -90,11 +90,11 @@ const CaseStudy: FC<{ showTitle: boolean }> = ({ showTitle }) => {
               <div className="flex flex-col gap-1">
                 <div className="flex items-center gap-3">
                   <p className="text-black01 font-semibold text-sm	sm:text-xl	">
-                    Anyworkx
+                    AnyWorkX
                   </p>
                   <p className="bg-black01 w-[19px] xl:w-[29px] h-[2px]"></p>
                   <p className="text-black01 font-semibold	 text-sm md:text-base	lg:text-xl">
-                    Service At Your Doorstep
+                    Endless services, endless possibilities
                   </p>
                 </div>
                 <p className="text-base sm:text-sm text-[#666666]">

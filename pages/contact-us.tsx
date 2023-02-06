@@ -168,10 +168,10 @@ export default function ContactUs() {
                       </p>
                       <div>
                         <p className="text-black01 text-base">
-                          Call us on any of this phone number between
+                          Feel free to get in touch with us on
                         </p>
                         <p className="text-black01 text-base">
-                          9 am and 4 pm, Mondays to Fridays.
+                          Mondays to Fridays between 9 am and 4 pm.
                         </p>
                       </div>
                     </div>
