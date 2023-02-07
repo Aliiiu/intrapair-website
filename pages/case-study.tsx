@@ -10,7 +10,7 @@ const caseStudy = () => {
 	return (
 		<div>
 			<Head>
-				<title>Case Study</title>
+				<title>Case Study - Intrapair</title>
 			</Head>
 
 			<AppLayout>

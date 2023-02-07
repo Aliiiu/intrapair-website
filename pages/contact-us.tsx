@@ -10,7 +10,7 @@ export default function ContactUs() {
 	return (
 		<div>
 			<Head>
-				<title>Contact us</title>
+				<title>Contact us - Intrapair</title>
 			</Head>
 
 			<AppLayout>

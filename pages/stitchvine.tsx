@@ -11,7 +11,7 @@ const Stitchvine = () => {
 	return (
 		<div>
 			<Head>
-				<title>Stitchvine</title>
+				<title>Stitchvine - Intrapair</title>
 			</Head>
 			<AppLayout>
 				<section className='container py-0 xl:pb-0 xl:pt-20 px-4 xl:pr-[114px] mx-auto'>

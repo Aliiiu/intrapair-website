@@ -12,7 +12,7 @@ const about = () => {
 	return (
 		<div>
 			<Head>
-				<title>About Us</title>
+				<title>About Us - Intrapair</title>
 			</Head>
 
 			<AppLayout>
