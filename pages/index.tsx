@@ -16,11 +16,15 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Intrapair | Accelerating Digital Transformation </title>
-        <link rel="icon" type="image/png" href="images/favicon.png" />
+        <title>Intrapair | Accelerating Digital Transformation</title>
         <meta
           name="description"
           content="Accelerating Digital Transformation"
+        />
+        <link rel="icon" type="image/png" href="images/favicon.png" />
+        <meta
+          name="description"
+          content="We build innovative software solutions"
         />
         <meta
           name="keywords"
@@ -60,6 +64,9 @@ export default function Home() {
           </section>
 
           <section className="pt-20 xl:py-[129px]" id="caseStudy">
+            <CaseStudy showTitle />
+          </section>
+          <section className="pt-20 xl:py-[129px]">
             <CaseStudy showTitle />
           </section>
 

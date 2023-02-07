@@ -10,7 +10,7 @@ const services = () => {
 	return (
 		<div>
 			<Head>
-				<title>Services</title>
+				<title>Services - Intrapair</title>
 			</Head>
 
 			<AppLayout>
