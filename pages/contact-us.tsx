@@ -192,10 +192,10 @@ export default function ContactUs() {
 											<HCaptcha
 												sitekey='1b315e77-be32-4f39-8d38-6f5740efc61f'
 												// sitekey='10000000-ffff-ffff-ffff-000000000001'
-												onLoad={onLoad}
+												// onLoad={onLoad}
 												// @ts-ignore
 												onVerify={setToken}
-												ref={captchaRef}
+												// ref={captchaRef}
 											/>
 											<Button
 												loading={loading}
