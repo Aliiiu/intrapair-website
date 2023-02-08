@@ -1,15 +1,18 @@
 import React, { FC } from 'react';
+import { ClipLoader } from 'react-spinners';
 
 interface Props {
 	text: string;
 	style: string;
+	loading?: boolean;
 }
-const Button: FC<Props> = ({ text, style }) => {
+const Button: FC<Props> = ({ text, style, loading }) => {
 	return (
 		<button
-			className={`rounded-[41px] text-sm sm:text-base text-white  transition-colors ease-in-out duration-500 py-3 lg:py-[15px] ${style}`}
+			disabled={loading}
+			className={`rounded-[41px] text-sm sm:text-base text-white max-h-[60px] flex justify-center items-center transition-colors ease-in-out duration-500 py-3 lg:py-[15px] ${style}`}
 		>
-			{text}
+			{loading ? <ClipLoader color='#ffffff' /> : text}
 		</button>
 	);
 };
