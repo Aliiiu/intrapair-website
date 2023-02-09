@@ -93,7 +93,7 @@ const CaseStudy: FC<{ showTitle: boolean }> = ({ showTitle }) => {
                     AnyWorkX
                   </p>
                   <p className="bg-black01 w-[19px] xl:w-[29px] h-[2px]"></p>
-                  <p className="text-black01 font-semibold	 text-sm md:text-base	lg:text-xl">
+                  <p className="text-black01 font-semibold	 text-sm md:text-base	lg:text-[19px]">
                     Endless services, endless possibilities
                   </p>
                 </div>
