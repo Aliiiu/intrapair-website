@@ -30,6 +30,19 @@ export default function ContactUs() {
 	} = useForm<FormData>();
 	const [showNot, setShowNot] = useState(false);
 	const { loading, startLoading, stopLoading } = useLoading();
+	const [errNot, setErrNot] = useState('');
+	const formRef = useRef<HTMLDivElement>(null);
+
+	// useEffect(() => {
+	// 	const timeId = setTimeout(() => {
+	// 		// After 3 seconds set the show value to false
+	// 		setShowNot(false);
+	// 	}, 3000);
+
+	// 	return () => {
+	// 		clearTimeout(timeId);
+	// 	};
+	// }, [])
 
 	const onSubmit = (data: FormData) => {
 		console.log(data);
@@ -38,12 +51,19 @@ export default function ContactUs() {
 			.contactUs(data)
 			.then((res) => {
 				console.log(res.data);
-				setTimeout(() => setShowNot(true));
+				formRef.current?.scrollIntoView({ behavior: 'smooth' });
+				setShowNot(true);
 			})
-			.catch((err) => console.log(err.response))
+			.catch((err) => {
+				console.log(err.response?.data?.error?.message);
+				formRef.current?.scrollIntoView({ behavior: 'smooth' });
+				setErrNot(err?.response?.data?.error?.message || '');
+			})
 			.finally(() => {
 				stopLoading();
-				setShowNot(false);
+				setTimeout(() => setShowNot(false), 5000);
+				setTimeout(() => setErrNot(''), 5000);
+				// setShowNot(false);
 			});
 	};
 
@@ -99,17 +119,26 @@ export default function ContactUs() {
 									height={171}
 								/>
 							</div>
-							<div className='flex flex-wrap gap-[80px] md:gap-[180px] justify-between'>
+							<div
+								ref={formRef}
+								className='flex flex-wrap gap-[80px] md:gap-[180px] justify-between'
+							>
 								<div
 									className='bg-white relative flex-1 p-[15px] overflow-hidden sm:p-[40px] max-w-[100%] rounded-3xl '
 									style={{
 										boxShadow: '0px 0px 29px -4px rgba(16, 24, 40, 0.04)',
 									}}
 								>
-									{showNot && (
+									{showNot ? (
 										<div className='bg-[#D9EDDB] w-full absolute top-0 left-0 h-[34px] flex justify-center items-center text-[#2C582B]'>
 											Form Sent Successfully! You will Get a reply from us soon
 										</div>
+									) : errNot.length > 0 ? (
+										<div className='bg-[#F3D8DA] w-full absolute top-0 left-0 h-[34px] flex justify-center items-center text-[#692326]'>
+											{errNot}
+										</div>
+									) : (
+										''
 									)}
 									<div className='flex flex-col gap-4'>
 										<p className='text-2xl font-semibold mt-10 text-black01'>
@@ -190,8 +219,8 @@ export default function ContactUs() {
 												placeholder='Message'
 											></textarea>
 											<HCaptcha
-												sitekey='1b315e77-be32-4f39-8d38-6f5740efc61f'
-												// sitekey='10000000-ffff-ffff-ffff-000000000001'
+												// sitekey='1b315e77-be32-4f39-8d38-6f5740efc61f'
+												sitekey='10000000-ffff-ffff-ffff-000000000001'
 												// onLoad={onLoad}
 												// @ts-ignore
 												onVerify={setToken}

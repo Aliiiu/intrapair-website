@@ -19,20 +19,6 @@ export default function Home() {
 		<div>
 			<Head>
 				<title>Intrapair | Accelerating Digital Transformation</title>
-				<script
-					async
-					src='https://www.googletagmanager.com/gtag/js?id=G-NKH4R2NDXQ'
-				></script>
-				<script
-					dangerouslySetInnerHTML={{
-						__html: `
-						window.dataLayer = window.dataLayer || [];
-						function gtag(){dataLayer.push(arguments);}
-						gtag('js', new Date());
-						gtag('config', 'G-NKH4R2NDXQ')
-					`,
-					}}
-				/>
 			</Head>
 
 			<AppLayout>
