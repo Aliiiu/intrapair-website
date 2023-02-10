@@ -16,7 +16,7 @@ const Anyworks = () => {
         <section className="container py-0 xl:pb-0 xl:pt-20 px-4 xl:pr-[114px] mx-auto">
           <div className="pt-[129px]">
             <div className="xl:pl-[114px]">
-              <h2 className="font-semibold text-3xl xl:text-5xl">
+              <h2 className="font-semibold text-3xl xl:text-[2.5rem]">
                 AnyWorkX - Endless services, endless possibilities
               </h2>
               <p className="text-grey_04 mt-2">
