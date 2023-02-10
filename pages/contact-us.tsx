@@ -26,23 +26,13 @@ export default function ContactUs() {
 		register,
 		handleSubmit,
 		setValue,
+		reset,
 		formState: { errors },
 	} = useForm<FormData>();
 	const [showNot, setShowNot] = useState(false);
 	const { loading, startLoading, stopLoading } = useLoading();
 	const [errNot, setErrNot] = useState('');
 	const formRef = useRef<HTMLDivElement>(null);
-
-	// useEffect(() => {
-	// 	const timeId = setTimeout(() => {
-	// 		// After 3 seconds set the show value to false
-	// 		setShowNot(false);
-	// 	}, 3000);
-
-	// 	return () => {
-	// 		clearTimeout(timeId);
-	// 	};
-	// }, [])
 
 	const onSubmit = (data: FormData) => {
 		console.log(data);
@@ -52,6 +42,7 @@ export default function ContactUs() {
 			.then((res) => {
 				console.log(res.data);
 				formRef.current?.scrollIntoView({ behavior: 'smooth' });
+				reset();
 				setShowNot(true);
 			})
 			.catch((err) => {
