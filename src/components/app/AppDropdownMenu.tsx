@@ -44,7 +44,7 @@ export const AppDropdownMenu = ({ isOpen, setOpen }: Props) => {
 		return (
 			<li onClick={() => setOpen(!isOpen)} key={nav.text}>
 				<Link
-					className='text-white font-semibold text-2xl md:text-4xl xl:text-5xl hover:underline'
+					className='text-white font-semibold text-2xl md:text-4xl lg:text-3xl xl:text-5xl hover:underline'
 					href={nav.url}
 				>
 					{nav.text}{' '}
@@ -155,7 +155,7 @@ export const AppDropdownMenu = ({ isOpen, setOpen }: Props) => {
 					</div>
 					<div className='px-4 pt-[50px] md:pt-[190px] lg:pt-[100px] 2xl:pt-[270px] pb-[70px] sm:pb-[140px] md:px-[120px] xl:px-[216px]'>
 						<div className='flex flex-col md:flex-row justify-between md:items-center gap-[50px] '>
-							<ul className='flex flex-col gap-y-2 md:gap-y-[50px] xl:gap-y-[30px]'>
+							<ul className='flex flex-col gap-y-2 md:gap-y-[50px] lg:gap-y-[30px] xl:gap-y-[30px]'>
 								{DROPDOWN_MENU_DATA.map(mapSidebarNav)}
 							</ul>
 							<Flex direction='column' gap='5px'>

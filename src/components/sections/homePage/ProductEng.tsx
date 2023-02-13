@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React, { useState, useEffect, useRef, FC, RefObject } from 'react';
-import Accordion from '../../UI/widget/Accordion/Accordion';
+import { AppAccordion } from '../../UI/widget/Accordion/Accordion';
 import { motion, AnimatePresence } from 'framer-motion';
 import Button from '../../UI/widget/button/Button';
 import Link from 'next/link';
@@ -13,8 +13,9 @@ interface ArrayType {
 	imgSrc: string;
 	width: number;
 	height: number;
+	panel: { [x: string]: any };
 }
-const faqArray: ArrayType[] = [
+export const faqArray: ArrayType[] = [
 	{
 		key: 1,
 		title: 'Product Development',
@@ -23,6 +24,11 @@ const faqArray: ArrayType[] = [
 		imgSrc: '/images/prodDev.png',
 		width: 607,
 		height: 447,
+		panel: {
+			title: 'panel1',
+			controls: 'panel1bh-content',
+			id: 'panel1bh-header',
+		},
 	},
 	{
 		key: 2,
@@ -32,6 +38,11 @@ const faqArray: ArrayType[] = [
 		imgSrc: '/images/devOps.png',
 		width: 531,
 		height: 502,
+		panel: {
+			title: 'panel2',
+			controls: 'panel2bh-content',
+			id: 'panel2bh-header',
+		},
 	},
 	{
 		key: 3,
@@ -41,6 +52,11 @@ const faqArray: ArrayType[] = [
 		imgSrc: '/images/dataEng.png',
 		width: 609,
 		height: 389,
+		panel: {
+			title: 'panel3',
+			controls: 'panel3bh-content',
+			id: 'panel3bh-header',
+		},
 	},
 	{
 		key: 4,
@@ -50,6 +66,11 @@ const faqArray: ArrayType[] = [
 		imgSrc: '/images/appDev.png',
 		width: 523,
 		height: 526,
+		panel: {
+			title: 'panel4',
+			controls: 'panel4bh-content',
+			id: 'panel4bh-header',
+		},
 	},
 ];
 
@@ -184,9 +205,10 @@ const ProductEng: FC<{
 					</div>
 				</div>
 				<div className='md:hidden'>
-					{faqArray.map((item) => (
-						<Accordion {...item} key={item.key} />
-					))}
+					{/* {faqArray.map((item) => (
+						<AppAccordion {...item} key={item.key} />
+					))} */}
+					<AppAccordion />
 				</div>
 				<div
 					className='md:flex xl:mt-[60px] hidden gap-[100px]'

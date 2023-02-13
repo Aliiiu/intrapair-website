@@ -12,7 +12,7 @@ const Button: FC<Props> = ({ text, style, loading }) => {
 			disabled={loading}
 			className={`rounded-[41px] text-sm sm:text-base text-white max-h-[60px] flex justify-center items-center transition-colors ease-in-out duration-500 py-3 lg:py-[15px] ${style}`}
 		>
-			{loading ? <ClipLoader color='#ffffff' /> : text}
+			{loading ? <ClipLoader color='#ffffff' size={20} /> : text}
 		</button>
 	);
 };

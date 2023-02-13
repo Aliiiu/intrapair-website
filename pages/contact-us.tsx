@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { AppLayout } from '../src/components/app';
 import Button from '../src/components/UI/widget/button/Button';
-import { useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 import { intrapairServices } from '../src/services/contactUs';
 import useLoading from '../src/hooks/useLoading';
@@ -27,12 +27,22 @@ export default function ContactUs() {
 		handleSubmit,
 		setValue,
 		reset,
+		control,
 		formState: { errors },
-	} = useForm<FormData>();
+	} = useForm<FormData>({
+		mode: 'onChange',
+	});
 	const [showNot, setShowNot] = useState(false);
 	const { loading, startLoading, stopLoading } = useLoading();
 	const [errNot, setErrNot] = useState('');
 	const formRef = useRef<HTMLDivElement>(null);
+	const [value, setValues] = useState('');
+
+	const handleChange = (event: any) => {
+		const result = event.target.value.replace(/\D/g, '');
+
+		setValues(result);
+	};
 
 	const onSubmit = (data: FormData) => {
 		console.log(data);
@@ -91,7 +101,7 @@ export default function ContactUs() {
 								fill
 								className='md:hidden'
 							/>
-							<div>
+							<div ref={formRef}>
 								<h1
 									className={`text-5xl mt-[70px] xl:text-6xl max-w-[800px] mx-auto text-center mb-10 xl:leading-[70px] font-extrabold font-milli font-outline-2 text-white`}
 								>
@@ -110,12 +120,9 @@ export default function ContactUs() {
 									height={171}
 								/>
 							</div>
-							<div
-								ref={formRef}
-								className='flex flex-wrap gap-[80px] md:gap-[180px] justify-between'
-							>
+							<div className='flex flex-col md:flex-row gap-[80px] md:gap-[180px] justify-between'>
 								<div
-									className='bg-white relative flex-1 p-[15px] overflow-hidden sm:p-[40px] max-w-[100%] rounded-3xl '
+									className='bg-white relative flex-1 px-[15px] py-[45px] overflow-hidden sm:p-[40px] max-w-[100%] rounded-3xl '
 									style={{
 										boxShadow: '0px 0px 29px -4px rgba(16, 24, 40, 0.04)',
 									}}
@@ -170,10 +177,15 @@ export default function ContactUs() {
 											/>
 											<div className='flex flex-wrap gap-9 '>
 												<input
-													type='number'
 													placeholder='Phone Number'
-													{...register('phone_number', { required: true })}
-													className='py-4 flex-1  placeholdertext-black01 outline-none font-base'
+													{...register('phone_number', {
+														required: true,
+													})}
+													value={value}
+													onChange={handleChange}
+													className={`py-4 flex-1 ${
+														errors ? 'border-b border-red-500' : ''
+													} placeholdertext-black01 outline-none font-base`}
 													style={{
 														borderBottom: ' 0.5px solid rgba(51, 51, 51, 0.4)',
 													}}
@@ -220,7 +232,7 @@ export default function ContactUs() {
 											<Button
 												loading={loading}
 												text='Submit'
-												style='bg-dark-blue border hover:bg-transparent hover:border-dark-blue hover:text-dark-blue w-[106px] lg:w-[201px] '
+												style='bg-dark-blue border w-[106px] lg:w-[201px] '
 											/>
 										</form>
 									</div>
@@ -332,7 +344,7 @@ export default function ContactUs() {
 						</div>
 					</section>
 
-					<section className='bg-[#F0FAFF] py-[96px]'>
+					{/* <section className='bg-[#F0FAFF] py-[96px]'>
 						<div className='container m-auto w-ful px-[30px]'>
 							<div className='flex flex-col gap-y-[50px]'>
 								<div className='flex flex-col gap-3 items-center'>
@@ -357,7 +369,7 @@ export default function ContactUs() {
 								</div>
 							</div>
 						</div>
-					</section>
+					</section> */}
 				</div>
 			</AppLayout>
 		</div>
